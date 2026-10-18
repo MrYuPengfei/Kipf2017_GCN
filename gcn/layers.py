@@ -78,10 +78,8 @@ def sparse_dropout(x, keep_prob):
 # =========================================================== 图卷积层
 class GraphConvolution(nn.Module):
     """图卷积层。
-
     对应文档 §3.3 的传播规则：
         H^(l+1) = σ( D̃^-1/2 Ã D̃^-1/2 H^(l) W^(l) )
-
     支持多个 support（如 Chebyshev 基），每个 support 拥有独立权重矩阵，
     最终输出求和 —— 这正是 ChebNet 到 GCN 的推广形式：
 

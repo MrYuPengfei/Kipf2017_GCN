@@ -113,19 +113,25 @@ python infer.py --model_path model/gcn_cora.gguf --dataset cora
 gcn-pytorch/
 ├── train.py              训练入口（argparse，对齐 TF 版 tf.app.flags）
 ├── test.py               正确性测试（54 项断言，独立参考值交叉核对）
+├── train_pyg.py          PyG 版训练入口（GCNConv，支持任意层数）
+├── test_pyg.py           PyG 版测试（37 项断言，含与手写层的等价性）
 ├── export_csv.py         数据集 pickle → CSV 导出
 ├── export_model.py       权重导出（GGUF / PyTorch / 元信息）
 ├── infer.py              推理（支持 .pt 与 .gguf）
 ├── requirements.txt
 ├── model/                导出产物：.gguf + .pt + .meta.json
 ├── data/csv/             CSV 形式的数据集（由 export_csv.py 生成）
-└── gcn/
-    ├── layers.py         GraphConvolution / Dense（含稀疏 dropout）—— 逐行注释
-    ├── models.py         GCN / MLP —— 组装层与损失
-    ├── metrics.py        masked softmax CE / masked accuracy
-    ├── utils.py          数据加载（pickle / CSV）+ 预处理 + Chebyshev
-    ├── __init__.py       稀疏张量不变量告警的上下文管理器
-    └── data/             citeseer / cora / pubmed 三个数据集
+├── README.data.md        数据集详解（指标 / 格式 / 读取 / 六个坑 / 实测精度）
+├── gcn/
+│   ├── layers.py         GraphConvolution / Dense（含稀疏 dropout）—— 逐行注释
+│   ├── models.py         GCN / MLP —— 组装层与损失
+│   ├── metrics.py        masked softmax CE / masked accuracy
+│   ├── utils.py          数据加载（pickle / CSV）+ 预处理 + Chebyshev
+│   ├── __init__.py       稀疏张量不变量告警的上下文管理器
+│   └── data/             citeseer / cora / pubmed 三个数据集
+└── pyg_gcn/
+    ├── __init__.py       to_pyg_data（Data 转换）+ PyG 告警抑制
+    └── models.py         PyGGCN（GCNConv 堆叠）
 ```
 
 ### 各文件的阅读顺序
@@ -194,6 +200,91 @@ PyTorch 里若在 `__init__` 中不给 `bias=False` 时的 `bias_param` 赋值�
 
 把 float32 特征写成 CSV 再读回，`%.9g` 会丢有效位导致 Pubmed 上出现 `8.9e-08` 的偏差；即便用 `%.17g` 精确往返，还原后的 CSR 与原 pickle 的 LIL 在 `preprocess_features` 中求和顺序不同，仍会带来末位差异。修法见「CSV 数据源」章节。
 
+## PyTorch Geometric 版（GCNConv）
+
+除了手写实现，项目还提供一套 **PyG 版**，用于横向验证与对照实验。两套实现**并存**，互不替代。
+
+```bash
+pip install torch_geometric        # 纯 Python，无需 torch-scatter
+
+python train_pyg.py --dataset cora                      # 默认 2 层
+python train_pyg.py --dataset cora --num_layers 1       # 单层
+python train_pyg.py --dataset cora --num_layers 8       # 加深，观察过平滑
+python train_pyg.py --dataset citeseer --source csv     # 用 CSV 数据源
+python test_pyg.py                                      # 37 项断言
+```
+
+### 两套实现的分工
+
+| | 手写实现 `gcn/` | PyG 版 `pyg_gcn/` |
+|---|---|---|
+| 定位 | **忠实移植 TF 原版**，逐行对照 | **社区标准实现**，用于对照与加深实验 |
+| 图卷积 | `GraphConvolution`（逐行注释） | `GCNConv` |
+| 层数 | 固定 2 层 | **任意层数**（`--num_layers`） |
+| support | 支持多 support（ChebNet） | 单 support（ChebNet 需 `ChebConv`） |
+| 数据入口 | `load_data`（pickle / CSV） | `to_pyg_data`（**同样调 `load_data`**） |
+| Cora 精度 | 76.70% | **79.50%** |
+
+### 关键设计：共用同一套划分
+
+`to_pyg_data()` **不调用** `torch_geometric.datasets.Planetoid`，而是复用 `load_data()` 后重排成 `Data` 对象。原因是：
+
+- Planetoid 会**联网下载**，而数据已在本地；
+- 更重要的是**划分一致性**——若让 PyG 自己切分，精度差异就分不清是「实现差异」还是「划分差异」。
+
+因此两套数字可直接比较。
+
+### 实测精度
+
+| 数据集 | 手写版 | PyG 版 | 差 |
+|---|---:|---:|---:|
+| Cora | 76.70% | **79.50%** | +2.80 |
+| Citeseer | 64.10% | **66.80%** | +2.70 |
+| Pubmed | 75.60% | **76.70%** | +1.10 |
+
+PyG 版更接近论文报告值（Cora 81.5%），差距主要在 Adam 实现细节与归一化的**自环语义**（见下）。
+
+### 一个必须知道的自环语义差异
+
+两套实现在**原始数据自带自环**的图上**并不等价**：
+
+| | 做法 | 对角元 |
+|---|---|---|
+| 手写 `preprocess_adj`（TF 原版） | `Ã = A + I` | 原为 1 则变成 **2** |
+| PyG `gcn_norm` | `add_self_loops` 覆盖 | 恒为 **1** |
+
+| 数据集 | 原始自环数 | 归一化矩阵最大差异 |
+|---|---:|---:|
+| Cora | 0 | `3.0e-08`（一致） |
+| Citeseer | 124 | `1.7e-01` |
+| Pubmed | 3 | `9.7e-02` |
+
+这不是 bug，是两种合理但不同的约定。`test_pyg.py` 的 B 组断言用「清掉自环后再加 I」的构造实验**证明**了 PyG 的确切行为（重构偏差 `3.0e-08`），而不是简单断言「两者相等」。
+
+### 层等价性验证
+
+权重对齐后（手写存 `(in,out)`、PyG 存 `(out,in)`），三层维度组合的前向输出偏差均 `< 1e-5`：
+
+| 维度 | 最大偏差 |
+|---|---|
+| 1433→16 | `6.5e-09` |
+| 16→7 | `< 1e-5` |
+| 5→3 | `< 1e-5` |
+
+这证明两者的**数学定义一致**，差异只来自自环约定与浮点顺序。
+
+### 加深实验：过平滑的直接证据
+
+`--num_layers` 是 PyG 版独有的能力：
+
+| 层数 | Cora 准确率 |
+|---:|---:|
+| 1 | 73.10% |
+| 2 | **79.50%** |
+| 8 | **6.40%** |
+
+8 层跌到 6.4%（7 分类的随机水平约 14.3%），比随机猜还差——这是 [[notes/06-深度困境-过平滑与过挤压|过平滑]] 最直观的实证：所有节点表示收敛到同一点，分类器彻底失效。
+
 ## 权重导出（GGUF）
 
 ```bash
@@ -222,6 +313,8 @@ python export_model.py --dataset cora
 `gcn` 与 `gcn_cheby` 用的是**同一个 `GCN` 类**——这正是文档 §3.5 说的"谱方法与空域方法在低阶近似下收敛到同一类算子"的工程体现：ChebNet 只是多给几个 support，层结构不用改。
 
 ## 数据集
+
+**完整说明见 [[README.data]]**（三个数据集的全部指标、两种格式对比、六个坑、九个组合的实测精度）。
 
 自动从 `gcn/data/` 读取（已随代码附带，无需额外下载）：
 
