@@ -17,8 +17,6 @@
 from __future__ import division, print_function
 
 import argparse
-import os
-import pickle as pkl
 import sys
 
 import numpy as np
@@ -26,11 +24,12 @@ import scipy.sparse as sp
 import torch
 import torch.nn.functional as F
 
+from gcn import silence_sparse_warning
 from gcn.layers import Dense, GraphConvolution, sparse_dropout
 from gcn.metrics import masked_accuracy, masked_softmax_cross_entropy
 from gcn.models import GCN, MLP
 from gcn.utils import (chebyshev_polynomials, load_data, normalize_adj,
-                       preprocess_adj, preprocess_features)
+                       preprocess_adj)
 
 VERBOSE = False
 _RESULTS = []
@@ -178,7 +177,7 @@ def test_chebyshev():
 def test_graph_convolution():
     section('D. GraphConvolution 前向公式')
 
-    n, f_in, f_out, f_cls = 50, 8, 16, 3
+    n, f_in, f_out = 50, 8, 16
     torch.manual_seed(0)
 
     x = torch.randn(n, f_in)
@@ -191,9 +190,11 @@ def test_graph_convolution():
     out = layer(x)
 
     # 独立参考：out = S @ (x @ W)
-    ref = torch.sparse.mm(sup, x @ layer.weights[0])
+    # 注意用 detach()：weights 带 requires_grad，直接转标量会触发
+    # "Converting a tensor with requires_grad=True to a scalar" 警告。
+    ref = torch.sparse.mm(sup, x @ layer.weights[0].detach())
     check('D1 单support 输出 = S·(X·W)', approx(out, ref, tol=1e-5),
-          '最大偏差 %.2e' % (out - ref).abs().max())
+          '最大偏差 %.2e' % (out.detach() - ref).abs().max())
 
     # --- 多 support 求和（ChebNet 场景）---
     layer2 = GraphConvolution(f_in, f_out, supports=[sup, sup, sup],
@@ -214,7 +215,7 @@ def test_graph_convolution():
     x_grad = torch.randn(n, f_in, requires_grad=True)
     layer(x_grad).sum().backward()
     check('D4 权重梯度非零（可回传）',
-          float(layer.weights[0].grad.abs().sum()) > 0)
+          float(layer.weights[0].grad.detach().abs().sum()) > 0)
 
 
 def test_dense_layer():
@@ -226,7 +227,7 @@ def test_dense_layer():
     layer.eval()
     x = torch.randn(n, f_in)
     out = layer(x)
-    check('E1 Dense 输出 = X·W', approx(out, x @ layer.weights, tol=1e-5))
+    check('E1 Dense 输出 = X·W', approx(out, x @ layer.weights.detach(), tol=1e-5))
 
 
 # ================================================================ F. Dropout
@@ -363,9 +364,10 @@ def test_weight_decay():
     numel = sum(p.numel() for p in layer.parameters())
 
     # TF 的 tf.nn.l2_loss(t) = sum(t^2) / numel
-    ref = sum(wd * torch.sum(p * p) / p.numel() for p in layer.parameters())
+    ref = sum(wd * torch.sum(p * p) / p.numel()
+              for p in layer.parameters()).detach()
     # 常见错误写法
-    wrong = sum(wd * torch.sum(p * p) / 2.0 for p in layer.parameters())
+    wrong = sum(wd * torch.sum(p * p) / 2.0 for p in layer.parameters()).detach()
 
     check('I1 L2 项按 numel 归一（与 tf.nn.l2_loss 一致）',
           float(ref) > 0 and float(ref) < float(wrong),
@@ -443,6 +445,84 @@ def test_all_models():
             check('K %s 前向+反向正常' % name, False, repr(ex))
 
 
+# ================================================================ L. CSV 数据源
+def test_csv_source():
+    """验证 export_csv.py 生成的 CSV 与原始 pickle 完全等价。"""
+    section('L. CSV 数据源等价性测试')
+
+    import json
+    import os
+    from gcn.utils import CSV_DIR
+
+    if not os.path.isdir(CSV_DIR):
+        check('L0 CSV 数据目录存在', False,
+              '未找到 %s，请先运行 `python export_csv.py`' % CSV_DIR)
+        return
+
+    for ds in ('cora', 'citeseer', 'pubmed'):
+        p = load_data(ds, source='pickle')
+        c = load_data(ds, source='csv')
+        meta = json.load(open(os.path.join(CSV_DIR, ds, 'meta.json'),
+                              encoding='utf-8'))
+
+        ok = True
+        details = []
+        for i, (a, b) in enumerate(zip(p[:8], c[:8])):
+            if a.dtype == torch.bool:
+                err = float((a ^ b).sum())
+            elif torch.is_tensor(a) and a.is_sparse:
+                err = float((a.to_dense() - b.to_dense()).abs().max())
+            else:
+                err = float((a - b).abs().max())
+            details.append('%.1e' % err)
+            ok = ok and err == 0.0
+        adj_err = float(abs(p[8] - c[8]).max())
+
+        check('L1 %s CSV 与 pickle 数值完全一致' % ds, ok and adj_err == 0.0,
+              'adj/features/labels/masks 最大偏差 [%s]，adj_raw %.1e'
+              % (', '.join(details), adj_err))
+
+        check('L2 %s CSV 元信息与张量维度自洽' % ds,
+              meta['num_nodes'] == c[0].shape[0]
+              and meta['num_features'] == c[1].shape[1]
+              and meta['num_classes'] == c[2].shape[1]
+              and meta['num_edges'] == int(c[8].nnz),
+              'nodes=%d features=%d classes=%d edges=%d'
+              % (meta['num_nodes'], meta['num_features'],
+                 meta['num_classes'], meta['num_edges']))
+
+        check('L3 %s CSV 划分数量正确' % ds,
+              int(c[5].sum()) == meta['splits']['train']
+              and int(c[6].sum()) == meta['splits']['val']
+              and int(c[7].sum()) == meta['splits']['test'],
+              'train=%d val=%d test=%d'
+              % (int(c[5].sum()), int(c[6].sum()), int(c[7].sum())))
+
+    # CSV 路径也能正常训练
+    adj, feat, ytr, yva, yte, mtr, mva, mte, araw = load_data('cora',
+                                                              source='csv')
+    sup = [preprocess_adj(araw)]
+    torch.manual_seed(123)
+    np.random.seed(123)
+    model = GCN(input_dim=feat.shape[1], output_dim=ytr.shape[1],
+                supports=sup, hidden1=16, dropout=0.5,
+                weight_decay=5e-4, learning_rate=0.01)
+    opt = torch.optim.Adam(model.parameters(), lr=0.01)
+    losses = []
+    for _ in range(60):
+        model.train()
+        model.labels, model.labels_mask = ytr, mtr
+        opt.zero_grad()
+        model(feat)
+        loss = model._loss()
+        loss.backward()
+        opt.step()
+        losses.append(loss.item())
+    check('L4 CSV 数据源可正常训练', float(np.mean(losses[-5:])) < float(np.mean(losses[:5])),
+          '前5轮 %.4f → 后5轮 %.4f' % (float(np.mean(losses[:5])),
+                                       float(np.mean(losses[-5:]))))
+
+
 # ================================================================ main
 def main():
     global VERBOSE
@@ -463,7 +543,7 @@ def main():
         test_data_pipeline, test_adj_normalization, test_chebyshev,
         test_graph_convolution, test_dense_layer, test_sparse_dropout,
         test_dropout_rate_semantics, test_metrics, test_weight_decay,
-        test_training_smoke, test_all_models,
+        test_training_smoke, test_all_models, test_csv_source,
     ]
 
     for fn in suites:
@@ -492,4 +572,6 @@ def main():
 
 
 if __name__ == '__main__':
-    sys.exit(main())
+    # 用上下文管理器显式声明稀疏不变量检查策略，消除 PyTorch 2.14 的 UserWarning
+    with silence_sparse_warning():
+        sys.exit(main())

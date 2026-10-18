@@ -3,3 +3,9 @@ torch>=1.12.0
 numpy>=1.21.0
 scipy>=1.7.0
 networkx>=2.6.0
+
+# 可选：导出 GGUF 权重所需（export_model.py）
+gguf>=0.10.0
+
+# 可选：静态检查（消除未使用导入等）
+pyflakes>=3.0.0

@@ -18,6 +18,7 @@ import argparse
 import numpy as np
 import torch
 
+from gcn import silence_sparse_warning
 from gcn.models import GCN
 from gcn.utils import load_data, preprocess_adj
 
@@ -29,6 +30,11 @@ def parse_args():
     p.add_argument('--dataset', type=str, default='cora',
                    choices=['cora', 'citeseer', 'pubmed'])
     p.add_argument('--hidden1', type=int, default=16)
+    p.add_argument('--source', type=str, default='pickle',
+                   choices=['pickle', 'csv'],
+                   help='数据源：pickle 或 csv（export_csv.py 生成）。')
+    p.add_argument('--csv_dir', type=str, default=None,
+                   help='CSV 数据目录，默认为 <项目>/data/csv。')
     return p.parse_args()
 
 
@@ -67,7 +73,7 @@ def main():
     args = parse_args()
 
     # 邻接矩阵必须重新计算（不在权重文件中）
-    adj, feat, ytr, yva, yte, mtr, mva, mte, araw = load_data(args.dataset)
+    adj, feat, ytr, yva, yte, mtr, mva, mte, araw = load_data(args.dataset, source=getattr(args, 'source', 'pickle'), csv_dir=getattr(args, 'csv_dir', None))
     supports = [preprocess_adj(araw)]
 
     model = load_weights(args.model_path, feat.shape[1], ytr.shape[1],
@@ -79,14 +85,13 @@ def main():
                                ('测试集', yte, mte)):
         model.labels, model.labels_mask = labels, mask
         with torch.no_grad():
-            out = model(feat)
+            model(feat)          # 前向，结果存入 model.outputs
             acc = model._accuracy().item()
         print('%-6s 准确率 %.4f  (样本 %d)' % (name, acc, int(mask.sum())))
 
-    # 预测示例
+    # 预测示例（predict() 复用上一步的 model.outputs）
     model.labels, model.labels_mask = yte, mte
     with torch.no_grad():
-        logits = model(feat)
         prob = model.predict()
     test_idx = torch.where(mte)[0][:10]
     print('\n前 10 个测试节点的预测:')
@@ -97,4 +102,6 @@ def main():
 
 
 if __name__ == '__main__':
-    main()
+    # 用上下文管理器显式声明稀疏不变量检查策略，消除 PyTorch 2.14 的 UserWarning
+    with silence_sparse_warning():
+        main()

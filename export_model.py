@@ -39,13 +39,13 @@ from __future__ import division, print_function
 import argparse
 import json
 import os
-import sys
 import time
 
 import numpy as np
 import torch
 
-from gcn.models import GCN, MLP
+from gcn import silence_sparse_warning
+from gcn.models import GCN
 from gcn.utils import load_data, preprocess_adj
 
 MODEL_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'model')
@@ -67,6 +67,11 @@ def parse_args():
     p.add_argument('--load', type=str, default='',
                    help='载入已有 .pt 权重而不再训练')
     p.add_argument('--seed', type=int, default=123)
+    p.add_argument('--source', type=str, default='pickle',
+                   choices=['pickle', 'csv'],
+                   help='数据源：pickle 或 csv（export_csv.py 生成）。')
+    p.add_argument('--csv_dir', type=str, default=None,
+                   help='CSV 数据目录，默认为 <项目>/data/csv。')
     return p.parse_args()
 
 
@@ -148,7 +153,8 @@ def save_gguf(path, model, meta):
         writer.add_key_value(key, val, t)
 
     # ---- 架构元信息（放进 KV 区，任何 GGUF 解析器都能读出）----
-    kv('general.architecture', 'gcn')
+    # 注意：GGUFWriter(path, arch='gcn') 已自动写入 general.architecture，
+    # 此处不要重复写，否则 gguf 会发出 "Duplicated key name" 警告。
     kv('general.name', meta['name'])
     kv('general.description',
        'Graph Convolutional Network (Kipf & Welling 2017) '
@@ -190,7 +196,7 @@ def main():
     print('GCN 权重导出  (dataset=%s, model=%s)' % (args.dataset, args.model))
     print('=' * 62)
 
-    adj, feat, ytr, yva, yte, mtr, mva, mte, araw = load_data(args.dataset)
+    adj, feat, ytr, yva, yte, mtr, mva, mte, araw = load_data(args.dataset, source=getattr(args, 'source', 'pickle'), csv_dir=getattr(args, 'csv_dir', None))
     MASK = {'train': mtr, 'val': mva, 'test': mte,
             'y_train': ytr, 'y_val': yva, 'y_test': yte}
 
@@ -284,8 +290,8 @@ def main():
         v = f.contents
         return v() if callable(v) else v
 
-    for k in ['general.architecture', 'gnn.num_features', 'gnn.hidden_dim',
-              'gnn.num_classes']:
+    for k in ['general.architecture', 'general.name', 'gnn.num_features',
+              'gnn.hidden_dim', 'gnn.num_classes']:
         print('  %-24s %r' % (k, field(k)))
 
     # 数值一致性：GGUF 里的权重 vs PyTorch 里的权重
@@ -316,4 +322,6 @@ def main():
 
 
 if __name__ == '__main__':
-    main()
+    # 用上下文管理器显式声明稀疏不变量检查策略，消除 PyTorch 2.14 的 UserWarning
+    with silence_sparse_warning():
+        main()
