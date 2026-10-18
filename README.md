@@ -1,8 +1,10 @@
-# GCN的 PyTorch 复现
+# GCN 的 PyTorch 复现
 
-把 Kipf & Welling 官方 **TensorFlow 1.x** 实现（[tkipf/gcn](https://github.com/tkipf/gcn)）移植为 **PyTorch**，逐行对照、保留全部实现细节与超参数。
+把 Kipf & Welling 官方 **TensorFlow 1.x** 实现（[tkipf/gcn](https://github.com/tkipf/gcn)）移植为 **PyTorch**，逐行对照、保留全部实现细节与超参数。另附一套 **PyTorch Geometric（`GCNConv`）** 实现用于对照验证。
 
-> **对应文档**：[[notes/01-谱方法|01-谱方法]] · [[notes/03-空域方法与消息传递|03-空域方法]] ｜ 原始代码在 `../gcn/`
+> **对应文档**：[[notes/01-谱方法|01-谱方法]] · [[notes/03-空域方法与消息传递|03-空域方法]] ｜ 原始代码在 `../gcn/` ｜ 数据集详解见 [[README.data]]
+>
+> **两套实现**：手写版（`gcn/` + `train.py`）忠实移植 TF 结构；PyG 版（`pyg_gcn/` + `train_pyg.py`）用社区标准 `GCNConv`。Cora 精度分别为 **76.70%** 与 **79.50%**，详见 [[#PyTorch Geometric 版（GCNConv）|PyTorch Geometric 版]]。
 
 ## 代码注释规范
 
@@ -26,20 +28,30 @@ PyTorch 版一一对应，而不必去翻原仓库。
 
 ## 零警告保证
 
-全部脚本在**严格模式**（任何警告都视为错误）下干净运行：
+全部脚本（含 PyG 版）在**严格模式**（任何警告都视为错误）下干净运行：
+
+```bash
+python -W error train.py      --dataset cora
+python -W error test.py
+python -W error train_pyg.py  --dataset cora
+python -W error test_pyg.py
+```
+
+也可按类别逐个升级为错误（旧写法，等价于 `-W error`）：
 
 ```bash
 python -W error::DeprecationWarning -W error::UserWarning \
       -W error::RuntimeWarning -W error::FutureWarning train.py --dataset cora
 ```
 
-为此处理了三类问题：
+为此处理了四类问题：
 
 | 问题 | 根因 | 处理方式 |
 |---|---|---|
 | `Sparse invariant checks are implicitly disabled` | PyTorch 2.14 新增；C++ 层全局 Context 触发 | `gcn.silence_sparse_warning()` 上下文管理器（**注意**：`torch.sparse.check_sparse_tensor_invariants(False)` 在 2.14.1 上无效，只有 `with` 形式可用） |
 | `divide by zero encountered in power` | `np.power(0, -0.5)` → inf | `np.errstate(divide='ignore', invalid='ignore')` + 显式置 0 |
 | `scipy.sparse.csr namespace is deprecated` | 数据集是 2017 年 pickle 的 `csr.csr_matrix` | 反序列化时静音警告 + `_to_modern_sparse()` 规范化为新版类型 |
+| `torch.jit.script` 在 Python 3.14+ 不受支持 | PyG 的 `MessagePassing` 用 JIT 做类型检查，**在 import 时**即触发 | `pyg_gcn.silence_pyg_warning()`；但该告警早于上下文管理器生效，故在 `pyg_gcn/__init__.py` **导入期**按「精确消息 + 精确模块」安装 filter |
 
 另用 `pyflakes` 清理了未使用导入与未使用变量（含 `infer.py` 中一处冗余的前向赋值）。
 
@@ -49,6 +61,7 @@ python -W error::DeprecationWarning -W error::UserWarning \
 cd scripts/gcn-pytorch
 pip install -r requirements.txt
 
+# ---- 手写实现 ----
 # 训练
 python train.py --dataset cora     --model gcn
 python train.py --dataset citeseer --model gcn
@@ -63,12 +76,20 @@ python train.py --dataset cora --model dense
 # 正确性测试（54 项断言）
 python test.py
 
+# ---- PyG 实现 ----
+pip install torch_geometric            # 纯 Python，无需 torch-scatter
+python train_pyg.py --dataset cora     # GCNConv，默认 2 层
+python train_pyg.py --dataset cora --num_layers 8   # 加深，观察过平滑
+python test_pyg.py                     # 37 项断言
+
+# ---- 数据与权重 ----
 # 把数据集导出为 CSV（写入 data/csv/）
 python export_csv.py
 
-# 用 CSV 数据源训练/测试（与pickle 逐位一致）
-python train.py --dataset cora --source csv
-python test.py  -k csv
+# 用 CSV 数据源训练/测试（与 pickle 逐位一致）
+python train.py     --dataset cora --source csv
+python train_pyg.py --dataset cora --source csv
+python test.py -k csv
 
 # 导出权重到 model/
 python export_model.py --dataset cora
@@ -103,9 +124,13 @@ python infer.py --model_path model/gcn_cora.gguf --dataset cora
 
 结论：**数学实现逐位正确**。差距来自框架差异——TF1 的 Adam 实现、稀疏算子的浮点累加顺序、dropout 掩码的随机数序列都与 PyTorch 不同。在稀疏图上单轮涉及上万次浮点累加，差异会被 Adam 的自适应步长放大。
 
-旁证：`hidden1` 从 16 调到 64，本实现精度升至 79.8% ——模型容量足够，纯粹是固定超参下的收敛轨迹差异。
+旁证：`hidden1` 从 16 调到 64，本实现精度升至 **79.80%** ——模型容量足够，纯粹是固定超参下的收敛轨迹差异。
 
-> **引用建议**：若需与论文可比的数字，建议用 PyTorch Geometric 的 `GCNConv`（社区维护，约 80.5%~81.5%）。本实现定位是**忠实移植 TF 代码结构**，而非刷精度。
+> **引用建议**：
+>
+> - 若需**与论文可比**的数字，用本项目自带的 PyG 版：`python train_pyg.py --dataset cora` → **79.50%**（论文 81.5%）。这是本仓库内实测值，不是引用二手数据。
+> - 若需**说明移植保真度**，用手写版的 76.70% 并附上 `test.py` 的 54 项断言结果——它证明的是「数学正确」，而非「精度 SOTA」。
+> - 两者相差的 2.8 个百分点，主因是归一化的[[#一个必须知道的自环语义差异|自环语义差异]]，不是实现错误。
 
 ## 目录结构
 
@@ -121,7 +146,7 @@ gcn-pytorch/
 ├── requirements.txt
 ├── model/                导出产物：.gguf + .pt + .meta.json
 ├── data/csv/             CSV 形式的数据集（由 export_csv.py 生成）
-├── README.data.md        数据集详解（指标 / 格式 / 读取 / 六个坑 / 实测精度）
+├── README.data.md        数据集详解（指标 / 格式 / 读取 / 四个坑 / 实测精度）
 ├── gcn/
 │   ├── layers.py         GraphConvolution / Dense（含稀疏 dropout）—— 逐行注释
 │   ├── models.py         GCN / MLP —— 组装层与损失
@@ -136,15 +161,29 @@ gcn-pytorch/
 
 ### 各文件的阅读顺序
 
+**手写实现**（理解数学本身）：
+
 ```
-layers.py     先读：理解单层在算什么（含形状推导）
+gcn/layers.py     先读：理解单层在算什么（含形状推导）
    ↓
-models.py     再读：理解层怎么串起来、损失怎么算
+gcn/models.py     再读：理解层怎么串起来、损失怎么算
    ↓
-utils.py      然后：理解数据怎么变成 adj + features + masks
+gcn/utils.py      然后：理解数据怎么变成 adj + features + masks
    ↓
-train.py      最后：理解训练循环与早停逻辑
+train.py          最后：理解训练循环与早停逻辑
 ```
+
+**PyG 实现**（理解工程封装）：
+
+```
+pyg_gcn/__init__.py  先读：to_pyg_data 如何把 load_data 的结果转成 Data
+   ↓
+pyg_gcn/models.py    再读：GCNConv 如何堆叠，以及为何手动加 L2
+   ↓
+train_pyg.py         最后：与 train.py 逐行对照，看差异只在哪些地方
+```
+
+**建议的对照顺序**：先读完手写链路，再看 PyG 版——因为 PyG 把归一化、自环、邻域聚合都封装进 `GCNConv` 内部了，若不先理解手写实现，就不知道那些封装到底做了什么。
 
 对照阅读时可用「TF 原版 → PyTorch 版」速查表：
 
@@ -157,7 +196,7 @@ train.py      最后：理解训练循环与早停逻辑
 | `gcn/models.py` | `gcn/models.py` | `Model.build()` → `nn.Module.forward`；`tf.train.AdamOptimizer` → `torch.optim.Adam` |
 | `gcn/train.py` | `train.py` | `tf.app.flags` → `argparse`；`sess.run` → 前向/反向/`optimizer.step` |
 
-## 复现时踩到的六个坑
+## 复现时踩到的七个坑
 
 ### 1. `tf.nn.l2_loss` 是逐元素均值，不是 `sum/2`
 
@@ -178,7 +217,7 @@ return tf.reduce_mean(loss)
 
 ### 3. 稀疏 dropout 必须作用于非零值
 
-特征矩阵密度仅 1.27%（49216 / 3869964）。用普通 `F.dropout` 会破坏稀疏结构、内存暴涨。TF 版用 `sparse_retain` 只在非零位置采样：
+特征矩阵密度仅 **1.27%**（49216 个非零 / 3880564 个格子）。用普通 `F.dropout` 会破坏稀疏结构、内存暴涨。TF 版用 `sparse_retain` 只在非零位置采样：
 
 ```python
 random_tensor = keep_prob + torch.rand_like(values)
@@ -199,6 +238,22 @@ PyTorch 里若在 `__init__` 中不给 `bias=False` 时的 `bias_param` 赋值�
 ### 6. CSV 往返的精度问题
 
 把 float32 特征写成 CSV 再读回，`%.9g` 会丢有效位导致 Pubmed 上出现 `8.9e-08` 的偏差；即便用 `%.17g` 精确往返，还原后的 CSR 与原 pickle 的 LIL 在 `preprocess_features` 中求和顺序不同，仍会带来末位差异。修法见「CSV 数据源」章节。
+
+### 7. 原始数据自带自环，`A + I` 会把它变成 2
+
+这一点在移植时最容易漏掉，因为它**不影响代码运行，只影响数值**。
+
+| 数据集 | 原始自环数 |
+|---|---:|
+| Cora | 0 |
+| Citeseer | **124** |
+| Pubmed | **3** |
+
+TF 原版与手写实现的 `preprocess_adj` 做的是 `adj + sp.eye(n)`：若某节点本来自环权重为 1，相加后变成 **2**。而 PyG 的 `add_self_loops` 是把对角元**覆盖为 1**。
+
+结果：Citeseer 上两套归一化矩阵的最大差异达 **`1.7e-01`**（Cora 为 `3.0e-08`，因为无自环两者重合）。
+
+**这不是 bug，是两种约定**。若要与 TF 原版逐位对齐，保留 `A + I`；若要复现 PyG 的数值，需先清除自环再加 I。`test_pyg.py` 的 B 组用构造实验证明了 PyG 的确切行为（重构偏差 `3.0e-08`）。
 
 ## PyTorch Geometric 版（GCNConv）
 
@@ -304,6 +359,8 @@ python export_model.py --dataset cora
 
 ## 支持的模型
 
+**手写版**（`train.py --model`）：
+
 | `--model` | 说明 | 对应文档 |
 |---|---|---|
 | `gcn` | 两层 GCN，support=1 | §3.3 |
@@ -312,9 +369,19 @@ python export_model.py --dataset cora
 
 `gcn` 与 `gcn_cheby` 用的是**同一个 `GCN` 类**——这正是文档 §3.5 说的"谱方法与空域方法在低阶近似下收敛到同一类算子"的工程体现：ChebNet 只是多给几个 support，层结构不用改。
 
+**PyG 版**（`train_pyg.py --num_layers`）：单一 `GCNConv` 堆叠结构，层数可调：
+
+| `--num_layers` | 结构 | Cora 实测 |
+|---:|---|---:|
+| 1 | F→C | 73.10% |
+| 2 | F→16→C（论文设定） | **79.50%** |
+| 8 | F→16→…→C | 6.40% |
+
+> **注意 `dense` 基线的实测值偏低**（Cora 30.20%，论文 56.5%）。原因是 Cora 仅 140 个训练节点，MLP 无图先验时迅速过拟合。详细分析见 [[README.data]] 第 7.1 节。
+
 ## 数据集
 
-**完整说明见 [[README.data]]**（三个数据集的全部指标、两种格式对比、六个坑、九个组合的实测精度）。
+**完整说明见 [[README.data]]**（三个数据集的全部指标、两种格式对比、四个坑、九个组合的实测精度）。
 
 自动从 `gcn/data/` 读取（已随代码附带，无需额外下载）：
 
@@ -326,7 +393,8 @@ python export_model.py --dataset cora
 | `ind.{ds}.graph` | `{index: [邻居...]}` 邻接字典 |
 | `ind.{ds}.test.index` | 测试节点索引（inductive 设置） |
 
-**Citeseer 特殊处理**：该数据集有孤立节点，`load_data` 中用零向量补齐到正确位置——这段逻辑已原样保留，漏掉会导致精度异常。
+**Citeseer 特殊处理**：该数据集有 15 个孤立节点（`node_id` 2407、2489、2553、2682、2781、2953、3042、3063、3212、3214、3250、3292、3305、3306、3309），`load_data` 中用零向量补齐到正确位置——这段逻辑已原样保留，漏掉会导致精度异常。细节见 [[README.data]] 的「坑 1」。
+
 ## CSV 数据源
 
 原始数据集是 2017 年的 Python2 pickle（`scipy.sparse.csr.csr_matrix`），跨版本反序列化容易出兼容问题，且不便于用 Excel / pandas 直接查看。`export_csv.py` 把它们导出成纯文本 CSV：
