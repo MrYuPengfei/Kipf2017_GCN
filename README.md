@@ -147,6 +147,9 @@ gcn-pytorch/
 ├── model/                导出产物：.gguf + .pt + .meta.json
 ├── data/csv/             CSV 形式的数据集（由 export_csv.py 生成）
 ├── README.data.md        数据集详解（指标 / 格式 / 读取 / 四个坑 / 实测精度）
+├── notebooks/
+│   ├── train.ipynb       手写实现的可交互版（含曲线、分类别准确率、CSV 对比）
+│   └── train_pyg.ipynb   PyG 版（含层数实验、层等价性、自环差异）
 ├── gcn/
 │   ├── layers.py         GraphConvolution / Dense（含稀疏 dropout）—— 逐行注释
 │   ├── models.py         GCN / MLP —— 组装层与损失
@@ -339,6 +342,32 @@ PyG 版更接近论文报告值（Cora 81.5%），差距主要在 Adam 实现细
 | 8 | **6.40%** |
 
 8 层跌到 6.4%（7 分类的随机水平约 14.3%），比随机猜还差——这是 [[notes/06-深度困境-过平滑与过挤压|过平滑]] 最直观的实证：所有节点表示收敛到同一点，分类器彻底失效。
+
+## Notebook（可交互版）
+
+`notebooks/` 下有两个 notebook，与 `train.py` / `train_pyg.py` **逻辑等价**，但把流程拆成可逐段运行的单元格：
+
+```bash
+pip install ipykernel          # 或 pip install -r requirements.txt
+jupyter lab notebooks/         # 在 scripts/gcn-pytorch 下启动
+```
+
+| notebook | 对应脚本 | 内容 | 实测结果 |
+|---|---|---|---|
+| `train.ipynb` | `train.py` | 数据 → 预处理 → 建模 → 训练 → 测试 → CSV 交叉验证 | Cora **76.70%** |
+| `train_pyg.ipynb` | `train_pyg.py` | 同上 + 层数实验 + 与手写层等价性 + 自环差异 | Cora **79.50%** |
+
+**notebook 里额外提供的四件事**（脚本里没有）：
+
+1. **内联 SVG 曲线** —— 损失/准确率双曲线，**不依赖 matplotlib**，装完 torch 就能跑。
+2. **分类别准确率表** —— 总体准确率会掩盖「少数类被放弃」。Cora 上类 3（样本最多）约 69%，类 2 约 87%。
+3. **层数实验** —— `train_pyg.ipynb` 直接跑 1/2/4/8 层：73.10% → 79.50% → 75.40% → **6.40%**。4 层就开始退化，8 层低于随机水平（14.3%）。
+4. **交叉验证** —— 手写版比对 pickle/CSV 九个张量（全 `0.00e+00`）；PyG 版比对 `GCNConv` 与 `GraphConvolution` 的前向输出（`5.6e-09`）。
+
+> **输出已固化**：notebook 里保存的是实际运行结果，不运行也能直接看数值。
+> 内容由 `scripts/gen_notebooks.py` 生成，改完重跑 `python scripts/gen_notebooks.py --run` 即可。
+
+> **一个协议细节**：notebook 的层数实验刻意照抄 `train_pyg.py` 的早停协议（验证损失 = CE + L2，不做权重回滚）。早期版本用了「best-weight 回滚 + 只比 CE」，2 层会得到 79.60% 而不是 79.50%——**0.1 个百分点的假差异**，值得警惕。
 
 ## 权重导出（GGUF）
 

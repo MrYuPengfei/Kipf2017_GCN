@@ -11,5 +11,13 @@ torch_geometric>=2.4.0
 # 可选：导出 GGUF 权重所需（export_model.py）
 gguf>=0.10.0
 
+# 可选：notebooks/ 的运行与再生成
+#   ipykernel 用于在 Jupyter 里跑 notebook
+#   nbformat + nbclient 用于 scripts/gen_notebooks.py 生成/批量执行
+# 注意：notebook 里的图表用内联 SVG 实现，**不需要 matplotlib**
+ipykernel>=6.0.0
+nbformat>=5.0.0
+nbclient>=0.10.0
+
 # 可选：静态检查（消除未使用导入等）
 pyflakes>=3.0.0
