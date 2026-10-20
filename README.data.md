@@ -2,7 +2,8 @@
 tags: [GCN/数据集, GNN/数据]
 aliases: [GCN数据集说明, 引文网络数据, Cora数据, 数据集文档]
 ---
-
+Cora，CiteSeer，PubMed应该是GNN学习过程中没有人能逃得过的三大关口，在数据集上的意义可能相当于GCN，GraphSAGE，GAT之于空域GNN的意义.
+https://blog.csdn.net/PolarisRisingWar/article/details/118714542
 # GCN 数据集说明（README.data）
 
 > 配套主文档：[[scripts/gcn-pytorch/README|GCN PyTorch 复现]] ｜ [[GNN-EDU|教育领域应用调研]]
