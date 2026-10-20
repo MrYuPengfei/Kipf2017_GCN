@@ -1,0 +1,3399 @@
+{
+  "1402.1128": {
+    "title": "Long Short-Term Memory Based Recurrent Neural Network Architectures for Large Vocabulary Speech Recognition",
+    "authors": [
+      "Haşim Sak",
+      "Andrew Senior",
+      "Françoise Beaufays"
+    ],
+    "year": "2014",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.NE"
+  },
+  "1509.09292": {
+    "title": "Convolutional Networks on Graphs for Learning Molecular Fingerprints",
+    "authors": [
+      "David Duvenaud",
+      "Dougal Maclaurin",
+      "Jorge Aguilera-Iparraguirre",
+      "Rafael Gómez-Bombarelli",
+      "Timothy Hirzel",
+      "Alán Aspuru-Guzik",
+      "Ryan P. Adams"
+    ],
+    "year": "2015",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.LG"
+  },
+  "1511.05493": {
+    "title": "Gated Graph Sequence Neural Networks",
+    "authors": [
+      "Yujia Li",
+      "Daniel Tarlow",
+      "Marc Brockschmidt",
+      "Richard Zemel"
+    ],
+    "year": "2015",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.LG"
+  },
+  "1506.01186": {
+    "title": "Cyclical Learning Rates for Training Neural Networks",
+    "authors": [
+      "Leslie N. Smith"
+    ],
+    "year": "2015",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.CV"
+  },
+  "1412.6575": {
+    "title": "Embedding Entities and Relations for Learning and Inference in Knowledge Bases",
+    "authors": [
+      "Bishan Yang",
+      "Wen-tau Yih",
+      "Xiaodong He",
+      "Jianfeng Gao",
+      "Li Deng"
+    ],
+    "year": "2014",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.CL"
+  },
+  "1212.5701": {
+    "title": "ADADELTA: An Adaptive Learning Rate Method",
+    "authors": [
+      "Matthew D. Zeiler"
+    ],
+    "year": "2012",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.LG"
+  },
+  "1606.06357": {
+    "title": "Complex Embeddings for Simple Link Prediction",
+    "authors": [
+      "Théo Trouillon",
+      "Johannes Welbl",
+      "Sebastian Riedel",
+      "Éric Gaussier",
+      "Guillaume Bouchard"
+    ],
+    "year": "2016",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.AI"
+  },
+  "1412.6071": {
+    "title": "Fractional Max-Pooling",
+    "authors": [
+      "Benjamin Graham"
+    ],
+    "year": "2014",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.CV"
+  },
+  "1511.05065": {
+    "title": "Proposal Flow",
+    "authors": [
+      "Bumsub Ham",
+      "Minsu Cho",
+      "Cordelia Schmid",
+      "Jean Ponce"
+    ],
+    "year": "2015",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.CV"
+  },
+  "0909.4061": {
+    "title": "Finding structure with randomness: Probabilistic algorithms for constructing approximate matrix decompositions",
+    "authors": [
+      "Nathan Halko",
+      "Per-Gunnar Martinsson",
+      "Joel A. Tropp"
+    ],
+    "year": "2009",
+    "doi": "",
+    "journal_ref": "SIAM Rev., Survey and Review section, Vol. 53, num. 2, pp. 217-288, June 2011",
+    "primary_cat": "math.NA"
+  },
+  "1502.03167": {
+    "title": "Batch Normalization: Accelerating Deep Network Training by Reducing Internal Covariate Shift",
+    "authors": [
+      "Sergey Ioffe",
+      "Christian Szegedy"
+    ],
+    "year": "2015",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.LG"
+  },
+  "1603.08861": {
+    "title": "Revisiting Semi-Supervised Learning with Graph Embeddings",
+    "authors": [
+      "Zhilin Yang",
+      "William W. Cohen",
+      "Ruslan Salakhutdinov"
+    ],
+    "year": "2016",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.LG"
+  },
+  "1506.02025": {
+    "title": "Spatial Transformer Networks",
+    "authors": [
+      "Max Jaderberg",
+      "Karen Simonyan",
+      "Andrew Zisserman",
+      "Koray Kavukcuoglu"
+    ],
+    "year": "2015",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.CV"
+  },
+  "1207.0580": {
+    "title": "Improving neural networks by preventing co-adaptation of feature detectors",
+    "authors": [
+      "Geoffrey E. Hinton",
+      "Nitish Srivastava",
+      "Alex Krizhevsky",
+      "Ilya Sutskever",
+      "Ruslan R. Salakhutdinov"
+    ],
+    "year": "2012",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.NE"
+  },
+  "1511.07289": {
+    "title": "Fast and Accurate Deep Network Learning by Exponential Linear Units (ELUs)",
+    "authors": [
+      "Djork-Arné Clevert",
+      "Thomas Unterthiner",
+      "Sepp Hochreiter"
+    ],
+    "year": "2015",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.LG"
+  },
+  "1511.06391": {
+    "title": "Order Matters: Sequence to sequence for sets",
+    "authors": [
+      "Oriol Vinyals",
+      "Samy Bengio",
+      "Manjunath Kudlur"
+    ],
+    "year": "2015",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "stat.ML"
+  },
+  "1506.05254": {
+    "title": "Gradient Estimation Using Stochastic Computation Graphs",
+    "authors": [
+      "John Schulman",
+      "Nicolas Heess",
+      "Theophane Weber",
+      "Pieter Abbeel"
+    ],
+    "year": "2015",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.LG"
+  },
+  "1504.08083": {
+    "title": "Fast R-CNN",
+    "authors": [
+      "Ross Girshick"
+    ],
+    "year": "2015",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.CV"
+  },
+  "1505.00853": {
+    "title": "Empirical Evaluation of Rectified Activations in Convolutional Network",
+    "authors": [
+      "Bing Xu",
+      "Naiyan Wang",
+      "Tianqi Chen",
+      "Mu Li"
+    ],
+    "year": "2015",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.LG"
+  },
+  "1606.08415": {
+    "title": "Gaussian Error Linear Units (GELUs)",
+    "authors": [
+      "Dan Hendrycks",
+      "Kevin Gimpel"
+    ],
+    "year": "2016",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.LG"
+  },
+  "1412.6980": {
+    "title": "Adam: A Method for Stochastic Optimization",
+    "authors": [
+      "Diederik P. Kingma",
+      "Jimmy Ba"
+    ],
+    "year": "2014",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.LG"
+  },
+  "1602.07868": {
+    "title": "Weight Normalization: A Simple Reparameterization to Accelerate Training of Deep Neural Networks",
+    "authors": [
+      "Tim Salimans",
+      "Diederik P. Kingma"
+    ],
+    "year": "2016",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.LG"
+  },
+  "1411.4280": {
+    "title": "Efficient Object Localization Using Convolutional Networks",
+    "authors": [
+      "Jonathan Tompson",
+      "Ross Goroshin",
+      "Arjun Jain",
+      "Yann LeCun",
+      "Christopher Bregler"
+    ],
+    "year": "2014",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.CV"
+  },
+  "1603.05201": {
+    "title": "Understanding and Improving Convolutional Neural Networks via Concatenated Rectified Linear Units",
+    "authors": [
+      "Wenling Shang",
+      "Kihyuk Sohn",
+      "Diogo Almeida",
+      "Honglak Lee"
+    ],
+    "year": "2016",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.LG"
+  },
+  "1512.00567": {
+    "title": "Rethinking the Inception Architecture for Computer Vision",
+    "authors": [
+      "Christian Szegedy",
+      "Vincent Vanhoucke",
+      "Sergey Ioffe",
+      "Jonathon Shlens",
+      "Zbigniew Wojna"
+    ],
+    "year": "2015",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.CV"
+  },
+  "1606.09375": {
+    "title": "Convolutional Neural Networks on Graphs with Fast Localized Spectral Filtering",
+    "authors": [
+      "Michaël Defferrard",
+      "Xavier Bresson",
+      "Pierre Vandergheynst"
+    ],
+    "year": "2016",
+    "doi": "",
+    "journal_ref": "Advances in Neural Information Processing Systems 29 (2016)",
+    "primary_cat": "cs.LG"
+  },
+  "1610.02415": {
+    "title": "Automatic chemical design using a data-driven continuous representation of molecules",
+    "authors": [
+      "Rafael Gómez-Bombarelli",
+      "Jennifer N. Wei",
+      "David Duvenaud",
+      "José Miguel Hernández-Lobato",
+      "Benjamín Sánchez-Lengeling",
+      "Dennis Sheberla",
+      "Jorge Aguilera-Iparraguirre",
+      "Timothy D. Hirzel",
+      "Ryan P. Adams",
+      "Alán Aspuru-Guzik"
+    ],
+    "year": "2016",
+    "doi": "10.1021/acscentsci.7b00572",
+    "journal_ref": "",
+    "primary_cat": "cs.LG"
+  },
+  "1608.03983": {
+    "title": "SGDR: Stochastic Gradient Descent with Warm Restarts",
+    "authors": [
+      "Ilya Loshchilov",
+      "Frank Hutter"
+    ],
+    "year": "2016",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.LG"
+  },
+  "1611.04678": {
+    "title": "Machine Learning of Accurate Energy-Conserving Molecular Force Fields",
+    "authors": [
+      "Stefan Chmiela",
+      "Alexandre Tkatchenko",
+      "Huziel E. Sauceda",
+      "Igor Poltavsky",
+      "Kristof T. Schütt",
+      "Klaus-Robert Müller"
+    ],
+    "year": "2016",
+    "doi": "10.1126/sciadv.1603015",
+    "journal_ref": "Science Advances 3(5):e1603015 (2017)",
+    "primary_cat": "physics.chem-ph"
+  },
+  "1702.03118": {
+    "title": "Sigmoid-Weighted Linear Units for Neural Network Function Approximation in Reinforcement Learning",
+    "authors": [
+      "Stefan Elfwing",
+      "Eiji Uchibe",
+      "Kenji Doya"
+    ],
+    "year": "2017",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.LG"
+  },
+  "1607.08022": {
+    "title": "Instance Normalization: The Missing Ingredient for Fast Stylization",
+    "authors": [
+      "Dmitry Ulyanov",
+      "Andrea Vedaldi",
+      "Victor Lempitsky"
+    ],
+    "year": "2016",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.CV"
+  },
+  "1704.07483": {
+    "title": "Continuously Differentiable Exponential Linear Units",
+    "authors": [
+      "Jonathan T. Barron"
+    ],
+    "year": "2017",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.LG"
+  },
+  "1704.01212": {
+    "title": "Neural Message Passing for Quantum Chemistry",
+    "authors": [
+      "Justin Gilmer",
+      "Samuel S. Schoenholz",
+      "Patrick F. Riley",
+      "Oriol Vinyals",
+      "George E. Dahl"
+    ],
+    "year": "2017",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.LG"
+  },
+  "1611.00712": {
+    "title": "The Concrete Distribution: A Continuous Relaxation of Discrete Random Variables",
+    "authors": [
+      "Chris J. Maddison",
+      "Andriy Mnih",
+      "Yee Whye Teh"
+    ],
+    "year": "2016",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.LG"
+  },
+  "1611.07308": {
+    "title": "Variational Graph Auto-Encoders",
+    "authors": [
+      "Thomas N. Kipf",
+      "Max Welling"
+    ],
+    "year": "2016",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "stat.ML"
+  },
+  "1703.00564": {
+    "title": "MoleculeNet: A Benchmark for Molecular Machine Learning",
+    "authors": [
+      "Zhenqin Wu",
+      "Bharath Ramsundar",
+      "Evan N. Feinberg",
+      "Joseph Gomes",
+      "Caleb Geniesse",
+      "Aneesh S. Pappu",
+      "Karl Leswing",
+      "Vijay Pande"
+    ],
+    "year": "2017",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.LG"
+  },
+  "1704.07458": {
+    "title": "A robust and efficient implementation of LOBPCG",
+    "authors": [
+      "Jed A. Duersch",
+      "Meiyue Shao",
+      "Chao Yang",
+      "Ming Gu"
+    ],
+    "year": "2017",
+    "doi": "10.1137/17M1129830",
+    "journal_ref": "SIAM Journal on Scientific Computing, 40(5): C655--C676, 2018",
+    "primary_cat": "math.NA"
+  },
+  "1704.02901": {
+    "title": "Dynamic Edge-Conditioned Filters in Convolutional Neural Networks on Graphs",
+    "authors": [
+      "Martin Simonovsky",
+      "Nikos Komodakis"
+    ],
+    "year": "2017",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.CV"
+  },
+  "1611.08402": {
+    "title": "Geometric deep learning on graphs and manifolds using mixture model CNNs",
+    "authors": [
+      "Federico Monti",
+      "Davide Boscaini",
+      "Jonathan Masci",
+      "Emanuele Rodolà",
+      "Jan Svoboda",
+      "Michael M. Bronstein"
+    ],
+    "year": "2016",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.CV"
+  },
+  "1607.06450": {
+    "title": "Layer Normalization",
+    "authors": [
+      "Jimmy Lei Ba",
+      "Jamie Ryan Kiros",
+      "Geoffrey E. Hinton"
+    ],
+    "year": "2016",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "stat.ML"
+  },
+  "1609.05158": {
+    "title": "Real-Time Single Image and Video Super-Resolution Using an Efficient Sub-Pixel Convolutional Neural Network",
+    "authors": [
+      "Wenzhe Shi",
+      "Jose Caballero",
+      "Ferenc Huszár",
+      "Johannes Totz",
+      "Andrew P. Aitken",
+      "Rob Bishop",
+      "Daniel Rueckert",
+      "Zehan Wang"
+    ],
+    "year": "2016",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.CV"
+  },
+  "1703.06103": {
+    "title": "Modeling Relational Data with Graph Convolutional Networks",
+    "authors": [
+      "Michael Schlichtkrull",
+      "Thomas N. Kipf",
+      "Peter Bloem",
+      "Rianne van den Berg",
+      "Ivan Titov",
+      "Max Welling"
+    ],
+    "year": "2017",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "stat.ML"
+  },
+  "1706.02216": {
+    "title": "Inductive Representation Learning on Large Graphs",
+    "authors": [
+      "William L. Hamilton",
+      "Rex Ying",
+      "Jure Leskovec"
+    ],
+    "year": "2017",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.SI"
+  },
+  "1607.00653": {
+    "title": "node2vec: Scalable Feature Learning for Networks",
+    "authors": [
+      "Aditya Grover",
+      "Jure Leskovec"
+    ],
+    "year": "2016",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.SI"
+  },
+  "1609.02907": {
+    "title": "Semi-Supervised Classification with Graph Convolutional Networks",
+    "authors": [
+      "Thomas N. Kipf",
+      "Max Welling"
+    ],
+    "year": "2016",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.LG"
+  },
+  "1612.00593": {
+    "title": "PointNet: Deep Learning on Point Sets for 3D Classification and Segmentation",
+    "authors": [
+      "Charles R. Qi",
+      "Hao Su",
+      "Kaichun Mo",
+      "Leonidas J. Guibas"
+    ],
+    "year": "2016",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.CV"
+  },
+  "1612.08083": {
+    "title": "Language Modeling with Gated Convolutional Networks",
+    "authors": [
+      "Yann N. Dauphin",
+      "Angela Fan",
+      "Michael Auli",
+      "David Grangier"
+    ],
+    "year": "2016",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.CL"
+  },
+  "1609.04309": {
+    "title": "Efficient softmax approximation for GPUs",
+    "authors": [
+      "Edouard Grave",
+      "Armand Joulin",
+      "Moustapha Cissé",
+      "David Grangier",
+      "Hervé Jégou"
+    ],
+    "year": "2016",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.CL"
+  },
+  "1611.01144": {
+    "title": "Categorical Reparameterization with Gumbel-Softmax",
+    "authors": [
+      "Eric Jang",
+      "Shixiang Gu",
+      "Ben Poole"
+    ],
+    "year": "2016",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "stat.ML"
+  },
+  "1704.03165": {
+    "title": "struc2vec: Learning Node Representations from Structural Identity",
+    "authors": [
+      "Leonardo F. R. Ribeiro",
+      "Pedro H. P. Savarese",
+      "Daniel R. Figueiredo"
+    ],
+    "year": "2017",
+    "doi": "10.1145/3097983.3098061",
+    "journal_ref": "",
+    "primary_cat": "cs.SI"
+  },
+  "1710.04954": {
+    "title": "PCPNET: Learning Local Shape Properties from Raw Point Clouds",
+    "authors": [
+      "Paul Guerrero",
+      "Yanir Kleiman",
+      "Maks Ovsjanikov",
+      "Niloy J. Mitra"
+    ],
+    "year": "2017",
+    "doi": "10.1111/cgf.13343",
+    "journal_ref": "",
+    "primary_cat": "cs.CG"
+  },
+  "1711.05101": {
+    "title": "Decoupled Weight Decay Regularization",
+    "authors": [
+      "Ilya Loshchilov",
+      "Frank Hutter"
+    ],
+    "year": "2017",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.LG"
+  },
+  "1710.10903": {
+    "title": "Graph Attention Networks",
+    "authors": [
+      "Petar Veličković",
+      "Guillem Cucurull",
+      "Arantxa Casanova",
+      "Adriana Romero",
+      "Pietro Liò",
+      "Yoshua Bengio"
+    ],
+    "year": "2017",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "stat.ML"
+  },
+  "1706.03762": {
+    "title": "Attention Is All You Need",
+    "authors": [
+      "Ashish Vaswani",
+      "Noam Shazeer",
+      "Niki Parmar",
+      "Jakob Uszkoreit",
+      "Llion Jones",
+      "Aidan N. Gomez",
+      "Lukasz Kaiser",
+      "Illia Polosukhin"
+    ],
+    "year": "2017",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.CL"
+  },
+  "1707.03815": {
+    "title": "Deep Gaussian Embedding of Graphs: Unsupervised Inductive Learning via Ranking",
+    "authors": [
+      "Aleksandar Bojchevski",
+      "Stephan Günnemann"
+    ],
+    "year": "2017",
+    "doi": "",
+    "journal_ref": "International Conference on Learning Representations, ICLR 2018",
+    "primary_cat": "stat.ML"
+  },
+  "1706.02515": {
+    "title": "Self-Normalizing Neural Networks",
+    "authors": [
+      "Günter Klambauer",
+      "Thomas Unterthiner",
+      "Andreas Mayr",
+      "Sepp Hochreiter"
+    ],
+    "year": "2017",
+    "doi": "",
+    "journal_ref": "Advances in Neural Information Processing Systems 30 (NIPS 2017)",
+    "primary_cat": "cs.LG"
+  },
+  "1802.03997": {
+    "title": "GEMSEC: Graph Embedding with Self Clustering",
+    "authors": [
+      "Benedek Rozemberczki",
+      "Ryan Davies",
+      "Rik Sarkar",
+      "Charles Sutton"
+    ],
+    "year": "2018",
+    "doi": "",
+    "journal_ref": "ASONAM 2019",
+    "primary_cat": "cs.SI"
+  },
+  "1710.05941": {
+    "title": "Searching for Activation Functions",
+    "authors": [
+      "Prajit Ramachandran",
+      "Barret Zoph",
+      "Quoc V. Le"
+    ],
+    "year": "2017",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.NE"
+  },
+  "1711.07553": {
+    "title": "Residual Gated Graph ConvNets",
+    "authors": [
+      "Xavier Bresson",
+      "Thomas Laurent"
+    ],
+    "year": "2017",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.LG"
+  },
+  "1711.08920": {
+    "title": "SplineCNN: Fast Geometric Deep Learning with Continuous B-Spline Kernels",
+    "authors": [
+      "Matthias Fey",
+      "Jan Eric Lenssen",
+      "Frank Weichert",
+      "Heinrich Müller"
+    ],
+    "year": "2017",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.CV"
+  },
+  "1802.02669": {
+    "title": "PPFNet: Global Context Aware Local Features for Robust 3D Point Matching",
+    "authors": [
+      "Haowen Deng",
+      "Tolga Birdal",
+      "Slobodan Ilic"
+    ],
+    "year": "2018",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.CV"
+  },
+  "1802.04364": {
+    "title": "Junction Tree Variational Autoencoder for Molecular Graph Generation",
+    "authors": [
+      "Wengong Jin",
+      "Regina Barzilay",
+      "Tommi Jaakkola"
+    ],
+    "year": "2018",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.LG"
+  },
+  "1706.08566": {
+    "title": "SchNet: A continuous-filter convolutional neural network for modeling quantum interactions",
+    "authors": [
+      "Kristof T. Schütt",
+      "Pieter-Jan Kindermans",
+      "Huziel E. Sauceda",
+      "Stefan Chmiela",
+      "Alexandre Tkatchenko",
+      "Klaus-Robert Müller"
+    ],
+    "year": "2017",
+    "doi": "",
+    "journal_ref": "Advances in Neural Information Processing Systems 30 (2017), pp. 992-1002",
+    "primary_cat": "stat.ML"
+  },
+  "1706.02413": {
+    "title": "PointNet++: Deep Hierarchical Feature Learning on Point Sets in a Metric Space",
+    "authors": [
+      "Charles R. Qi",
+      "Li Yi",
+      "Hao Su",
+      "Leonidas J. Guibas"
+    ],
+    "year": "2017",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.CV"
+  },
+  "1707.01476": {
+    "title": "Convolutional 2D Knowledge Graph Embeddings",
+    "authors": [
+      "Tim Dettmers",
+      "Pasquale Minervini",
+      "Pontus Stenetorp",
+      "Sebastian Riedel"
+    ],
+    "year": "2017",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.LG"
+  },
+  "1711.10604": {
+    "title": "TensorFlow Distributions",
+    "authors": [
+      "Joshua V. Dillon",
+      "Ian Langmore",
+      "Dustin Tran",
+      "Eugene Brevdo",
+      "Srinivas Vasudevan",
+      "Dave Moore",
+      "Brian Patton",
+      "Alex Alemi",
+      "Matt Hoffman",
+      "Rif A. Saurous"
+    ],
+    "year": "2017",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.LG"
+  },
+  "1708.07120": {
+    "title": "Super-Convergence: Very Fast Training of Neural Networks Using Large Learning Rates",
+    "authors": [
+      "Leslie N. Smith",
+      "Nicholay Topin"
+    ],
+    "year": "2017",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.LG"
+  },
+  "1802.04407": {
+    "title": "Adversarially Regularized Graph Autoencoder for Graph Embedding",
+    "authors": [
+      "Shirui Pan",
+      "Ruiqi Hu",
+      "Guodong Long",
+      "Jing Jiang",
+      "Lina Yao",
+      "Chengqi Zhang"
+    ],
+    "year": "2018",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.LG"
+  },
+  "1706.05206": {
+    "title": "FeaStNet: Feature-Steered Graph Convolutions for 3D Shape Analysis",
+    "authors": [
+      "Nitika Verma",
+      "Edmond Boyer",
+      "Jakob Verbeek"
+    ],
+    "year": "2017",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.CV"
+  },
+  "1801.07829": {
+    "title": "Dynamic Graph CNN for Learning on Point Clouds",
+    "authors": [
+      "Yue Wang",
+      "Yongbin Sun",
+      "Ziwei Liu",
+      "Sanjay E. Sarma",
+      "Michael M. Bronstein",
+      "Justin M. Solomon"
+    ],
+    "year": "2018",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.CV"
+  },
+  "1710.10370": {
+    "title": "Topology Adaptive Graph Convolutional Networks",
+    "authors": [
+      "Jian Du",
+      "Shanghang Zhang",
+      "Guanhang Wu",
+      "Jose M. F. Moura",
+      "Soummya Kar"
+    ],
+    "year": "2017",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.LG"
+  },
+  "1707.04638": {
+    "title": "Predicting multicellular function through multi-layer tissue networks",
+    "authors": [
+      "Marinka Zitnik",
+      "Jure Leskovec"
+    ],
+    "year": "2017",
+    "doi": "10.1093/bioinformatics/btx252",
+    "journal_ref": "Bioinformatics 2017, 33 (14): i190-i198",
+    "primary_cat": "cs.LG"
+  },
+  "1801.07791": {
+    "title": "PointCNN: Convolution On $\\mathcal{X}$-Transformed Points",
+    "authors": [
+      "Yangyan Li",
+      "Rui Bu",
+      "Mingchao Sun",
+      "Wei Wu",
+      "Xinhan Di",
+      "Baoquan Chen"
+    ],
+    "year": "2018",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.CV"
+  },
+  "1708.05045": {
+    "title": "Cross-lingual Entity Alignment via Joint Attribute-Preserving Embedding",
+    "authors": [
+      "Zequn Sun",
+      "Wei Hu",
+      "Chengkai Li"
+    ],
+    "year": "2017",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.CL"
+  },
+  "1801.10247": {
+    "title": "FastGCN: Fast Learning with Graph Convolutional Networks via Importance Sampling",
+    "authors": [
+      "Jie Chen",
+      "Tengfei Ma",
+      "Cao Xiao"
+    ],
+    "year": "2018",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.LG"
+  },
+  "1808.06354": {
+    "title": "Signed Graph Convolutional Network",
+    "authors": [
+      "Tyler Derr",
+      "Yao Ma",
+      "Jiliang Tang"
+    ],
+    "year": "2018",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.SI"
+  },
+  "1808.07217": {
+    "title": "Don't Use Large Mini-Batches, Use Local SGD",
+    "authors": [
+      "Tao Lin",
+      "Sebastian U. Stich",
+      "Kumar Kshitij Patel",
+      "Martin Jaggi"
+    ],
+    "year": "2018",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.LG"
+  },
+  "1809.10341": {
+    "title": "Deep Graph Infomax",
+    "authors": [
+      "Petar Veličković",
+      "William Fedus",
+      "William L. Hamilton",
+      "Pietro Liò",
+      "Yoshua Bengio",
+      "R Devon Hjelm"
+    ],
+    "year": "2018",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "stat.ML"
+  },
+  "1810.05997": {
+    "title": "Predict then Propagate: Graph Neural Networks meet Personalized PageRank",
+    "authors": [
+      "Johannes Gasteiger",
+      "Aleksandar Bojchevski",
+      "Stephan Günnemann"
+    ],
+    "year": "2018",
+    "doi": "",
+    "journal_ref": "International Conference on Learning Representations (ICLR), New Orleans, LA, USA, 2019",
+    "primary_cat": "cs.LG"
+  },
+  "1803.05880": {
+    "title": "GossipGraD: Scalable Deep Learning using Gossip Communication based Asynchronous Gradient Descent",
+    "authors": [
+      "Jeff Daily",
+      "Abhinav Vishnu",
+      "Charles Siegel",
+      "Thomas Warfel",
+      "Vinay Amatya"
+    ],
+    "year": "2018",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.DC"
+  },
+  "1802.06916": {
+    "title": "Simplicial Closure and higher-order link prediction",
+    "authors": [
+      "Austin R. Benson",
+      "Rediet Abebe",
+      "Michael T. Schaub",
+      "Ali Jadbabaie",
+      "Jon Kleinberg"
+    ],
+    "year": "2018",
+    "doi": "10.1073/pnas.1800683115",
+    "journal_ref": "Proceedings of the National Academy of Sciences Nov 2018, 115 (48) E11221-E11230",
+    "primary_cat": "cs.SI"
+  },
+  "1806.05594": {
+    "title": "There Are Many Consistent Explanations of Unlabeled Data: Why You Should Average",
+    "authors": [
+      "Ben Athiwaratkun",
+      "Marc Finzi",
+      "Pavel Izmailov",
+      "Andrew Gordon Wilson"
+    ],
+    "year": "2018",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.LG"
+  },
+  "1807.10267": {
+    "title": "Generating 3D faces using Convolutional Mesh Autoencoders",
+    "authors": [
+      "Anurag Ranjan",
+      "Timo Bolkart",
+      "Soubhik Sanyal",
+      "Michael J. Black"
+    ],
+    "year": "2018",
+    "doi": "",
+    "journal_ref": "European Conference on Computer Vision 2018",
+    "primary_cat": "cs.CV"
+  },
+  "1810.00825": {
+    "title": "Set Transformer: A Framework for Attention-based Permutation-Invariant Neural Networks",
+    "authors": [
+      "Juho Lee",
+      "Yoonho Lee",
+      "Jungtaek Kim",
+      "Adam R. Kosiorek",
+      "Seungjin Choi",
+      "Yee Whye Teh"
+    ],
+    "year": "2018",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.LG"
+  },
+  "1810.00826": {
+    "title": "How Powerful are Graph Neural Networks?",
+    "authors": [
+      "Keyulu Xu",
+      "Weihua Hu",
+      "Jure Leskovec",
+      "Stefanie Jegelka"
+    ],
+    "year": "2018",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.LG"
+  },
+  "1811.00250": {
+    "title": "Filter Pruning via Geometric Median for Deep Convolutional Neural Networks Acceleration",
+    "authors": [
+      "Yang He",
+      "Ping Liu",
+      "Ziwei Wang",
+      "Zhilan Hu",
+      "Yi Yang"
+    ],
+    "year": "2018",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.CV"
+  },
+  "1810.02244": {
+    "title": "Weisfeiler and Leman Go Neural: Higher-order Graph Neural Networks",
+    "authors": [
+      "Christopher Morris",
+      "Martin Ritzert",
+      "Matthias Fey",
+      "William L. Hamilton",
+      "Jan Eric Lenssen",
+      "Gaurav Rattan",
+      "Martin Grohe"
+    ],
+    "year": "2018",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.LG"
+  },
+  "1811.03508": {
+    "title": "A simple yet effective baseline for non-attributed graph classification",
+    "authors": [
+      "Chen Cai",
+      "Yusu Wang"
+    ],
+    "year": "2018",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.LG"
+  },
+  "1803.03735": {
+    "title": "Attention-based Graph Neural Network for Semi-supervised Learning",
+    "authors": [
+      "Kiran K. Thekumparampil",
+      "Chong Wang",
+      "Sewoong Oh",
+      "Li-Jia Li"
+    ],
+    "year": "2018",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "stat.ML"
+  },
+  "1803.08494": {
+    "title": "Group Normalization",
+    "authors": [
+      "Yuxin Wu",
+      "Kaiming He"
+    ],
+    "year": "2018",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.CV"
+  },
+  "1806.08804": {
+    "title": "Hierarchical Graph Representation Learning with Differentiable Pooling",
+    "authors": [
+      "Rex Ying",
+      "Jiaxuan You",
+      "Christopher Morris",
+      "Xiang Ren",
+      "William L. Hamilton",
+      "Jure Leskovec"
+    ],
+    "year": "2018",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.LG"
+  },
+  "1806.03536": {
+    "title": "Representation Learning on Graphs with Jumping Knowledge Networks",
+    "authors": [
+      "Keyulu Xu",
+      "Chengtao Li",
+      "Yonglong Tian",
+      "Tomohiro Sonobe",
+      "Ken-ichi Kawarabayashi",
+      "Stefanie Jegelka"
+    ],
+    "year": "2018",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.LG"
+  },
+  "1806.01261": {
+    "title": "Relational inductive biases, deep learning, and graph networks",
+    "authors": [
+      "Peter W. Battaglia",
+      "Jessica B. Hamrick",
+      "Victor Bapst",
+      "Alvaro Sanchez-Gonzalez",
+      "Vinicius Zambaldi",
+      "Mateusz Malinowski",
+      "Andrea Tacchetti",
+      "David Raposo",
+      "Adam Santoro",
+      "Ryan Faulkner",
+      "Caglar Gulcehre",
+      "Francis Song",
+      "Andrew Ballard",
+      "Justin Gilmer",
+      "George Dahl",
+      "Ashish Vaswani",
+      "Kelsey Allen",
+      "Charles Nash",
+      "Victoria Langston",
+      "Chris Dyer",
+      "Nicolas Heess",
+      "Daan Wierstra",
+      "Pushmeet Kohli",
+      "Matt Botvinick",
+      "Oriol Vinyals",
+      "Yujia Li",
+      "Razvan Pascanu"
+    ],
+    "year": "2018",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.LG"
+  },
+  "1808.05689": {
+    "title": "SimGNN: A Neural Network Approach to Fast Graph Similarity Computation",
+    "authors": [
+      "Yunsheng Bai",
+      "Hao Ding",
+      "Song Bian",
+      "Ting Chen",
+      "Yizhou Sun",
+      "Wei Wang"
+    ],
+    "year": "2018",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.LG"
+  },
+  "1811.05868": {
+    "title": "Pitfalls of Graph Neural Network Evaluation",
+    "authors": [
+      "Oleksandr Shchur",
+      "Maximilian Mumme",
+      "Aleksandar Bojchevski",
+      "Stephan Günnemann"
+    ],
+    "year": "2018",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.LG"
+  },
+  "1809.05910": {
+    "title": "MeshCNN: A Network with an Edge",
+    "authors": [
+      "Rana Hanocka",
+      "Amir Hertz",
+      "Noa Fish",
+      "Raja Giryes",
+      "Shachar Fleishman",
+      "Daniel Cohen-Or"
+    ],
+    "year": "2018",
+    "doi": "10.1145/3306346.3322959",
+    "journal_ref": "",
+    "primary_cat": "cs.LG"
+  },
+  "1811.01287": {
+    "title": "Towards Sparse Hierarchical Graph Classifiers",
+    "authors": [
+      "Cătălina Cangea",
+      "Petar Veličković",
+      "Nikola Jovanović",
+      "Thomas Kipf",
+      "Pietro Liò"
+    ],
+    "year": "2018",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "stat.ML"
+  },
+  "1802.09238": {
+    "title": "Towards Exact Molecular Dynamics Simulations with Machine-Learned Force Fields",
+    "authors": [
+      "Stefan Chmiela",
+      "Huziel E. Sauceda",
+      "Klaus-Robert Müller",
+      "Alexandre Tkatchenko"
+    ],
+    "year": "2018",
+    "doi": "10.1038/s41467-018-06169-2",
+    "journal_ref": "Nature Communications 9, 3887 (2018)",
+    "primary_cat": "physics.chem-ph"
+  },
+  "1802.05957": {
+    "title": "Spectral Normalization for Generative Adversarial Networks",
+    "authors": [
+      "Takeru Miyato",
+      "Toshiki Kataoka",
+      "Masanori Koyama",
+      "Yuichi Yoshida"
+    ],
+    "year": "2018",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.LG"
+  },
+  "1803.05407": {
+    "title": "Averaging Weights Leads to Wider Optima and Better Generalization",
+    "authors": [
+      "Pavel Izmailov",
+      "Dmitrii Podoprikhin",
+      "Timur Garipov",
+      "Dmitry Vetrov",
+      "Andrew Gordon Wilson"
+    ],
+    "year": "2018",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.LG"
+  },
+  "1905.02244": {
+    "title": "Searching for MobileNetV3",
+    "authors": [
+      "Andrew Howard",
+      "Mark Sandler",
+      "Grace Chu",
+      "Liang-Chieh Chen",
+      "Bo Chen",
+      "Mingxing Tan",
+      "Weijun Wang",
+      "Yukun Zhu",
+      "Ruoming Pang",
+      "Vijay Vasudevan",
+      "Quoc V. Le",
+      "Hartwig Adam"
+    ],
+    "year": "2019",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.CV"
+  },
+  "1903.03894": {
+    "title": "GNNExplainer: Generating Explanations for Graph Neural Networks",
+    "authors": [
+      "Rex Ying",
+      "Dylan Bourgeois",
+      "Jiaxuan You",
+      "Marinka Zitnik",
+      "Jure Leskovec"
+    ],
+    "year": "2019",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.LG"
+  },
+  "1904.05530": {
+    "title": "Recurrent Event Network: Autoregressive Structure Inference over Temporal Knowledge Graphs",
+    "authors": [
+      "Woojeong Jin",
+      "Meng Qu",
+      "Xisen Jin",
+      "Xiang Ren"
+    ],
+    "year": "2019",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.LG"
+  },
+  "1905.11605": {
+    "title": "Cross-lingual Knowledge Graph Alignment via Graph Matching Neural Network",
+    "authors": [
+      "Kun Xu",
+      "Liwei Wang",
+      "Mo Yu",
+      "Yansong Feng",
+      "Yan Song",
+      "Zhiguo Wang",
+      "Dong Yu"
+    ],
+    "year": "2019",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.LG"
+  },
+  "1905.10965": {
+    "title": "A closed-form formula for the Kullback-Leibler divergence between Cauchy distributions",
+    "authors": [
+      "Frédéric Chyzak",
+      "Frank Nielsen"
+    ],
+    "year": "2019",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.IT"
+  },
+  "1905.07953": {
+    "title": "Cluster-GCN: An Efficient Algorithm for Training Deep and Large Graph Convolutional Networks",
+    "authors": [
+      "Wei-Lin Chiang",
+      "Xuanqing Liu",
+      "Si Si",
+      "Yang Li",
+      "Samy Bengio",
+      "Cho-Jui Hsieh"
+    ],
+    "year": "2019",
+    "doi": "10.1145/3292500.3330925",
+    "journal_ref": "",
+    "primary_cat": "cs.LG"
+  },
+  "1902.10191": {
+    "title": "EvolveGCN: Evolving Graph Convolutional Networks for Dynamic Graphs",
+    "authors": [
+      "Aldo Pareja",
+      "Giacomo Domeniconi",
+      "Jie Chen",
+      "Tengfei Ma",
+      "Toyotaro Suzumura",
+      "Hiroki Kanezashi",
+      "Tim Kaler",
+      "Tao B. Schardl",
+      "Charles E. Leiserson"
+    ],
+    "year": "2019",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.LG"
+  },
+  "1904.08082": {
+    "title": "Self-Attention Graph Pooling",
+    "authors": [
+      "Junhyun Lee",
+      "Inyeop Lee",
+      "Jaewoo Kang"
+    ],
+    "year": "2019",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.LG"
+  },
+  "1904.03751": {
+    "title": "DeepGCNs: Can GCNs Go as Deep as CNNs?",
+    "authors": [
+      "Guohao Li",
+      "Matthias Müller",
+      "Ali Thabet",
+      "Bernard Ghanem"
+    ],
+    "year": "2019",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.CV"
+  },
+  "1901.08150": {
+    "title": "Hypergraph Convolution and Hypergraph Attention",
+    "authors": [
+      "Song Bai",
+      "Feihu Zhang",
+      "Philip H. S. Torr"
+    ],
+    "year": "2019",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.LG"
+  },
+  "1902.07153": {
+    "title": "Simplifying Graph Convolutional Networks",
+    "authors": [
+      "Felix Wu",
+      "Tianyi Zhang",
+      "Amauri Holanda de Souza",
+      "Christopher Fifty",
+      "Tao Yu",
+      "Kilian Q. Weinberger"
+    ],
+    "year": "2019",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.LG"
+  },
+  "1905.12265": {
+    "title": "Strategies for Pre-training Graph Neural Networks",
+    "authors": [
+      "Weihua Hu",
+      "Bowen Liu",
+      "Joseph Gomes",
+      "Marinka Zitnik",
+      "Percy Liang",
+      "Vijay Pande",
+      "Jure Leskovec"
+    ],
+    "year": "2019",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.LG"
+  },
+  "1905.02850": {
+    "title": "Understanding Attention and Generalization in Graph Neural Networks",
+    "authors": [
+      "Boris Knyazev",
+      "Graham W. Taylor",
+      "Mohamed R. Amer"
+    ],
+    "year": "2019",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.LG"
+  },
+  "1904.04849": {
+    "title": "Just Jump: Dynamic Neighborhood Aggregation in Graph Neural Networks",
+    "authors": [
+      "Matthias Fey"
+    ],
+    "year": "2019",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.LG"
+  },
+  "1904.12787": {
+    "title": "Graph Matching Networks for Learning the Similarity of Graph Structured Objects",
+    "authors": [
+      "Yujia Li",
+      "Chenjie Gu",
+      "Thomas Dullien",
+      "Oriol Vinyals",
+      "Pushmeet Kohli"
+    ],
+    "year": "2019",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.LG"
+  },
+  "1905.10990": {
+    "title": "Edge Contraction Pooling for Graph Neural Networks",
+    "authors": [
+      "Frederik Diehl"
+    ],
+    "year": "2019",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.LG"
+  },
+  "1904.05811": {
+    "title": "Relational Graph Attention Networks",
+    "authors": [
+      "Dan Busbridge",
+      "Dane Sherburn",
+      "Pietro Cavallo",
+      "Nils Y. Hammerla"
+    ],
+    "year": "2019",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.LG"
+  },
+  "1905.05178": {
+    "title": "Graph U-Nets",
+    "authors": [
+      "Hongyang Gao",
+      "Shuiwang Ji"
+    ],
+    "year": "2019",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.LG"
+  },
+  "1905.00067": {
+    "title": "MixHop: Higher-Order Graph Convolutional Architectures via Sparsified Neighborhood Mixing",
+    "authors": [
+      "Sami Abu-El-Haija",
+      "Bryan Perozzi",
+      "Amol Kapoor",
+      "Nazanin Alipourfard",
+      "Kristina Lerman",
+      "Hrayr Harutyunyan",
+      "Greg Ver Steeg",
+      "Aram Galstyan"
+    ],
+    "year": "2019",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.LG"
+  },
+  "1904.12058": {
+    "title": "Inductive Matrix Completion Based on Graph Neural Networks",
+    "authors": [
+      "Muhan Zhang",
+      "Yixin Chen"
+    ],
+    "year": "2019",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.IR"
+  },
+  "1904.11943": {
+    "title": "SWALP : Stochastic Weight Averaging in Low-Precision Training",
+    "authors": [
+      "Guandao Yang",
+      "Tianyi Zhang",
+      "Polina Kirichenko",
+      "Junwen Bai",
+      "Andrew Gordon Wilson",
+      "Christopher De Sa"
+    ],
+    "year": "2019",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.LG"
+  },
+  "1903.07293": {
+    "title": "Heterogeneous Graph Attention Network",
+    "authors": [
+      "Xiao Wang",
+      "Houye Ji",
+      "Chuan Shi",
+      "Bai Wang",
+      "Peng Cui",
+      "P. Yu",
+      "Yanfang Ye"
+    ],
+    "year": "2019",
+    "doi": "",
+    "journal_ref": "WWW 2019",
+    "primary_cat": "cs.SI"
+  },
+  "1901.01343": {
+    "title": "Graph Neural Networks with convolutional ARMA filters",
+    "authors": [
+      "Filippo Maria Bianchi",
+      "Daniele Grattarola",
+      "Lorenzo Livi",
+      "Cesare Alippi"
+    ],
+    "year": "2019",
+    "doi": "10.1109/TPAMI.2021.3054830",
+    "journal_ref": "",
+    "primary_cat": "cs.LG"
+  },
+  "1902.07987": {
+    "title": "Learning representations of irregular particle-detector geometry with distance-weighted graph networks",
+    "authors": [
+      "Shah Rukh Qasim",
+      "Jan Kieseler",
+      "Yutaro Iiyama",
+      "Maurizio Pierini"
+    ],
+    "year": "2019",
+    "doi": "10.1140/epjc/s10052-019-7113-9",
+    "journal_ref": "Eur. Phys. J. C, 79 7 (2019) 608",
+    "primary_cat": "physics.data-an"
+  },
+  "1904.06376": {
+    "title": "Leveraging the bfloat16 Artificial Intelligence Datatype For Higher-Precision Computations",
+    "authors": [
+      "Greg Henry",
+      "Ping Tak Peter Tang",
+      "Alexander Heinecke"
+    ],
+    "year": "2019",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.MS"
+  },
+  "1906.01277": {
+    "title": "Wasserstein Weisfeiler-Lehman Graph Kernels",
+    "authors": [
+      "Matteo Togninalli",
+      "Elisabetta Ghisu",
+      "Felipe Llinares-López",
+      "Bastian Rieck",
+      "Karsten Borgwardt"
+    ],
+    "year": "2019",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.LG"
+  },
+  "1908.03265": {
+    "title": "On the Variance of the Adaptive Learning Rate and Beyond",
+    "authors": [
+      "Liyuan Liu",
+      "Haoming Jiang",
+      "Pengcheng He",
+      "Weizhu Chen",
+      "Xiaodong Liu",
+      "Jianfeng Gao",
+      "Jiawei Han"
+    ],
+    "year": "2019",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.LG"
+  },
+  "1911.07675": {
+    "title": "GraLSP: Graph Neural Networks with Local Structural Patterns",
+    "authors": [
+      "Yilun Jin",
+      "Guojie Song",
+      "Chuan Shi"
+    ],
+    "year": "2019",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.LG"
+  },
+  "1910.12091": {
+    "title": "Understanding Isomorphism Bias in Graph Data Sets",
+    "authors": [
+      "Sergei Ivanov",
+      "Sergei Sviridov",
+      "Evgeny Burnaev"
+    ],
+    "year": "2019",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.LG"
+  },
+  "2002.02126": {
+    "title": "LightGCN: Simplifying and Powering Graph Convolution Network for Recommendation",
+    "authors": [
+      "Xiangnan He",
+      "Kuan Deng",
+      "Xiang Wang",
+      "Yan Li",
+      "Yongdong Zhang",
+      "Meng Wang"
+    ],
+    "year": "2020",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.IR"
+  },
+  "2002.05287": {
+    "title": "Geom-GCN: Geometric Graph Convolutional Networks",
+    "authors": [
+      "Hongbin Pei",
+      "Bingzhe Wei",
+      "Kevin Chen-Chuan Chang",
+      "Yu Lei",
+      "Bo Yang"
+    ],
+    "year": "2020",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.LG"
+  },
+  "1905.13727": {
+    "title": "PowerSGD: Practical Low-Rank Gradient Compression for Distributed Optimization",
+    "authors": [
+      "Thijs Vogels",
+      "Sai Praneeth Karimireddy",
+      "Martin Jaggi"
+    ],
+    "year": "2019",
+    "doi": "",
+    "journal_ref": "NeurIPS 2019",
+    "primary_cat": "cs.LG"
+  },
+  "1909.12223": {
+    "title": "PairNorm: Tackling Oversmoothing in GNNs",
+    "authors": [
+      "Lingxiao Zhao",
+      "Leman Akoglu"
+    ],
+    "year": "2019",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.LG"
+  },
+  "1911.05485": {
+    "title": "Diffusion Improves Graph Learning",
+    "authors": [
+      "Johannes Gasteiger",
+      "Stefan Weißenberger",
+      "Stephan Günnemann"
+    ],
+    "year": "2019",
+    "doi": "",
+    "journal_ref": "Thirty-third Conference on Neural Information Processing Systems (NeurIPS), Vancouver, Canada, 2019",
+    "primary_cat": "cs.SI"
+  },
+  "1907.02204": {
+    "title": "Improving Attention Mechanism in Graph Neural Networks via Cardinality Preservation",
+    "authors": [
+      "Shuo Zhang",
+      "Lei Xie"
+    ],
+    "year": "2019",
+    "doi": "10.24963/ijcai.2020/194",
+    "journal_ref": "",
+    "primary_cat": "cs.LG"
+  },
+  "1909.09501": {
+    "title": "Trivializations for Gradient-Based Optimization on Manifolds",
+    "authors": [
+      "Mario Lezcano-Casado"
+    ],
+    "year": "2019",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.LG"
+  },
+  "2002.01680": {
+    "title": "MAGNN: Metapath Aggregated Graph Neural Network for Heterogeneous Graph Embedding",
+    "authors": [
+      "Xinyu Fu",
+      "Jiani Zhang",
+      "Ziqiao Meng",
+      "Irwin King"
+    ],
+    "year": "2020",
+    "doi": "10.1145/3366423.3380297",
+    "journal_ref": "",
+    "primary_cat": "cs.SI"
+  },
+  "1911.06136": {
+    "title": "KEPLER: A Unified Model for Knowledge Embedding and Pre-trained Language Representation",
+    "authors": [
+      "Xiaozhi Wang",
+      "Tianyu Gao",
+      "Zhaocheng Zhu",
+      "Zhengyan Zhang",
+      "Zhiyuan Liu",
+      "Juanzi Li",
+      "Jian Tang"
+    ],
+    "year": "2019",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.CL"
+  },
+  "1911.07979": {
+    "title": "ASAP: Adaptive Structure Aware Pooling for Learning Hierarchical Graph Representations",
+    "authors": [
+      "Ekagra Ranjan",
+      "Soumya Sanyal",
+      "Partha Pratim Talukdar"
+    ],
+    "year": "2019",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.LG"
+  },
+  "1907.06845": {
+    "title": "The continuous Bernoulli: fixing a pervasive error in variational autoencoders",
+    "authors": [
+      "Gabriel Loaiza-Ganem",
+      "John P. Cunningham"
+    ],
+    "year": "2019",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "stat.ML"
+  },
+  "1905.13686": {
+    "title": "Explainability Techniques for Graph Convolutional Networks",
+    "authors": [
+      "Federico Baldassarre",
+      "Hossein Azizpour"
+    ],
+    "year": "2019",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.LG"
+  },
+  "1907.05600": {
+    "title": "Generative Modeling by Estimating Gradients of the Data Distribution",
+    "authors": [
+      "Yang Song",
+      "Stefano Ermon"
+    ],
+    "year": "2019",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.LG"
+  },
+  "1910.02054": {
+    "title": "ZeRO: Memory Optimizations Toward Training Trillion Parameter Models",
+    "authors": [
+      "Samyam Rajbhandari",
+      "Jeff Rasley",
+      "Olatunji Ruwase",
+      "Yuxiong He"
+    ],
+    "year": "2019",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.LG"
+  },
+  "1908.02591": {
+    "title": "Anti-Money Laundering in Bitcoin: Experimenting with Graph Convolutional Networks for Financial Forensics",
+    "authors": [
+      "Mark Weber",
+      "Giacomo Domeniconi",
+      "Jie Chen",
+      "Daniel Karl I. Weidele",
+      "Claudio Bellei",
+      "Tom Robinson",
+      "Charles E. Leiserson"
+    ],
+    "year": "2019",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.SI"
+  },
+  "1909.13021": {
+    "title": "Multi-scale Attributed Node Embedding",
+    "authors": [
+      "Benedek Rozemberczki",
+      "Carl Allen",
+      "Rik Sarkar"
+    ],
+    "year": "2019",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.LG"
+  },
+  "1907.04931": {
+    "title": "GraphSAINT: Graph Sampling Based Inductive Learning Method",
+    "authors": [
+      "Hanqing Zeng",
+      "Hongkuan Zhou",
+      "Ajitesh Srivastava",
+      "Rajgopal Kannan",
+      "Viktor Prasanna"
+    ],
+    "year": "2019",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.LG"
+  },
+  "1906.12192": {
+    "title": "GNN-FiLM: Graph Neural Networks with Feature-wise Linear Modulation",
+    "authors": [
+      "Marc Brockschmidt"
+    ],
+    "year": "2019",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.LG"
+  },
+  "1908.08681": {
+    "title": "Mish: A Self Regularized Non-Monotonic Activation Function",
+    "authors": [
+      "Diganta Misra"
+    ],
+    "year": "2019",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.LG"
+  },
+  "2001.02312": {
+    "title": "Stochastic Weight Averaging in Parallel: Large-Batch Training that Generalizes Well",
+    "authors": [
+      "Vipul Gupta",
+      "Santiago Akle Serrano",
+      "Dennis DeCoste"
+    ],
+    "year": "2020",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.LG"
+  },
+  "1907.00481": {
+    "title": "Spectral Clustering with Graph Neural Networks for Graph Pooling",
+    "authors": [
+      "Filippo Maria Bianchi",
+      "Daniele Grattarola",
+      "Cesare Alippi"
+    ],
+    "year": "2019",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.LG"
+  },
+  "2009.03294": {
+    "title": "GraphNorm: A Principled Approach to Accelerating Graph Neural Network Training",
+    "authors": [
+      "Tianle Cai",
+      "Shengjie Luo",
+      "Keyulu Xu",
+      "Di He",
+      "Tie-Yan Liu",
+      "Liwei Wang"
+    ],
+    "year": "2020",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.LG"
+  },
+  "2007.02901": {
+    "title": "Wiki-CS: A Wikipedia-Based Benchmark for Graph Neural Networks",
+    "authors": [
+      "Péter Mernyei",
+      "Cătălina Cangea"
+    ],
+    "year": "2020",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.LG"
+  },
+  "2005.07959": {
+    "title": "Characteristic Functions on Graphs: Birds of a Feather, from Statistical Descriptors to Parametric Models",
+    "authors": [
+      "Benedek Rozemberczki",
+      "Rik Sarkar"
+    ],
+    "year": "2020",
+    "doi": "",
+    "journal_ref": "CIKM 2020",
+    "primary_cat": "cs.LG"
+  },
+  "2005.00687": {
+    "title": "Open Graph Benchmark: Datasets for Machine Learning on Graphs",
+    "authors": [
+      "Weihua Hu",
+      "Matthias Fey",
+      "Marinka Zitnik",
+      "Yuxiao Dong",
+      "Hongyu Ren",
+      "Bowen Liu",
+      "Michele Catasta",
+      "Jure Leskovec"
+    ],
+    "year": "2020",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.LG"
+  },
+  "2006.16811": {
+    "title": "Path Integral Based Convolution and Pooling for Graph Neural Networks",
+    "authors": [
+      "Zheng Ma",
+      "Junyu Xuan",
+      "Yu Guang Wang",
+      "Ming Li",
+      "Pietro Lio"
+    ],
+    "year": "2020",
+    "doi": "10.1088/1742-5468/ac3ae4",
+    "journal_ref": "NeurIPS 2020",
+    "primary_cat": "cs.LG"
+  },
+  "2006.16904": {
+    "title": "Graph Clustering with Graph Neural Networks",
+    "authors": [
+      "Anton Tsitsulin",
+      "John Palowitch",
+      "Bryan Perozzi",
+      "Emmanuel Müller"
+    ],
+    "year": "2020",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.LG"
+  },
+  "2007.03545": {
+    "title": "Network Embedding with Completely-imbalanced Labels",
+    "authors": [
+      "Zheng Wang",
+      "Xiaojun Ye",
+      "Chaokun Wang",
+      "Jian Cui",
+      "Philip S. Yu"
+    ],
+    "year": "2020",
+    "doi": "10.1109/TKDE.2020.2971490",
+    "journal_ref": "",
+    "primary_cat": "cs.LG"
+  },
+  "2006.07739": {
+    "title": "DeeperGCN: All You Need to Train Deeper GCNs",
+    "authors": [
+      "Guohao Li",
+      "Chenxin Xiong",
+      "Ali Thabet",
+      "Bernard Ghanem"
+    ],
+    "year": "2020",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.LG"
+  },
+  "2003.01332": {
+    "title": "Heterogeneous Graph Transformer",
+    "authors": [
+      "Ziniu Hu",
+      "Yuxiao Dong",
+      "Kuansan Wang",
+      "Yizhou Sun"
+    ],
+    "year": "2020",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.LG"
+  },
+  "2004.11198": {
+    "title": "SIGN: Scalable Inception Graph Neural Networks",
+    "authors": [
+      "Fabrizio Frasca",
+      "Emanuele Rossi",
+      "Davide Eynard",
+      "Ben Chamberlain",
+      "Michael Bronstein",
+      "Federico Monti"
+    ],
+    "year": "2020",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.LG"
+  },
+  "2006.11239": {
+    "title": "Denoising Diffusion Probabilistic Models",
+    "authors": [
+      "Jonathan Ho",
+      "Ajay Jain",
+      "Pieter Abbeel"
+    ],
+    "year": "2020",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.LG"
+  },
+  "2007.02133": {
+    "title": "Simple and Deep Graph Convolutional Networks",
+    "authors": [
+      "Ming Chen",
+      "Zhewei Wei",
+      "Zengfeng Huang",
+      "Bolin Ding",
+      "Yaliang Li"
+    ],
+    "year": "2020",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.LG"
+  },
+  "2003.00982": {
+    "title": "Benchmarking Graph Neural Networks",
+    "authors": [
+      "Vijay Prakash Dwivedi",
+      "Chaitanya K. Joshi",
+      "Anh Tuan Luu",
+      "Thomas Laurent",
+      "Yoshua Bengio",
+      "Xavier Bresson"
+    ],
+    "year": "2020",
+    "doi": "",
+    "journal_ref": "Journal of Machine Learning Research (JMLR), 2022",
+    "primary_cat": "cs.LG"
+  },
+  "2003.13663": {
+    "title": "Revisiting Over-smoothing in Deep GCNs",
+    "authors": [
+      "Chaoqi Yang",
+      "Ruijie Wang",
+      "Shuochao Yao",
+      "Shengzhong Liu",
+      "Tarek Abdelzaher"
+    ],
+    "year": "2020",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.LG"
+  },
+  "2006.10637": {
+    "title": "Temporal Graph Networks for Deep Learning on Dynamic Graphs",
+    "authors": [
+      "Emanuele Rossi",
+      "Ben Chamberlain",
+      "Fabrizio Frasca",
+      "Davide Eynard",
+      "Federico Monti",
+      "Michael Bronstein"
+    ],
+    "year": "2020",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.LG"
+  },
+  "2007.09593": {
+    "title": "On the role of gradients for machine learning of molecular energies and forces",
+    "authors": [
+      "Anders S. Christensen",
+      "O. Anatole von Lilienfeld"
+    ],
+    "year": "2020",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "physics.chem-ph"
+  },
+  "2004.05718": {
+    "title": "Principal Neighbourhood Aggregation for Graph Nets",
+    "authors": [
+      "Gabriele Corso",
+      "Luca Cavalleri",
+      "Dominique Beaini",
+      "Pietro Liò",
+      "Petar Veličković"
+    ],
+    "year": "2020",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.LG"
+  },
+  "2002.09518": {
+    "title": "Memory-Based Graph Networks",
+    "authors": [
+      "Amir Hosein Khasahmadi",
+      "Kaveh Hassani",
+      "Parsa Moradi",
+      "Leo Lee",
+      "Quaid Morris"
+    ],
+    "year": "2020",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.LG"
+  },
+  "2009.00826": {
+    "title": "PANE: scalable and effective attributed network embedding",
+    "authors": [
+      "Renchi Yang",
+      "Jieming Shi",
+      "Xiaokui Xiao",
+      "Yin Yang",
+      "Sourav S. Bhowmick",
+      "Juncheng Liu"
+    ],
+    "year": "2020",
+    "doi": "10.1007/s00778-023-00790-4",
+    "journal_ref": "",
+    "primary_cat": "cs.SI"
+  },
+  "2006.11468": {
+    "title": "Beyond Homophily in Graph Neural Networks: Current Limitations and Effective Designs",
+    "authors": [
+      "Jiong Zhu",
+      "Yujun Yan",
+      "Lingxiao Zhao",
+      "Mark Heimann",
+      "Leman Akoglu",
+      "Danai Koutra"
+    ],
+    "year": "2020",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.LG"
+  },
+  "2006.06972": {
+    "title": "Towards Deeper Graph Neural Networks with Differentiable Group Normalization",
+    "authors": [
+      "Kaixiong Zhou",
+      "Xiao Huang",
+      "Yuening Li",
+      "Daochen Zha",
+      "Rui Chen",
+      "Xia Hu"
+    ],
+    "year": "2020",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.LG"
+  },
+  "2003.01251": {
+    "title": "Point-GNN: Graph Neural Network for 3D Object Detection in a Point Cloud",
+    "authors": [
+      "Weijing Shi",
+      " Ragunathan",
+      " Rajkumar"
+    ],
+    "year": "2020",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.CV"
+  },
+  "2004.13336": {
+    "title": "Automatic Cross-Replica Sharding of Weight Update in Data-Parallel Training",
+    "authors": [
+      "Yuanzhong Xu",
+      "HyoukJoong Lee",
+      "Dehao Chen",
+      "Hongjun Choi",
+      "Blake Hechtman",
+      "Shibo Wang"
+    ],
+    "year": "2020",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.DC"
+  },
+  "2009.03509": {
+    "title": "Masked Label Prediction: Unified Message Passing Model for Semi-Supervised Classification",
+    "authors": [
+      "Yunsheng Shi",
+      "Zhengjie Huang",
+      "Shikun Feng",
+      "Hui Zhong",
+      "Wenjin Wang",
+      "Yu Sun"
+    ],
+    "year": "2020",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.LG"
+  },
+  "2003.03123": {
+    "title": "Directional Message Passing for Molecular Graphs",
+    "authors": [
+      "Johannes Gasteiger",
+      "Janek Groß",
+      "Stephan Günnemann"
+    ],
+    "year": "2020",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.LG"
+  },
+  "2010.13993": {
+    "title": "Combining Label Propagation and Simple Models Out-performs Graph Neural Networks",
+    "authors": [
+      "Qian Huang",
+      "Horace He",
+      "Abhay Singh",
+      "Ser-Nam Lim",
+      "Austin R. Benson"
+    ],
+    "year": "2020",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.LG"
+  },
+  "2011.04573": {
+    "title": "Parameterized Explainer for Graph Neural Network",
+    "authors": [
+      "Dongsheng Luo",
+      "Wei Cheng",
+      "Dongkuan Xu",
+      "Wenchao Yu",
+      "Bo Zong",
+      "Haifeng Chen",
+      "Xiang Zhang"
+    ],
+    "year": "2020",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.LG"
+  },
+  "2102.11533": {
+    "title": "Accurate Learning of Graph Representations with Graph Multiset Pooling",
+    "authors": [
+      "Jinheon Baek",
+      "Minki Kang",
+      "Sung Ju Hwang"
+    ],
+    "year": "2021",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.LG"
+  },
+  "2106.07476": {
+    "title": "Training Graph Neural Networks with 1000 Layers",
+    "authors": [
+      "Guohao Li",
+      "Matthias Müller",
+      "Bernard Ghanem",
+      "Vladlen Koltun"
+    ],
+    "year": "2021",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.LG"
+  },
+  "2106.09671": {
+    "title": "Pseudo-Euclidean Attract-Repel Embeddings for Undirected Graphs",
+    "authors": [
+      "Alexander Peysakhovich",
+      "Anna Klimovskaia Susmel",
+      "Leon Bottou"
+    ],
+    "year": "2021",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.SI"
+  },
+  "2110.07875": {
+    "title": "Graph Neural Networks with Learnable Structural and Positional Representations",
+    "authors": [
+      "Vijay Prakash Dwivedi",
+      "Anh Tuan Luu",
+      "Thomas Laurent",
+      "Yoshua Bengio",
+      "Xavier Bresson"
+    ],
+    "year": "2021",
+    "doi": "",
+    "journal_ref": "ICLR 2022 (https://openreview.net/pdf?id=wTTjnvGphYj)",
+    "primary_cat": "cs.LG"
+  },
+  "2105.04854": {
+    "title": "Improving Molecular Graph Neural Network Explainability with Orthonormalization and Induced Sparsity",
+    "authors": [
+      "Ryan Henderson",
+      "Djork-Arné Clevert",
+      "Floriane Montanari"
+    ],
+    "year": "2021",
+    "doi": "",
+    "journal_ref": "Proceedings of the 38th International Conference on Machine Learning, PMLR 139:4203-4213, 2021",
+    "primary_cat": "stat.ML"
+  },
+  "2101.00797": {
+    "title": "Beyond Low-frequency Information in Graph Convolutional Networks",
+    "authors": [
+      "Deyu Bo",
+      "Xiao Wang",
+      "Chuan Shi",
+      "Huawei Shen"
+    ],
+    "year": "2021",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.LG"
+  },
+  "2012.09164": {
+    "title": "Point Transformer",
+    "authors": [
+      "Hengshuang Zhao",
+      "Li Jiang",
+      "Jiaya Jia",
+      "Philip Torr",
+      "Vladlen Koltun"
+    ],
+    "year": "2020",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.CV"
+  },
+  "2104.01481": {
+    "title": "Do We Need Anisotropic Graph Neural Networks?",
+    "authors": [
+      "Shyam A. Tailor",
+      "Felix L. Opolka",
+      "Pietro Liò",
+      "Nicholas D. Lane"
+    ],
+    "year": "2021",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.LG"
+  },
+  "2104.03058": {
+    "title": "Optimizing Memory Efficiency of Graph Neural Networks on Edge Computing Platforms",
+    "authors": [
+      "Ao Zhou",
+      "Jianlei Yang",
+      "Yeqi Gao",
+      "Tong Qiao",
+      "Yingjie Qi",
+      "Xiaoyi Wang",
+      "Yunli Chen",
+      "Pengcheng Dai",
+      "Weisheng Zhao",
+      "Chunming Hu"
+    ],
+    "year": "2021",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.LG"
+  },
+  "2012.00131": {
+    "title": "HydroNet: Benchmark Tasks for Preserving Intermolecular Interactions and Structural Motifs in Predictive and Generative Models for Molecular Data",
+    "authors": [
+      "Sutanay Choudhury",
+      "Jenna A. Bilbrey",
+      "Logan Ward",
+      "Sotiris S. Xantheas",
+      "Ian Foster",
+      "Joseph P. Heindel",
+      "Ben Blaiszik",
+      "Marcus E. Schwarting"
+    ],
+    "year": "2020",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.LG"
+  },
+  "2009.14794": {
+    "title": "Rethinking Attention with Performers",
+    "authors": [
+      "Krzysztof Choromanski",
+      "Valerii Likhosherstov",
+      "David Dohan",
+      "Xingyou Song",
+      "Andreea Gane",
+      "Tamas Sarlos",
+      "Peter Hawkins",
+      "Jared Davis",
+      "Afroz Mohiuddin",
+      "Lukasz Kaiser",
+      "David Belanger",
+      "Lucy Colwell",
+      "Adrian Weller"
+    ],
+    "year": "2020",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.LG"
+  },
+  "2011.14115": {
+    "title": "Fast and Uncertainty-Aware Directional Message Passing for Non-Equilibrium Molecules",
+    "authors": [
+      "Johannes Gasteiger",
+      "Shankari Giri",
+      "Johannes T. Margraf",
+      "Stephan Günnemann"
+    ],
+    "year": "2020",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.LG"
+  },
+  "2010.12878": {
+    "title": "Pathfinder Discovery Networks for Neural Message Passing",
+    "authors": [
+      "Benedek Rozemberczki",
+      "Peter Englert",
+      "Amol Kapoor",
+      "Martin Blais",
+      "Bryan Perozzi"
+    ],
+    "year": "2020",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.LG"
+  },
+  "2011.08843": {
+    "title": "Design Space for Graph Neural Networks",
+    "authors": [
+      "Jiaxuan You",
+      "Rex Ying",
+      "Jure Leskovec"
+    ],
+    "year": "2020",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.LG"
+  },
+  "2105.14491": {
+    "title": "How Attentive are Graph Attention Networks?",
+    "authors": [
+      "Shaked Brody",
+      "Uri Alon",
+      "Eran Yahav"
+    ],
+    "year": "2021",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.LG"
+  },
+  "2104.12259": {
+    "title": "User Preference-aware Fake News Detection",
+    "authors": [
+      "Yingtong Dou",
+      "Kai Shu",
+      "Congying Xia",
+      "Philip S. Yu",
+      "Lichao Sun"
+    ],
+    "year": "2021",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.SI"
+  },
+  "2110.14446": {
+    "title": "Large Scale Learning on Non-Homophilous Graphs: New Benchmarks and Strong Simple Methods",
+    "authors": [
+      "Derek Lim",
+      "Felix Hohne",
+      "Xiuyu Li",
+      "Sijia Linda Huang",
+      "Vaishnavi Gupta",
+      "Omkar Bhalerao",
+      "Ser-Nam Lim"
+    ],
+    "year": "2021",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.LG"
+  },
+  "2103.09430": {
+    "title": "OGB-LSC: A Large-Scale Challenge for Machine Learning on Graphs",
+    "authors": [
+      "Weihua Hu",
+      "Matthias Fey",
+      "Hongyu Ren",
+      "Maho Nakata",
+      "Yuxiao Dong",
+      "Jure Leskovec"
+    ],
+    "year": "2021",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.LG"
+  },
+  "2201.07858": {
+    "title": "Decoupling the Depth and Scope of Graph Neural Networks",
+    "authors": [
+      "Hanqing Zeng",
+      "Muhan Zhang",
+      "Yinglong Xia",
+      "Ajitesh Srivastava",
+      "Andrey Malevich",
+      "Rajgopal Kannan",
+      "Viktor Prasanna",
+      "Long Jin",
+      "Ren Chen"
+    ],
+    "year": "2022",
+    "doi": "",
+    "journal_ref": "Advances in Neural Information Processing Systems, 2021",
+    "primary_cat": "cs.LG"
+  },
+  "2106.07161": {
+    "title": "Heterogeneous Edge-Enhanced Graph Attention Network For Multi-Agent Trajectory Prediction",
+    "authors": [
+      "Xiaoyu Mo",
+      "Yang Xing",
+      "Chen Lv"
+    ],
+    "year": "2021",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.RO"
+  },
+  "2010.00577": {
+    "title": "Interpreting Graph Neural Networks for NLP With Differentiable Edge Masking",
+    "authors": [
+      "Michael Sejr Schlichtkrull",
+      "Nicola De Cao",
+      "Ivan Titov"
+    ],
+    "year": "2020",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.CL"
+  },
+  "2111.12128": {
+    "title": "On the Unreasonable Effectiveness of Feature propagation in Learning on Graphs with Missing Node Features",
+    "authors": [
+      "Emanuele Rossi",
+      "Henry Kenlay",
+      "Maria I. Gorinova",
+      "Benjamin Paul Chamberlain",
+      "Xiaowen Dong",
+      "Michael Bronstein"
+    ],
+    "year": "2021",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.LG"
+  },
+  "2110.03753": {
+    "title": "From Stars to Subgraphs: Uplifting Any GNN with Local Structure Awareness",
+    "authors": [
+      "Lingxiao Zhao",
+      "Wei Jin",
+      "Leman Akoglu",
+      "Neil Shah"
+    ],
+    "year": "2021",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.LG"
+  },
+  "2210.14709": {
+    "title": "Learning on Large-scale Text-attributed Graphs via Variational Inference",
+    "authors": [
+      "Jianan Zhao",
+      "Meng Qu",
+      "Chaozhuo Li",
+      "Hao Yan",
+      "Qian Liu",
+      "Rui Li",
+      "Xing Xie",
+      "Jian Tang"
+    ],
+    "year": "2022",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.LG"
+  },
+  "2211.05953": {
+    "title": "Breadth-First Pipeline Parallelism",
+    "authors": [
+      "Joel Lamy-Poirier"
+    ],
+    "year": "2022",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.DC"
+  },
+  "2212.09083": {
+    "title": "Influence-Based Mini-Batching for Graph Neural Networks",
+    "authors": [
+      "Johannes Gasteiger",
+      "Chendi Qian",
+      "Stephan Günnemann"
+    ],
+    "year": "2022",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.LG"
+  },
+  "2205.05198": {
+    "title": "Reducing Activation Recomputation in Large Transformer Models",
+    "authors": [
+      "Vijay Korthikanti",
+      "Jared Casper",
+      "Sangkug Lym",
+      "Lawrence McAfee",
+      "Michael Andersch",
+      "Mohammad Shoeybi",
+      "Bryan Catanzaro"
+    ],
+    "year": "2022",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.LG"
+  },
+  "2207.03579": {
+    "title": "DGraph: A Large-Scale Financial Dataset for Graph Anomaly Detection",
+    "authors": [
+      "Xuanwen Huang",
+      "Yang Yang",
+      "Yang Wang",
+      "Chunping Wang",
+      "Zhisheng Zhang",
+      "Jiarong Xu",
+      "Lei Chen",
+      "Michalis Vazirgiannis"
+    ],
+    "year": "2022",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.SI"
+  },
+  "2302.11636": {
+    "title": "Do We Really Need Complicated Model Architectures For Temporal Networks?",
+    "authors": [
+      "Weilin Cong",
+      "Si Zhang",
+      "Jian Kang",
+      "Baichuan Yuan",
+      "Hao Wu",
+      "Xin Zhou",
+      "Hanghang Tong",
+      "Mehrdad Mahdavi"
+    ],
+    "year": "2023",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.LG"
+  },
+  "2305.19523": {
+    "title": "Harnessing Explanations: LLM-to-LM Interpreter for Enhanced Text-Attributed Graph Representation Learning",
+    "authors": [
+      "Xiaoxin He",
+      "Xavier Bresson",
+      "Thomas Laurent",
+      "Adam Perold",
+      "Yann LeCun",
+      "Bryan Hooi"
+    ],
+    "year": "2023",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.LG"
+  },
+  "2206.09677": {
+    "title": "GraphFramEx: Towards Systematic Evaluation of Explainability Methods for Graph Neural Networks",
+    "authors": [
+      "Kenza Amara",
+      "Rex Ying",
+      "Zitao Zhang",
+      "Zhihao Han",
+      "Yinan Shan",
+      "Ulrik Brandes",
+      "Sebastian Schemm",
+      "Ce Zhang"
+    ],
+    "year": "2022",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.LG"
+  },
+  "2306.06202": {
+    "title": "NeuroGraph: Benchmarks for Graph Machine Learning in Brain Connectomics",
+    "authors": [
+      "Anwar Said",
+      "Roza G. Bayrak",
+      "Tyler Derr",
+      "Mudassir Shabbir",
+      "Daniel Moyer",
+      "Catie Chang",
+      "Xenofon Koutsoukos"
+    ],
+    "year": "2023",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.LG"
+  },
+  "2302.11640": {
+    "title": "A critical look at the evaluation of GNNs under heterophily: Are we really making progress?",
+    "authors": [
+      "Oleg Platonov",
+      "Denis Kuznedelev",
+      "Michael Diskin",
+      "Artem Babenko",
+      "Liudmila Prokhorenkova"
+    ],
+    "year": "2023",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.LG"
+  },
+  "2205.12454": {
+    "title": "Recipe for a General, Powerful, Scalable Graph Transformer",
+    "authors": [
+      "Ladislav Rampášek",
+      "Mikhail Galkin",
+      "Vijay Prakash Dwivedi",
+      "Anh Tuan Luu",
+      "Guy Wolf",
+      "Dominique Beaini"
+    ],
+    "year": "2022",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.LG"
+  },
+  "2208.09339": {
+    "title": "Evaluating Explainability for Graph Neural Networks",
+    "authors": [
+      "Chirag Agarwal",
+      "Owen Queen",
+      "Himabindu Lakkaraju",
+      "Marinka Zitnik"
+    ],
+    "year": "2022",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.LG"
+  },
+  "2212.08541": {
+    "title": "Learnable Commutative Monoids for Graph Neural Networks",
+    "authors": [
+      "Euan Ong",
+      "Petar Veličković"
+    ],
+    "year": "2022",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.LG"
+  },
+  "2305.11624": {
+    "title": "Efficient ConvBN Blocks for Transfer Learning and Beyond",
+    "authors": [
+      "Kaichao You",
+      "Guo Qin",
+      "Anchang Bao",
+      "Meng Cao",
+      "Ping Huang",
+      "Jiulong Shan",
+      "Mingsheng Long"
+    ],
+    "year": "2023",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.AI"
+  },
+  "2305.10498": {
+    "title": "Edge Directionality Improves Learning on Heterophilic Graphs",
+    "authors": [
+      "Emanuele Rossi",
+      "Bertrand Charpentier",
+      "Francesco Di Giovanni",
+      "Fabrizio Frasca",
+      "Stephan Günnemann",
+      "Michael Bronstein"
+    ],
+    "year": "2023",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.LG"
+  },
+  "2206.08164": {
+    "title": "Long Range Graph Benchmark",
+    "authors": [
+      "Vijay Prakash Dwivedi",
+      "Ladislav Rampášek",
+      "Mikhail Galkin",
+      "Ali Parviz",
+      "Guy Wolf",
+      "Anh Tuan Luu",
+      "Dominique Beaini"
+    ],
+    "year": "2022",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.LG"
+  },
+  "2212.09034": {
+    "title": "Graph Neural Networks are Inherently Good Generalizers: Insights by Bridging GNNs and MLPs",
+    "authors": [
+      "Chenxiao Yang",
+      "Qitian Wu",
+      "Jiahua Wang",
+      "Junchi Yan"
+    ],
+    "year": "2022",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.LG"
+  },
+  "2211.04952": {
+    "title": "Graph Neural Networks with Adaptive Readouts",
+    "authors": [
+      "David Buterez",
+      "Jon Paul Janet",
+      "Steven J. Kiddle",
+      "Dino Oglic",
+      "Pietro Liò"
+    ],
+    "year": "2022",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.LG"
+  },
+  "2202.12795": {
+    "title": "Equilibrium Aggregation: Encoding Sets via Optimization",
+    "authors": [
+      "Sergey Bartunov",
+      "Fabian B. Fuchs",
+      "Timothy Lillicrap"
+    ],
+    "year": "2022",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.LG"
+  },
+  "2306.10759": {
+    "title": "SGFormer: Simplifying and Empowering Transformers for Large-Graph Representations",
+    "authors": [
+      "Qitian Wu",
+      "Wentao Zhao",
+      "Chenxiao Yang",
+      "Hengrui Zhang",
+      "Fan Nie",
+      "Haitian Jiang",
+      "Yatao Bian",
+      "Junchi Yan"
+    ],
+    "year": "2023",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.LG"
+  },
+  "2210.07147": {
+    "title": "Global Explainability of GNNs via Logic Combination of Learned Concepts",
+    "authors": [
+      "Steve Azzolin",
+      "Antonio Longa",
+      "Pietro Barbiero",
+      "Pietro Liò",
+      "Andrea Passerini"
+    ],
+    "year": "2022",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.LG"
+  },
+  "2210.16518": {
+    "title": "ViSNet: an equivariant geometry-enhanced graph neural network with vector-scalar interactive message passing for molecules",
+    "authors": [
+      "Yusong Wang",
+      "Shaoning Li",
+      "Xinheng He",
+      "Mingyu Li",
+      "Zun Wang",
+      "Nanning Zheng",
+      "Bin Shao",
+      "Tie-Yan Liu",
+      "Tong Wang"
+    ],
+    "year": "2022",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "physics.chem-ph"
+  },
+  "2212.07564": {
+    "title": "AirfRANS: High Fidelity Computational Fluid Dynamics Dataset for Approximating Reynolds-Averaged Navier-Stokes Solutions",
+    "authors": [
+      "Florent Bonnet",
+      "Ahmed Jocelyn Mazari",
+      "Paola Cinnella",
+      "Patrick Gallinari"
+    ],
+    "year": "2022",
+    "doi": "",
+    "journal_ref": "36th Conference on Neural Information Processing Systems (NeurIPS 2022) Track on Datasets and Benchmarks",
+    "primary_cat": "cs.LG"
+  },
+  "2205.14135": {
+    "title": "FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness",
+    "authors": [
+      "Tri Dao",
+      "Daniel Y. Fu",
+      "Stefano Ermon",
+      "Atri Rudra",
+      "Christopher Ré"
+    ],
+    "year": "2022",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.LG"
+  },
+  "2302.13875": {
+    "title": "Evaluating Robustness and Uncertainty of Graph Models Under Structural Distributional Shifts",
+    "authors": [
+      "Gleb Bazhenov",
+      "Denis Kuznedelev",
+      "Andrey Malinin",
+      "Artem Babenko",
+      "Liudmila Prokhorenkova"
+    ],
+    "year": "2023",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.LG"
+  },
+  "2412.05496": {
+    "title": "Flex Attention: A Programming Model for Generating Optimized Attention Kernels",
+    "authors": [
+      "Juechu Dong",
+      "Boyuan Feng",
+      "Driss Guessous",
+      "Yanbo Liang",
+      "Horace He"
+    ],
+    "year": "2024",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.LG"
+  },
+  "2503.09008": {
+    "title": "Towards Quantifying Long-Range Interactions in Graph Machine Learning: a Large Graph Dataset and a Measurement",
+    "authors": [
+      "Huidong Liang",
+      "Haitz Sáez de Ocáriz Borde",
+      "Baskaran Sripathmanathan",
+      "Michael Bronstein",
+      "Xiaowen Dong"
+    ],
+    "year": "2025",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.LG"
+  },
+  "2403.01232": {
+    "title": "Polynormer: Polynomial-Expressive Graph Transformer in Linear Time",
+    "authors": [
+      "Chenhui Deng",
+      "Zichao Yue",
+      "Zhiru Zhang"
+    ],
+    "year": "2024",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.LG"
+  },
+  "2402.09353": {
+    "title": "DoRA: Weight-Decomposed Low-Rank Adaptation",
+    "authors": [
+      "Shih-Yang Liu",
+      "Chien-Yi Wang",
+      "Hongxu Yin",
+      "Pavlo Molchanov",
+      "Yu-Chiang Frank Wang",
+      "Kwang-Ting Cheng",
+      "Min-Hung Chen"
+    ],
+    "year": "2024",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.CL"
+  },
+  "2409.11856": {
+    "title": "Edge-Based Graph Component Pooling",
+    "authors": [
+      "T. Snelleman",
+      "B. M. Renting",
+      "H. H. Hoos",
+      "J. N. van Rijn"
+    ],
+    "year": "2024",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.LG"
+  },
+  "2307.07107": {
+    "title": "Graph Positional and Structural Encoder",
+    "authors": [
+      "Semih Cantürk",
+      "Renming Liu",
+      "Olivier Lapointe-Gagné",
+      "Vincent Létourneau",
+      "Guy Wolf",
+      "Dominique Beaini",
+      "Ladislav Rampášek"
+    ],
+    "year": "2023",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.LG"
+  },
+  "2406.07234": {
+    "title": "OPFData: Large-scale datasets for AC optimal power flow with topological perturbations",
+    "authors": [
+      "Sean Lovett",
+      "Miha Zgubic",
+      "Sofia Liguori",
+      "Sephora Madjiheurem",
+      "Hamish Tomlinson",
+      "Sophie Elster",
+      "Chris Apps",
+      "Sims Witherspoon",
+      "Luis Piloto"
+    ],
+    "year": "2024",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.LG"
+  },
+  "2307.08691": {
+    "title": "FlashAttention-2: Faster Attention with Better Parallelism and Work Partitioning",
+    "authors": [
+      "Tri Dao"
+    ],
+    "year": "2023",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.LG"
+  },
+  "2409.14500": {
+    "title": "GraphLand: Evaluating Graph Machine Learning Models on Diverse Industrial Data",
+    "authors": [
+      "Gleb Bazhenov",
+      "Oleg Platonov",
+      "Liudmila Prokhorenkova"
+    ],
+    "year": "2024",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.LG"
+  },
+  "2403.04747": {
+    "title": "GNN-VPA: A Variance-Preserving Aggregation Strategy for Graph Neural Networks",
+    "authors": [
+      "Lisa Schneckenreiter",
+      "Richard Freinschlag",
+      "Florian Sestak",
+      "Johannes Brandstetter",
+      "Günter Klambauer",
+      "Andreas Mayr"
+    ],
+    "year": "2024",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.LG"
+  },
+  "2308.06862": {
+    "title": "Effect of Choosing Loss Function when Using T-batching for Representation Learning on Dynamic Networks",
+    "authors": [
+      "Erfan Loghmani",
+      "MohammadAmin Fazli"
+    ],
+    "year": "2023",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.LG"
+  },
+  "2310.11009": {
+    "title": "LPFormer: An Adaptive Graph Transformer for Link Prediction",
+    "authors": [
+      "Harry Shomer",
+      "Yao Ma",
+      "Haitao Mao",
+      "Juanhui Li",
+      "Bo Wu",
+      "Jiliang Tang"
+    ],
+    "year": "2023",
+    "doi": "10.1145/3637528.3672025",
+    "journal_ref": "",
+    "primary_cat": "cs.LG"
+  },
+  "2402.07630": {
+    "title": "G-Retriever: Retrieval-Augmented Generation for Textual Graph Understanding and Question Answering",
+    "authors": [
+      "Xiaoxin He",
+      "Yijun Tian",
+      "Yifei Sun",
+      "Nitesh V. Chawla",
+      "Thomas Laurent",
+      "Yann LeCun",
+      "Xavier Bresson",
+      "Bryan Hooi"
+    ],
+    "year": "2024",
+    "doi": "",
+    "journal_ref": "",
+    "primary_cat": "cs.LG"
+  },
+  "2308.16139": {
+    "title": "MedShapeNet -- A Large-Scale Dataset of 3D Medical Shapes for Computer Vision",
+    "authors": [
+      "Jianning Li",
+      "Zongwei Zhou",
+      "Jiancheng Yang",
+      "Antonio Pepe",
+      "Christina Gsaxner",
+      "Gijs Luijten",
+      "Chongyu Qu",
+      "Tiezheng Zhang",
+      "Xiaoxi Chen",
+      "Wenxuan Li",
+      "Marek Wodzinski",
+      "Paul Friedrich",
+      "Kangxian Xie",
+      "Yuan Jin",
+      "Narmada Ambigapathy",
+      "Enrico Nasca",
+      "Naida Solak",
+      "Gian Marco Melito",
+      "Viet Duc Vu",
+      "Afaque R. Memon",
+      "Christopher Schlachta",
+      "Sandrine De Ribaupierre",
+      "Rajnikant Patel",
+      "Roy Eagleson",
+      "Xiaojun Chen",
+      "Heinrich Mächler",
+      "Jan Stefan Kirschke",
+      "Ezequiel de la Rosa",
+      "Patrick Ferdinand Christ",
+      "Hongwei Bran Li",
+      "David G. Ellis",
+      "Michele R. Aizenberg",
+      "Sergios Gatidis",
+      "Thomas Küstner",
+      "Nadya Shusharina",
+      "Nicholas Heller",
+      "Vincent Andrearczyk",
+      "Adrien Depeursinge",
+      "Mathieu Hatt",
+      "Anjany Sekuboyina",
+      "Maximilian Löffler",
+      "Hans Liebl",
+      "Reuben Dorent",
+      "Tom Vercauteren",
+      "Jonathan Shapey",
+      "Aaron Kujawa",
+      "Stefan Cornelissen",
+      "Patrick Langenhuizen",
+      "Achraf Ben-Hamadou",
+      "Ahmed Rekik",
+      "Sergi Pujades",
+      "Edmond Boyer",
+      "Federico Bolelli",
+      "Costantino Grana",
+      "Luca Lumetti",
+      "Hamidreza Salehi",
+      "Jun Ma",
+      "Yao Zhang",
+      "Ramtin Gharleghi",
+      "Susann Beier",
+      "Arcot Sowmya",
+      "Eduardo A. Garza-Villarreal",
+      "Thania Balducci",
+      "Diego Angeles-Valdez",
+      "Roberto Souza",
+      "Leticia Rittner",
+      "Richard Frayne",
+      "Yuanfeng Ji",
+      "Vincenzo Ferrari",
+      "Soumick Chatterjee",
+      "Florian Dubost",
+      "Stefanie Schreiber",
+      "Hendrik Mattern",
+      "Oliver Speck",
+      "Daniel Haehn",
+      "Christoph John",
+      "Andreas Nürnberger",
+      "João Pedrosa",
+      "Carlos Ferreira",
+      "Guilherme Aresta",
+      "António Cunha",
+      "Aurélio Campilho",
+      "Yannick Suter",
+      "Jose Garcia",
+      "Alain Lalande",
+      "Vicky Vandenbossche",
+      "Aline Van Oevelen",
+      "Kate Duquesne",
+      "Hamza Mekhzoum",
+      "Jef Vandemeulebroucke",
+      "Emmanuel Audenaert",
+      "Claudia Krebs",
+      "Timo van Leeuwen",
+      "Evie Vereecke",
+      "Hauke Heidemeyer",
+      "Rainer Röhrig",
+      "Frank Hölzle",
+      "Vahid Badeli",
+      "Kathrin Krieger",
+      "Matthias Gunzer",
+      "Jianxu Chen",
+      "Timo van Meegdenburg",
+      "Amin Dada",
+      "Miriam Balzer",
+      "Jana Fragemann",
+      "Frederic Jonske",
+      "Moritz Rempe",
+      "Stanislav Malorodov",
+      "Fin H. Bahnsen",
+      "Constantin Seibold",
+      "Alexander Jaus",
+      "Zdravko Marinov",
+      "Paul F. Jaeger",
+      "Rainer Stiefelhagen",
+      "Ana Sofia Santos",
+      "Mariana Lindo",
+      "André Ferreira",
+      "Victor Alves",
+      "Michael Kamp",
+      "Amr Abourayya",
+      "Felix Nensa",
+      "Fabian Hörst",
+      "Alexander Brehmer",
+      "Lukas Heine",
+      "Yannik Hanusrichter",
+      "Martin Weßling",
+      "Marcel Dudda",
+      "Lars E. Podleska",
+      "Matthias A. Fink",
+      "Julius Keyl",
+      "Konstantinos Tserpes",
+      "Moon-Sung Kim",
+      "Shireen Elhabian",
+      "Hans Lamecker",
+      "Dženan Zukić",
+      "Beatriz Paniagua",
+      "Christian Wachinger",
+      "Martin Urschler",
+      "Luc Duong",
+      "Jakob Wasserthal",
+      "Peter F. Hoyer",
+      "Oliver Basu",
+      "Thomas Maal",
+      "Max J. H. Witjes",
+      "Gregor Schiele",
+      "Ti-chiun Chang",
+      "Seyed-Ahmad Ahmadi",
+      "Ping Luo",
+      "Bjoern Menze",
+      "Mauricio Reyes",
+      "Thomas M. Deserno",
+      "Christos Davatzikos",
+      "Behrus Puladi",
+      "Pascal Fua",
+      "Alan L. Yuille",
+      "Jens Kleesiek",
+      "Jan Egger"
+    ],
+    "year": "2023",
+    "doi": "10.1515/bmt-2024-0396",
+    "journal_ref": "",
+    "primary_cat": "cs.CV"
+  }
+}

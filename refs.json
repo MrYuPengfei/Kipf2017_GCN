@@ -1,0 +1,2704 @@
+[
+  {
+    "arxiv_id": "0909.4061",
+    "doi": "",
+    "title": "",
+    "alt_titles": [],
+    "cited_by": [
+      "[torch] _lowrank"
+    ]
+  },
+  {
+    "arxiv_id": "1207.0580",
+    "doi": "",
+    "title": "",
+    "alt_titles": [],
+    "cited_by": [
+      "[torch] nn.modules.dropout:Dropout#extra_repr"
+    ]
+  },
+  {
+    "arxiv_id": "1212.5701",
+    "doi": "",
+    "title": "",
+    "alt_titles": [],
+    "cited_by": [
+      "[torch] optim.adadelta:Adadelta#step"
+    ]
+  },
+  {
+    "arxiv_id": "1402.1128",
+    "doi": "",
+    "title": "",
+    "alt_titles": [],
+    "cited_by": [
+      "[torch] nn.modules.rnn:LSTM#forward"
+    ]
+  },
+  {
+    "arxiv_id": "1411.4280",
+    "doi": "",
+    "title": "",
+    "alt_titles": [],
+    "cited_by": [
+      "[torch] nn.modules.dropout:Dropout1d#forward",
+      "[torch] nn.modules.dropout:Dropout2d#forward",
+      "[torch] nn.modules.dropout:Dropout3d#forward",
+      "[torch] nn.modules.dropout:FeatureAlphaDropout#forward"
+    ]
+  },
+  {
+    "arxiv_id": "1412.6071",
+    "doi": "",
+    "title": "",
+    "alt_titles": [],
+    "cited_by": [
+      "[torch] nn.functional",
+      "[torch] nn.modules.pooling:FractionalMaxPool2d#__setstate__",
+      "[torch] nn.modules.pooling:FractionalMaxPool3d#forward"
+    ]
+  },
+  {
+    "arxiv_id": "1412.6575",
+    "doi": "",
+    "title": "Embedding Entities and Relations for Learning and Inference in Knowledge Bases",
+    "alt_titles": [
+      "Embedding Entities and Relations for Learning and Inference in Knowledge Bases"
+    ],
+    "cited_by": [
+      "[pyg] nn.kge.distmult:DistMult#"
+    ]
+  },
+  {
+    "arxiv_id": "1412.6980",
+    "doi": "",
+    "title": "",
+    "alt_titles": [],
+    "cited_by": [
+      "[torch] optim.adam:Adam#step",
+      "[torch] optim.adamax:Adamax#step",
+      "[torch] optim.sparse_adam:SparseAdam#step"
+    ]
+  },
+  {
+    "arxiv_id": "1502.03167",
+    "doi": "",
+    "title": "Batch Normalization: Accelerating Deep Network Training by Reducing Internal Covariate Shift",
+    "alt_titles": [
+      "Batch Normalization: Accelerating Deep Network Training by Reducing Internal Covariate Shift"
+    ],
+    "cited_by": [
+      "[pyg] nn.norm.batch_norm:BatchNorm#",
+      "[pyg] nn.norm.batch_norm:HeteroBatchNorm#__repr__",
+      "[torch] nn.modules.batchnorm:BatchNorm1d#initialize_parameters",
+      "[torch] nn.modules.batchnorm:BatchNorm2d#_check_input_dim",
+      "[torch] nn.modules.batchnorm:BatchNorm3d#_check_input_dim",
+      "[torch] nn.modules.batchnorm:SyncBatchNorm#_check_input_dim"
+    ]
+  },
+  {
+    "arxiv_id": "1504.08083",
+    "doi": "",
+    "title": "",
+    "alt_titles": [],
+    "cited_by": [
+      "[torch] nn.modules.loss:SmoothL1Loss#forward"
+    ]
+  },
+  {
+    "arxiv_id": "1505.00853",
+    "doi": "",
+    "title": "",
+    "alt_titles": [],
+    "cited_by": [
+      "[torch] nn.modules.activation:RReLU#extra_repr"
+    ]
+  },
+  {
+    "arxiv_id": "1506.01186",
+    "doi": "",
+    "title": "",
+    "alt_titles": [],
+    "cited_by": [
+      "[torch] optim.lr_scheduler:CyclicLR#load_state_dict"
+    ]
+  },
+  {
+    "arxiv_id": "1506.02025",
+    "doi": "",
+    "title": "",
+    "alt_titles": [],
+    "cited_by": [
+      "[torch] nn.functional"
+    ]
+  },
+  {
+    "arxiv_id": "1506.05254",
+    "doi": "",
+    "title": "",
+    "alt_titles": [],
+    "cited_by": [
+      "[torch] distributions.__init__"
+    ]
+  },
+  {
+    "arxiv_id": "1509.09292",
+    "doi": "",
+    "title": "Convolutional Networks on Graphs for Learning Molecular Fingerprints",
+    "alt_titles": [
+      "Convolutional Networks on Graphs for Learning Molecular Fingerprints"
+    ],
+    "cited_by": [
+      "[pyg] nn.conv.mf_conv:MFConv#",
+      "[pyg] nn.models.neural_fingerprint:NeuralFingerprint#"
+    ]
+  },
+  {
+    "arxiv_id": "1511.05065",
+    "doi": "",
+    "title": "Proposal Flow",
+    "alt_titles": [
+      "Proposal Flow"
+    ],
+    "cited_by": [
+      "[pyg] datasets.pascal_pf:PascalPF#"
+    ]
+  },
+  {
+    "arxiv_id": "1511.05493",
+    "doi": "",
+    "title": "Gated Graph Sequence Neural Networks",
+    "alt_titles": [
+      "Gated Graph Sequence Neural Networks"
+    ],
+    "cited_by": [
+      "[pyg] nn.conv.gated_graph_conv:GatedGraphConv#"
+    ]
+  },
+  {
+    "arxiv_id": "1511.06391",
+    "doi": "",
+    "title": "Order Matters: Sequence to sequence for Sets",
+    "alt_titles": [
+      "Order Matters: Sequence to sequence for Sets"
+    ],
+    "cited_by": [
+      "[pyg] nn.aggr.set2set:Set2Set#"
+    ]
+  },
+  {
+    "arxiv_id": "1511.07289",
+    "doi": "",
+    "title": "",
+    "alt_titles": [],
+    "cited_by": [
+      "[torch] nn.modules.activation:ELU#forward"
+    ]
+  },
+  {
+    "arxiv_id": "1512.00567",
+    "doi": "",
+    "title": "",
+    "alt_titles": [],
+    "cited_by": [
+      "[torch] nn.functional",
+      "[torch] nn.modules.loss:LinearCrossEntropyLoss#forward",
+      "[torch] nn.modules.loss:probabilities#forward"
+    ]
+  },
+  {
+    "arxiv_id": "1602.07868",
+    "doi": "",
+    "title": "",
+    "alt_titles": [],
+    "cited_by": [
+      "[torch] nn.utils.parametrizations:_WeightNorm#weight_norm",
+      "[torch] nn.utils.weight_norm",
+      "[torch] nn.utils.weight_norm:WeightNorm#weight_norm"
+    ]
+  },
+  {
+    "arxiv_id": "1603.05201",
+    "doi": "",
+    "title": "",
+    "alt_titles": [],
+    "cited_by": [
+      "[torch] nn.modules.activation:ReLU#extra_repr"
+    ]
+  },
+  {
+    "arxiv_id": "1603.08861",
+    "doi": "",
+    "title": "Revisiting Semi-Supervised Learning with Graph Embeddings",
+    "alt_titles": [
+      "Revisiting Semi-Supervised Learning with Graph Embeddings"
+    ],
+    "cited_by": [
+      "[pyg] datasets.nell:NELL#",
+      "[pyg] datasets.planetoid:Planetoid#"
+    ]
+  },
+  {
+    "arxiv_id": "1606.06357",
+    "doi": "",
+    "title": "Complex Embeddings for Simple Link Prediction",
+    "alt_titles": [
+      "Complex Embeddings for Simple Link Prediction"
+    ],
+    "cited_by": [
+      "[pyg] nn.kge.complex:ComplEx#"
+    ]
+  },
+  {
+    "arxiv_id": "1606.08415",
+    "doi": "",
+    "title": "",
+    "alt_titles": [],
+    "cited_by": [
+      "[torch] nn.functional",
+      "[torch] nn.modules.activation:SiLU#forward"
+    ]
+  },
+  {
+    "arxiv_id": "1606.09375",
+    "doi": "",
+    "title": "Convolutional Neural Networks on Graphs with Fast Localized Spectral Filtering",
+    "alt_titles": [
+      "Convolutional Neural Networks on Graphs with Fast Localized Spectral Filtering"
+    ],
+    "cited_by": [
+      "[pyg] nn.conv.cheb_conv:ChebConv#"
+    ]
+  },
+  {
+    "arxiv_id": "1607.00653",
+    "doi": "",
+    "title": "node2vec: Scalable Feature Learning for Networks",
+    "alt_titles": [
+      "node2vec: Scalable Feature Learning for Networks"
+    ],
+    "cited_by": [
+      "[pyg] nn.models.node2vec:Node2Vec#"
+    ]
+  },
+  {
+    "arxiv_id": "1607.06450",
+    "doi": "",
+    "title": "Layer Normalization",
+    "alt_titles": [
+      "Layer Normalization"
+    ],
+    "cited_by": [
+      "[pyg] nn.norm.layer_norm:HeteroLayerNorm#__repr__",
+      "[pyg] nn.norm.layer_norm:LayerNorm#",
+      "[torch] nn.modules.normalization:LayerNorm#extra_repr"
+    ]
+  },
+  {
+    "arxiv_id": "1607.08022",
+    "doi": "",
+    "title": "Instance Normalization: The Missing Ingredient for Fast Stylization",
+    "alt_titles": [
+      "Instance Normalization: The Missing Ingredient for Fast Stylization"
+    ],
+    "cited_by": [
+      "[pyg] nn.norm.instance_norm:InstanceNorm#",
+      "[torch] nn.modules.instancenorm:InstanceNorm1d#forward",
+      "[torch] nn.modules.instancenorm:InstanceNorm2d#_check_input_dim",
+      "[torch] nn.modules.instancenorm:InstanceNorm3d#_check_input_dim"
+    ]
+  },
+  {
+    "arxiv_id": "1608.03983",
+    "doi": "",
+    "title": "",
+    "alt_titles": [],
+    "cited_by": [
+      "[torch] optim.lr_scheduler:CosineAnnealingLR#_get_closed_form_lr",
+      "[torch] optim.lr_scheduler:CosineAnnealingWarmRestarts#load_state_dict"
+    ]
+  },
+  {
+    "arxiv_id": "1609.02907",
+    "doi": "",
+    "title": "Semi-supervised Classification with Graph Convolutional Networks",
+    "alt_titles": [
+      "Semi-supervised Classification with Graph Convolutional Networks"
+    ],
+    "cited_by": [
+      "[pyg] datasets.karate:KarateClub#",
+      "[pyg] nn.conv.gcn_conv:GCNConv#gcn_norm",
+      "[pyg] nn.models.basic_gnn:GCN#__repr__",
+      "[pyg] transforms.gcn_norm:GCNNorm#",
+      "[pyg] transforms.random_node_split:RandomNodeSplit#"
+    ]
+  },
+  {
+    "arxiv_id": "1609.04309",
+    "doi": "",
+    "title": "",
+    "alt_titles": [],
+    "cited_by": [
+      "[torch] nn.modules.adaptive:AdaptiveLogSoftmaxWithLoss#"
+    ]
+  },
+  {
+    "arxiv_id": "1609.05158",
+    "doi": "",
+    "title": "",
+    "alt_titles": [],
+    "cited_by": [
+      "[torch] nn.modules.pixelshuffle:PixelShuffle#",
+      "[torch] nn.modules.pixelshuffle:PixelUnshuffle#extra_repr"
+    ]
+  },
+  {
+    "arxiv_id": "1610.02415",
+    "doi": "",
+    "title": "Automatic Chemical Design Using a Data-Driven Continuous Representation of Molecules",
+    "alt_titles": [
+      "Automatic Chemical Design Using a Data-Driven Continuous Representation of Molecules"
+    ],
+    "cited_by": [
+      "[pyg] datasets.zinc:ZINC#"
+    ]
+  },
+  {
+    "arxiv_id": "1611.00712",
+    "doi": "",
+    "title": "",
+    "alt_titles": [],
+    "cited_by": [
+      "[torch] nn.functional"
+    ]
+  },
+  {
+    "arxiv_id": "1611.01144",
+    "doi": "",
+    "title": "",
+    "alt_titles": [],
+    "cited_by": [
+      "[torch] nn.functional"
+    ]
+  },
+  {
+    "arxiv_id": "1611.04678",
+    "doi": "",
+    "title": "",
+    "alt_titles": [],
+    "cited_by": [
+      "[pyg] datasets.md17:MD17#"
+    ]
+  },
+  {
+    "arxiv_id": "1611.07308",
+    "doi": "",
+    "title": "Variational Graph Auto-Encoders",
+    "alt_titles": [
+      "Variational Graph Auto-Encoders"
+    ],
+    "cited_by": [
+      "[pyg] nn.models.autoencoder:GAE#forward_all",
+      "[pyg] nn.models.autoencoder:InnerProductDecoder#",
+      "[pyg] nn.models.autoencoder:VGAE#test"
+    ]
+  },
+  {
+    "arxiv_id": "1611.08402",
+    "doi": "",
+    "title": "Geometric Deep Learning on Graphs and Manifolds Using Mixture Model CNNs",
+    "alt_titles": [
+      "Geometric Deep Learning on Graphs and Manifolds Using Mixture Model CNNs",
+      "Geometric Deep Learning on Graphs and Manifolds using Mixture Model CNNs"
+    ],
+    "cited_by": [
+      "[pyg] datasets.mnist_superpixels:MNISTSuperpixels#",
+      "[pyg] nn.conv.gmm_conv:GMMConv#"
+    ]
+  },
+  {
+    "arxiv_id": "1612.00593",
+    "doi": "",
+    "title": "PointNet++: Deep Hierarchical Feature Learning on Point Sets in a Metric Space",
+    "alt_titles": [
+      "PointNet++: Deep Hierarchical Feature Learning on Point Sets in a Metric Space",
+      "PointNet: Deep Learning on Point Sets for 3D Classification and Segmentation"
+    ],
+    "cited_by": [
+      "[pyg] nn.conv.point_conv:PointNetConv#"
+    ]
+  },
+  {
+    "arxiv_id": "1612.08083",
+    "doi": "",
+    "title": "",
+    "alt_titles": [],
+    "cited_by": [
+      "[torch] nn.functional"
+    ]
+  },
+  {
+    "arxiv_id": "1702.03118",
+    "doi": "",
+    "title": "",
+    "alt_titles": [],
+    "cited_by": [
+      "[torch] nn.functional",
+      "[torch] nn.modules.activation:SiLU#forward"
+    ]
+  },
+  {
+    "arxiv_id": "1703.00564",
+    "doi": "",
+    "title": "MoleculeNet: A Benchmark for Molecular Machine Learning",
+    "alt_titles": [
+      "MoleculeNet: A Benchmark for Molecular Machine Learning"
+    ],
+    "cited_by": [
+      "[pyg] datasets.molecule_net:MoleculeNet#",
+      "[pyg] datasets.qm7:QM7b#",
+      "[pyg] datasets.qm9:QM9#"
+    ]
+  },
+  {
+    "arxiv_id": "1703.06103",
+    "doi": "",
+    "title": "Modeling Relational Data with Graph Convolutional Networks",
+    "alt_titles": [
+      "Modeling Relational Data with Graph Convolutional Networks"
+    ],
+    "cited_by": [
+      "[pyg] datasets.entities:Entities#",
+      "[pyg] datasets.rel_link_pred_dataset:RelLinkPredDataset#",
+      "[pyg] nn.conv.cugraph.rgcn_conv:CuGraphRGCNConv#",
+      "[pyg] nn.conv.rgcn_conv:RGCNConv#masked_edge_index",
+      "[pyg] nn.to_hetero_transformer",
+      "[pyg] nn.to_hetero_with_bases_transformer"
+    ]
+  },
+  {
+    "arxiv_id": "1704.01212",
+    "doi": "",
+    "title": "Neural Message Passing for Quantum Chemistry",
+    "alt_titles": [
+      "Neural Message Passing for Quantum Chemistry"
+    ],
+    "cited_by": [
+      "[pyg] datasets.qm9:QM9#",
+      "[pyg] nn.conv.nn_conv:NNConv#",
+      "[pyg] transforms.virtual_node:VirtualNode#"
+    ]
+  },
+  {
+    "arxiv_id": "1704.02901",
+    "doi": "",
+    "title": "Dynamic Edge-Conditioned Filters in Convolutional Neural Networks on Graphs",
+    "alt_titles": [
+      "Dynamic Edge-Conditioned Filters in Convolutional Neural Networks on Graphs"
+    ],
+    "cited_by": [
+      "[pyg] nn.conv.nn_conv:NNConv#",
+      "[pyg] nn.pool.voxel_grid"
+    ]
+  },
+  {
+    "arxiv_id": "1704.03165",
+    "doi": "",
+    "title": "struc2vec: Learning Node Representations from Structural Identity",
+    "alt_titles": [
+      "struc2vec: Learning Node Representations from Structural Identity"
+    ],
+    "cited_by": [
+      "[pyg] datasets.airports:Airports#"
+    ]
+  },
+  {
+    "arxiv_id": "1704.07458",
+    "doi": "",
+    "title": "",
+    "alt_titles": [],
+    "cited_by": [
+      "[torch] _lobpcg:LOBPCGAutogradFunction#lobpcg"
+    ]
+  },
+  {
+    "arxiv_id": "1704.07483",
+    "doi": "",
+    "title": "",
+    "alt_titles": [],
+    "cited_by": [
+      "[torch] nn.modules.activation:CELU#extra_repr"
+    ]
+  },
+  {
+    "arxiv_id": "1706.02216",
+    "doi": "",
+    "title": "Inductive Representation Learning on Large Graphs",
+    "alt_titles": [
+      "Inductive Representation Learning on Large Graphs"
+    ],
+    "cited_by": [
+      "[pyg] datasets.reddit:Reddit#",
+      "[pyg] loader.neighbor_loader:NeighborLoader#",
+      "[pyg] loader.neighbor_sampler:NeighborSampler#to",
+      "[pyg] nn.aggr.lstm:LSTMAggregation#",
+      "[pyg] nn.conv.cugraph.sage_conv:CuGraphSAGEConv#",
+      "[pyg] nn.conv.sage_conv:SAGEConv#",
+      "[pyg] nn.models.basic_gnn:GraphSAGE#init_conv"
+    ]
+  },
+  {
+    "arxiv_id": "1706.02413",
+    "doi": "",
+    "title": "PointNet++: Deep Hierarchical Feature Learning on Point Sets in a Metric Space",
+    "alt_titles": [
+      "PointNet++: Deep Hierarchical Feature Learning on Point Sets in a Metric Space"
+    ],
+    "cited_by": [
+      "[pyg] nn.conv.point_conv:PointNetConv#",
+      "[pyg] nn.pool.__init__",
+      "[pyg] nn.unpool.knn_interpolate"
+    ]
+  },
+  {
+    "arxiv_id": "1706.02515",
+    "doi": "",
+    "title": "",
+    "alt_titles": [],
+    "cited_by": [
+      "[torch] nn.modules.activation:SELU#extra_repr",
+      "[torch] nn.modules.dropout:AlphaDropout#forward",
+      "[torch] nn.modules.dropout:FeatureAlphaDropout#forward"
+    ]
+  },
+  {
+    "arxiv_id": "1706.03762",
+    "doi": "",
+    "title": "Attention Is All You Need",
+    "alt_titles": [
+      "Attention Is All You Need"
+    ],
+    "cited_by": [
+      "[pyg] nn.encoding:PositionalEncoding#",
+      "[torch] nn.modules.activation:MultiheadAttention#_is_make_fx_tracing",
+      "[torch] nn.modules.transformer:Transformer#_get_seq_len",
+      "[torch] nn.modules.transformer:TransformerDecoder#forward",
+      "[torch] nn.modules.transformer:TransformerDecoderLayer#_ff_block",
+      "[torch] nn.modules.transformer:TransformerEncoder#_reset_parameters",
+      "[torch] nn.modules.transformer:TransformerEncoderLayer#forward"
+    ]
+  },
+  {
+    "arxiv_id": "1706.05206",
+    "doi": "",
+    "title": "FeaStNet: Feature-Steered Graph Convolutions for 3D Shape Analysis",
+    "alt_titles": [
+      "FeaStNet: Feature-Steered Graph Convolutions for 3D Shape Analysis"
+    ],
+    "cited_by": [
+      "[pyg] nn.conv.feast_conv:FeaStConv#"
+    ]
+  },
+  {
+    "arxiv_id": "1706.08566",
+    "doi": "",
+    "title": "SchNet: A Continuous-filter Convolutional Neural Network for Modeling Quantum Interactions",
+    "alt_titles": [
+      "SchNet: A Continuous-filter Convolutional Neural Network for Modeling Quantum Interactions"
+    ],
+    "cited_by": [
+      "[pyg] nn.models.schnet:SchNet#"
+    ]
+  },
+  {
+    "arxiv_id": "1707.01476",
+    "doi": "",
+    "title": "Convolutional 2D Knowledge Graph Embeddings",
+    "alt_titles": [
+      "Convolutional 2D Knowledge Graph Embeddings"
+    ],
+    "cited_by": [
+      "[pyg] datasets.word_net:WordNet18RR#process"
+    ]
+  },
+  {
+    "arxiv_id": "1707.03815",
+    "doi": "",
+    "title": "Deep Gaussian Embedding of Graphs: Unsupervised Inductive Learning via Ranking",
+    "alt_titles": [
+      "Deep Gaussian Embedding of Graphs: Unsupervised Inductive Learning via Ranking"
+    ],
+    "cited_by": [
+      "[pyg] datasets.citation_full:CitationFull#"
+    ]
+  },
+  {
+    "arxiv_id": "1707.04638",
+    "doi": "",
+    "title": "Predicting Multicellular Function through Multi-layer Tissue Networks",
+    "alt_titles": [
+      "Predicting Multicellular Function through Multi-layer Tissue Networks"
+    ],
+    "cited_by": [
+      "[pyg] datasets.ppi:PPI#"
+    ]
+  },
+  {
+    "arxiv_id": "1708.05045",
+    "doi": "",
+    "title": "Cross-lingual Entity Alignment via Joint Attribute-Preserving Embedding",
+    "alt_titles": [
+      "Cross-lingual Entity Alignment via Joint Attribute-Preserving Embedding"
+    ],
+    "cited_by": [
+      "[pyg] datasets.dbp15k:DBP15K#"
+    ]
+  },
+  {
+    "arxiv_id": "1708.07120",
+    "doi": "",
+    "title": "",
+    "alt_titles": [],
+    "cited_by": [
+      "[torch] optim.lr_scheduler:OneCycleLR#step"
+    ]
+  },
+  {
+    "arxiv_id": "1710.04954",
+    "doi": "",
+    "title": "PCPNet: Learning Local Shape Properties from Raw Point Clouds",
+    "alt_titles": [
+      "PCPNet: Learning Local Shape Properties from Raw Point Clouds"
+    ],
+    "cited_by": [
+      "[pyg] datasets.pcpnet_dataset:PCPNetDataset#"
+    ]
+  },
+  {
+    "arxiv_id": "1710.05941",
+    "doi": "",
+    "title": "",
+    "alt_titles": [],
+    "cited_by": [
+      "[torch] nn.functional",
+      "[torch] nn.modules.activation:SiLU#forward"
+    ]
+  },
+  {
+    "arxiv_id": "1710.10370",
+    "doi": "",
+    "title": "Topology Adaptive Graph Convolutional Networks",
+    "alt_titles": [
+      "Topology Adaptive Graph Convolutional Networks"
+    ],
+    "cited_by": [
+      "[pyg] nn.conv.tag_conv:TAGConv#"
+    ]
+  },
+  {
+    "arxiv_id": "1710.10903",
+    "doi": "",
+    "title": "How Attentive are Graph Attention Networks?",
+    "alt_titles": [
+      "Graph Attention Networks",
+      "How Attentive are Graph Attention Networks?"
+    ],
+    "cited_by": [
+      "[pyg] nn.conv.cugraph.gat_conv:CuGraphGATConv#",
+      "[pyg] nn.conv.gat_conv:GATConv#",
+      "[pyg] nn.models.basic_gnn:GAT#init_conv"
+    ]
+  },
+  {
+    "arxiv_id": "1711.05101",
+    "doi": "",
+    "title": "",
+    "alt_titles": [],
+    "cited_by": [
+      "[torch] optim._adafactor:Adafactor#step",
+      "[torch] optim.adamw:AdamW#__setstate__",
+      "[torch] optim.nadam:NAdam#step",
+      "[torch] optim.radam:RAdam#step"
+    ]
+  },
+  {
+    "arxiv_id": "1711.07553",
+    "doi": "",
+    "title": "Residual Gated Graph ConvNets",
+    "alt_titles": [
+      "Residual Gated Graph ConvNets"
+    ],
+    "cited_by": [
+      "[pyg] nn.conv.res_gated_graph_conv:ResGatedGraphConv#"
+    ]
+  },
+  {
+    "arxiv_id": "1711.08920",
+    "doi": "",
+    "title": "SplineCNN: Fast Geometric Deep Learning with Continuous B-Spline Kernels",
+    "alt_titles": [
+      "SplineCNN: Fast Geometric Deep Learning with Continuous B-Spline Kernels"
+    ],
+    "cited_by": [
+      "[pyg] nn.conv.spline_conv:SplineConv#"
+    ]
+  },
+  {
+    "arxiv_id": "1711.10604",
+    "doi": "",
+    "title": "",
+    "alt_titles": [],
+    "cited_by": [
+      "[torch] distributions.__init__"
+    ]
+  },
+  {
+    "arxiv_id": "1801.07791",
+    "doi": "",
+    "title": "PointCNN: Convolution On X-Transformed Points",
+    "alt_titles": [
+      "PointCNN: Convolution On X-Transformed Points"
+    ],
+    "cited_by": [
+      "[pyg] nn.conv.x_conv:XConv#"
+    ]
+  },
+  {
+    "arxiv_id": "1801.07829",
+    "doi": "",
+    "title": "Dynamic Graph CNN for Learning on Point Clouds",
+    "alt_titles": [
+      "Dynamic Graph CNN for Learning on Point Clouds"
+    ],
+    "cited_by": [
+      "[pyg] nn.conv.edge_conv:DynamicEdgeConv#__repr__",
+      "[pyg] nn.conv.edge_conv:EdgeConv#",
+      "[pyg] nn.models.basic_gnn:EdgeCNN#init_conv"
+    ]
+  },
+  {
+    "arxiv_id": "1801.10247",
+    "doi": "",
+    "title": "FastGCN: Fast Learning with Graph Convolutional Networks via Importance Sampling",
+    "alt_titles": [
+      "FastGCN: Fast Learning with Graph Convolutional Networks via Importance Sampling"
+    ],
+    "cited_by": [
+      "[pyg] datasets.planetoid:Planetoid#",
+      "[pyg] transforms.random_node_split:RandomNodeSplit#"
+    ]
+  },
+  {
+    "arxiv_id": "1802.02669",
+    "doi": "",
+    "title": "PPFNet: Global Context Aware Local Features for Robust 3D Point Matching",
+    "alt_titles": [
+      "PPFNet: Global Context Aware Local Features for Robust 3D Point Matching"
+    ],
+    "cited_by": [
+      "[pyg] nn.conv.ppf_conv:PPFConv#point_pair_features"
+    ]
+  },
+  {
+    "arxiv_id": "1802.03997",
+    "doi": "",
+    "title": "GEMSEC: Graph Embedding with Self Clustering",
+    "alt_titles": [
+      "GEMSEC: Graph Embedding with Self Clustering"
+    ],
+    "cited_by": [
+      "[pyg] datasets.gemsec:GemsecDeezer#"
+    ]
+  },
+  {
+    "arxiv_id": "1802.04364",
+    "doi": "",
+    "title": "Junction Tree Variational Autoencoder for Molecular Graph Generation",
+    "alt_titles": [
+      "Junction Tree Variational Autoencoder for Molecular Graph Generation"
+    ],
+    "cited_by": [
+      "[pyg] utils._tree_decomposition"
+    ]
+  },
+  {
+    "arxiv_id": "1802.04407",
+    "doi": "",
+    "title": "Adversarially Regularized Graph Autoencoder for Graph Embedding",
+    "alt_titles": [
+      "Adversarially Regularized Graph Autoencoder for Graph Embedding"
+    ],
+    "cited_by": [
+      "[pyg] nn.models.autoencoder:ARGA#kl_loss",
+      "[pyg] nn.models.autoencoder:ARGVA#discriminator_loss"
+    ]
+  },
+  {
+    "arxiv_id": "1802.05957",
+    "doi": "",
+    "title": "",
+    "alt_titles": [],
+    "cited_by": [
+      "[torch] nn.utils.parametrizations:_SpectralNorm#spectral_norm",
+      "[torch] nn.utils.spectral_norm",
+      "[torch] nn.utils.spectral_norm:SpectralNormStateDictHook#spectral_norm"
+    ]
+  },
+  {
+    "arxiv_id": "1802.06916",
+    "doi": "",
+    "title": "Simplicial Closure and higher-order link prediction",
+    "alt_titles": [
+      "Simplicial Closure and higher-order link prediction"
+    ],
+    "cited_by": [
+      "[pyg] datasets.cornell:CornellTemporalHyperGraphDataset#"
+    ]
+  },
+  {
+    "arxiv_id": "1802.09238",
+    "doi": "",
+    "title": "",
+    "alt_titles": [],
+    "cited_by": [
+      "[pyg] datasets.md17:MD17#"
+    ]
+  },
+  {
+    "arxiv_id": "1803.03735",
+    "doi": "",
+    "title": "Attention-based Graph Neural Network for Semi-Supervised Learning",
+    "alt_titles": [
+      "Attention-based Graph Neural Network for Semi-Supervised Learning"
+    ],
+    "cited_by": [
+      "[pyg] nn.conv.agnn_conv:AGNNConv#"
+    ]
+  },
+  {
+    "arxiv_id": "1803.05407",
+    "doi": "",
+    "title": "",
+    "alt_titles": [],
+    "cited_by": [
+      "[torch] optim.swa_utils:AveragedModel#swa_update",
+      "[torch] optim.swa_utils:SWALR#update_bn"
+    ]
+  },
+  {
+    "arxiv_id": "1803.05880",
+    "doi": "",
+    "title": "",
+    "alt_titles": [],
+    "cited_by": [
+      "[torch] distributed.fsdp.fully_sharded_data_parallel"
+    ]
+  },
+  {
+    "arxiv_id": "1803.08494",
+    "doi": "",
+    "title": "",
+    "alt_titles": [],
+    "cited_by": [
+      "[torch] nn.modules.normalization:GroupNorm#extra_repr"
+    ]
+  },
+  {
+    "arxiv_id": "1806.01261",
+    "doi": "",
+    "title": "Relational Inductive Biases, Deep Learning, and Graph Networks",
+    "alt_titles": [
+      "Relational Inductive Biases, Deep Learning, and Graph Networks"
+    ],
+    "cited_by": [
+      "[pyg] nn.models.meta:MetaLayer#"
+    ]
+  },
+  {
+    "arxiv_id": "1806.03536",
+    "doi": "",
+    "title": "Representation Learning on Graphs with Jumping Knowledge Networks",
+    "alt_titles": [
+      "Representation Learning on Graphs with Jumping Knowledge Networks"
+    ],
+    "cited_by": [
+      "[pyg] nn.models.jumping_knowledge:JumpingKnowledge#"
+    ]
+  },
+  {
+    "arxiv_id": "1806.05594",
+    "doi": "",
+    "title": "",
+    "alt_titles": [],
+    "cited_by": [
+      "[torch] optim.swa_utils:AveragedModel#swa_update"
+    ]
+  },
+  {
+    "arxiv_id": "1806.08804",
+    "doi": "",
+    "title": "Hierarchical Graph Representation Learning with Differentiable Pooling",
+    "alt_titles": [
+      "Hierarchical Graph Representation Learning with Differentiable Pooling"
+    ],
+    "cited_by": [
+      "[pyg] nn.dense.diff_pool"
+    ]
+  },
+  {
+    "arxiv_id": "1807.10267",
+    "doi": "",
+    "title": "Generating 3D faces using Convolutional Mesh Autoencoders",
+    "alt_titles": [
+      "Generating 3D faces using Convolutional Mesh Autoencoders"
+    ],
+    "cited_by": [
+      "[pyg] datasets.coma:CoMA#"
+    ]
+  },
+  {
+    "arxiv_id": "1808.05689",
+    "doi": "",
+    "title": "Graph Edit Distance Computation via Graph Neural Networks",
+    "alt_titles": [
+      "Graph Edit Distance Computation via Graph Neural Networks"
+    ],
+    "cited_by": [
+      "[pyg] datasets.ged_dataset:GEDDataset#"
+    ]
+  },
+  {
+    "arxiv_id": "1808.06354",
+    "doi": "",
+    "title": "Signed Graph Convolutional Network",
+    "alt_titles": [
+      "Signed Graph Convolutional Network"
+    ],
+    "cited_by": [
+      "[pyg] nn.conv.signed_conv:SignedConv#",
+      "[pyg] nn.models.signed_gcn:SignedGCN#"
+    ]
+  },
+  {
+    "arxiv_id": "1808.07217",
+    "doi": "",
+    "title": "",
+    "alt_titles": [],
+    "cited_by": [
+      "[torch] distributed.algorithms.model_averaging.averagers:PeriodicModelAverager#average_parameters",
+      "[torch] distributed.algorithms.model_averaging.hierarchical_model_averager:HierarchicalModelAverager#",
+      "[torch] distributed.optim.post_localSGD_optimizer:PostLocalSGDOptimizer#"
+    ]
+  },
+  {
+    "arxiv_id": "1809.05910",
+    "doi": "",
+    "title": "MeshCNN: A Network With An Edge",
+    "alt_titles": [
+      "MeshCNN: A Network With An Edge"
+    ],
+    "cited_by": [
+      "[pyg] nn.conv.meshcnn_conv:MeshCNNConv#",
+      "[pyg] nn.conv.meshcnn_conv:MeshCNNConv#forward"
+    ]
+  },
+  {
+    "arxiv_id": "1809.10341",
+    "doi": "",
+    "title": "Deep Graph Infomax",
+    "alt_titles": [
+      "Deep Graph Infomax"
+    ],
+    "cited_by": [
+      "[pyg] nn.models.deep_graph_infomax:DeepGraphInfomax#"
+    ]
+  },
+  {
+    "arxiv_id": "1810.00825",
+    "doi": "",
+    "title": "Set Transformer: A Framework for Attention-based Permutation-Invariant Neural Networks",
+    "alt_titles": [
+      "Set Transformer: A Framework for Attention-based Permutation-Invariant Neural Networks"
+    ],
+    "cited_by": [
+      "[pyg] nn.aggr.utils:InducedSetAttentionBlock#__repr__",
+      "[pyg] nn.aggr.utils:MultiheadAttentionBlock#",
+      "[pyg] nn.aggr.utils:PoolingByMultiheadAttention#__repr__",
+      "[pyg] nn.aggr.utils:SetAttentionBlock#__repr__"
+    ]
+  },
+  {
+    "arxiv_id": "1810.00826",
+    "doi": "",
+    "title": "How Powerful are Graph Neural Networks?",
+    "alt_titles": [
+      "How Powerful are Graph Neural Networks?"
+    ],
+    "cited_by": [
+      "[pyg] nn.conv.gin_conv:GINConv#",
+      "[pyg] nn.models.basic_gnn:GIN#init_conv"
+    ]
+  },
+  {
+    "arxiv_id": "1810.02244",
+    "doi": "",
+    "title": "Weisfeiler and Leman Go Neural: Higher-order Graph Neural Networks",
+    "alt_titles": [
+      "Weisfeiler and Leman Go Neural: Higher-order Graph Neural Networks"
+    ],
+    "cited_by": [
+      "[pyg] nn.conv.graph_conv:GraphConv#"
+    ]
+  },
+  {
+    "arxiv_id": "1810.05997",
+    "doi": "",
+    "title": "Predict then Propagate: Graph Neural Networks meet Personalized PageRank",
+    "alt_titles": [
+      "Predict then Propagate: Graph Neural Networks meet Personalized PageRank"
+    ],
+    "cited_by": [
+      "[pyg] nn.conv.appnp:APPNP#"
+    ]
+  },
+  {
+    "arxiv_id": "1811.00250",
+    "doi": "",
+    "title": "",
+    "alt_titles": [],
+    "cited_by": [
+      "[torch] ao.pruning._experimental.pruner.FPGM_pruner:FPGMPruner#"
+    ]
+  },
+  {
+    "arxiv_id": "1811.01287",
+    "doi": "",
+    "title": "",
+    "alt_titles": [],
+    "cited_by": [
+      "[pyg] nn.pool.select.topk:SelectTopK#topk",
+      "[pyg] nn.pool.topk_pool:TopKPooling#"
+    ]
+  },
+  {
+    "arxiv_id": "1811.03508",
+    "doi": "",
+    "title": "A Simple yet Effective Baseline for Non-attribute Graph Classification",
+    "alt_titles": [
+      "A Simple yet Effective Baseline for Non-attribute Graph Classification"
+    ],
+    "cited_by": [
+      "[pyg] transforms.local_degree_profile:LocalDegreeProfile#"
+    ]
+  },
+  {
+    "arxiv_id": "1811.05868",
+    "doi": "",
+    "title": "Pitfalls of Graph Neural Network Evaluation",
+    "alt_titles": [
+      "Pitfalls of Graph Neural Network Evaluation"
+    ],
+    "cited_by": [
+      "[pyg] datasets.amazon:Amazon#",
+      "[pyg] datasets.coauthor:Coauthor#",
+      "[pyg] transforms.random_node_split:RandomNodeSplit#"
+    ]
+  },
+  {
+    "arxiv_id": "1901.01343",
+    "doi": "",
+    "title": "Graph Neural Networks with Convolutional ARMA Filters",
+    "alt_titles": [
+      "Graph Neural Networks with Convolutional ARMA Filters"
+    ],
+    "cited_by": [
+      "[pyg] nn.conv.arma_conv:ARMAConv#"
+    ]
+  },
+  {
+    "arxiv_id": "1901.08150",
+    "doi": "",
+    "title": "Hypergraph Convolution and Hypergraph Attention",
+    "alt_titles": [
+      "Hypergraph Convolution and Hypergraph Attention"
+    ],
+    "cited_by": [
+      "[pyg] nn.conv.hypergraph_conv:HypergraphConv#"
+    ]
+  },
+  {
+    "arxiv_id": "1902.07153",
+    "doi": "",
+    "title": "Simplifying Graph Convolutional Networks",
+    "alt_titles": [
+      "Simplifying Graph Convolutional Networks"
+    ],
+    "cited_by": [
+      "[pyg] datasets.reddit2:Reddit2#",
+      "[pyg] nn.conv.sg_conv:SGConv#"
+    ]
+  },
+  {
+    "arxiv_id": "1902.07987",
+    "doi": "",
+    "title": "Learning Representations of Irregular Particle-detector Geometry with Distance-weighted Graph Networks",
+    "alt_titles": [
+      "Learning Representations of Irregular Particle-detector Geometry with Distance-weighted Graph Networks"
+    ],
+    "cited_by": [
+      "[pyg] nn.conv.gravnet_conv:GravNetConv#"
+    ]
+  },
+  {
+    "arxiv_id": "1902.10191",
+    "doi": "",
+    "title": "EvolveGCN: Evolving Graph Convolutional Networks for Dynamic Graphs",
+    "alt_titles": [
+      "EvolveGCN: Evolving Graph Convolutional Networks for Dynamic Graphs"
+    ],
+    "cited_by": [
+      "[pyg] datasets.bitcoin_otc:BitcoinOTC#"
+    ]
+  },
+  {
+    "arxiv_id": "1903.03894",
+    "doi": "",
+    "title": "PGMExplainer: Probabilistic Graphical Model Explanations for Graph Neural Networks",
+    "alt_titles": [
+      "GNNExplainer: Generating Explanations for Graph Neural Networks",
+      "PGMExplainer: Probabilistic Graphical Model Explanations for Graph Neural Networks"
+    ],
+    "cited_by": [
+      "[pyg] contrib.explain.pgm_explainer:PGMExplainer#",
+      "[pyg] datasets.ba_shapes:BAShapes#house",
+      "[pyg] datasets.explainer_dataset:ExplainerDataset#",
+      "[pyg] datasets.motif_generator.cycle:CycleMotif#",
+      "[pyg] datasets.motif_generator.grid:GridMotif#",
+      "[pyg] datasets.motif_generator.house:HouseMotif#",
+      "[pyg] explain.algorithm.gnn_explainer:GNNExplainer#"
+    ]
+  },
+  {
+    "arxiv_id": "1903.07293",
+    "doi": "",
+    "title": "Heterogenous Graph Attention Networks",
+    "alt_titles": [
+      "Heterogenous Graph Attention Network",
+      "Heterogenous Graph Attention Networks"
+    ],
+    "cited_by": [
+      "[pyg] nn.conv.han_conv:HANConv#group",
+      "[pyg] transforms.add_metapaths:AddMetaPaths#"
+    ]
+  },
+  {
+    "arxiv_id": "1904.03751",
+    "doi": "",
+    "title": "DeepGCNs: Can GCNs Go as Deep as CNNs?",
+    "alt_titles": [
+      "All You Need to Train Deeper GCNs",
+      "DeepGCNs: Can GCNs Go as Deep as CNNs?"
+    ],
+    "cited_by": [
+      "[pyg] nn.models.deepgcn:DeepGCNLayer#"
+    ]
+  },
+  {
+    "arxiv_id": "1904.04849",
+    "doi": "",
+    "title": "Just Jump: Towards Dynamic Neighborhood Aggregation in Graph Neural Networks",
+    "alt_titles": [
+      "Just Jump: Towards Dynamic Neighborhood Aggregation in Graph Neural Networks"
+    ],
+    "cited_by": [
+      "[pyg] nn.conv.dna_conv:DNAConv#__repr__"
+    ]
+  },
+  {
+    "arxiv_id": "1904.05530",
+    "doi": "",
+    "title": "Recurrent Event Network for Reasoning over Temporal Knowledge Graphs",
+    "alt_titles": [
+      "Recurrent Event Network for Reasoning over Temporal Knowledge Graphs"
+    ],
+    "cited_by": [
+      "[pyg] datasets.gdelt:GDELT#",
+      "[pyg] datasets.icews:ICEWS18#_process_data_list",
+      "[pyg] nn.models.re_net:RENet#"
+    ]
+  },
+  {
+    "arxiv_id": "1904.05811",
+    "doi": "",
+    "title": "Relational Graph Attention Networks",
+    "alt_titles": [
+      "Relational Graph Attention Networks"
+    ],
+    "cited_by": [
+      "[pyg] nn.conv.rgat_conv:RGATConv#"
+    ]
+  },
+  {
+    "arxiv_id": "1904.06376",
+    "doi": "",
+    "title": "",
+    "alt_titles": [],
+    "cited_by": [
+      "[torch] __init__"
+    ]
+  },
+  {
+    "arxiv_id": "1904.08082",
+    "doi": "",
+    "title": "Understanding Attention and Generalization in Graph Neural Networks",
+    "alt_titles": [
+      "Self-Attention Graph Pooling",
+      "Understanding Attention and Generalization in Graph Neural Networks"
+    ],
+    "cited_by": [
+      "[pyg] nn.pool.sag_pool:SAGPooling#"
+    ]
+  },
+  {
+    "arxiv_id": "1904.11943",
+    "doi": "",
+    "title": "",
+    "alt_titles": [],
+    "cited_by": [
+      "[torch] optim.swa_utils:AveragedModel#swa_update"
+    ]
+  },
+  {
+    "arxiv_id": "1904.12058",
+    "doi": "",
+    "title": "Inductive Matrix Completion Based on Graph Neural Networks",
+    "alt_titles": [
+      "Inductive Matrix Completion Based on Graph Neural Networks"
+    ],
+    "cited_by": [
+      "[pyg] datasets.igmc_dataset:IGMCDataset#",
+      "[pyg] datasets.movie_lens_100k:MovieLens100K#",
+      "[pyg] datasets.movie_lens_1m:MovieLens1M#"
+    ]
+  },
+  {
+    "arxiv_id": "1904.12787",
+    "doi": "",
+    "title": "Graph Matching Networks for Learning the Similarity of Graph Structured Objects",
+    "alt_titles": [
+      "Graph Matching Networks for Learning the Similarity of Graph Structured Objects"
+    ],
+    "cited_by": [
+      "[pyg] nn.aggr.attention:AttentionalAggregation#"
+    ]
+  },
+  {
+    "arxiv_id": "1905.00067",
+    "doi": "",
+    "title": "MixHop: Higher-Order Graph Convolutional Architectures via Sparsified Neighborhood Mixing",
+    "alt_titles": [
+      "MixHop: Higher-Order Graph Convolutional Architectures via Sparsified Neighborhood Mixing"
+    ],
+    "cited_by": [
+      "[pyg] datasets.mixhop_synthetic_dataset:MixHopSyntheticDataset#",
+      "[pyg] nn.conv.mixhop_conv:MixHopConv#"
+    ]
+  },
+  {
+    "arxiv_id": "1905.02244",
+    "doi": "",
+    "title": "",
+    "alt_titles": [],
+    "cited_by": [
+      "[torch] nn.functional",
+      "[torch] nn.modules.activation:Hardswish#extra_repr"
+    ]
+  },
+  {
+    "arxiv_id": "1905.02850",
+    "doi": "",
+    "title": "",
+    "alt_titles": [],
+    "cited_by": [
+      "[pyg] nn.pool.sag_pool:SAGPooling#",
+      "[pyg] nn.pool.select.topk:SelectTopK#topk",
+      "[pyg] nn.pool.topk_pool:TopKPooling#"
+    ]
+  },
+  {
+    "arxiv_id": "1905.05178",
+    "doi": "",
+    "title": "Understanding Attention and Generalization in Graph Neural Networks",
+    "alt_titles": [
+      "Graph U-Nets",
+      "Towards Sparse Hierarchical Graph Classifiers",
+      "Understanding Attention and Generalization in Graph Neural Networks",
+      "Understanding Pooling in Graph Neural Networks"
+    ],
+    "cited_by": [
+      "[pyg] nn.models.graph_unet:GraphUNet#",
+      "[pyg] nn.pool.connect.base:Connect#__init__",
+      "[pyg] nn.pool.select.base:Select#__init__",
+      "[pyg] nn.pool.select.topk:SelectTopK#topk",
+      "[pyg] nn.pool.topk_pool:TopKPooling#"
+    ]
+  },
+  {
+    "arxiv_id": "1905.07953",
+    "doi": "",
+    "title": "Cluster-GCN: An Efficient Algorithm for Training Deep and Large Graph Convolutional Networks",
+    "alt_titles": [
+      "Cluster-GCN: An Efficient Algorithm for Training Deep and Large Graph Convolutional Networks"
+    ],
+    "cited_by": [
+      "[pyg] loader.cluster:ClusterData#",
+      "[pyg] loader.cluster:ClusterLoader#__repr__",
+      "[pyg] nn.conv.cluster_gcn_conv:ClusterGCNConv#"
+    ]
+  },
+  {
+    "arxiv_id": "1905.10965",
+    "doi": "",
+    "title": "",
+    "alt_titles": [],
+    "cited_by": [
+      "[torch] distributions.kl"
+    ]
+  },
+  {
+    "arxiv_id": "1905.10990",
+    "doi": "",
+    "title": "Edge Contraction Pooling for Graph Neural Networks",
+    "alt_titles": [
+      "Edge Contraction Pooling for Graph Neural Networks"
+    ],
+    "cited_by": [
+      "[pyg] nn.pool.edge_pool:EdgePooling#"
+    ]
+  },
+  {
+    "arxiv_id": "1905.11605",
+    "doi": "",
+    "title": "Cross-lingual Knowledge Graph Alignment via Graph Matching Neural Network",
+    "alt_titles": [
+      "Cross-lingual Knowledge Graph Alignment via Graph Matching Neural Network"
+    ],
+    "cited_by": [
+      "[pyg] datasets.dbp15k:DBP15K#"
+    ]
+  },
+  {
+    "arxiv_id": "1905.12265",
+    "doi": "",
+    "title": "Strategies for Pre-training Graph Neural Networks",
+    "alt_titles": [
+      "Strategies for Pre-training Graph Neural Networks"
+    ],
+    "cited_by": [
+      "[pyg] nn.conv.gin_conv:GINEConv#__repr__"
+    ]
+  },
+  {
+    "arxiv_id": "1905.13686",
+    "doi": "",
+    "title": "Explainability Techniques for Graph Convolutional Networks",
+    "alt_titles": [
+      "Explainability Techniques for Graph Convolutional Networks"
+    ],
+    "cited_by": [
+      "[pyg] datasets.infection_dataset:InfectionDataset#"
+    ]
+  },
+  {
+    "arxiv_id": "1905.13727",
+    "doi": "",
+    "title": "",
+    "alt_titles": [],
+    "cited_by": [
+      "[torch] distributed.algorithms.ddp_comm_hooks.powerSGD_hook",
+      "[torch] distributed.algorithms.ddp_comm_hooks.powerSGD_hook:PowerSGDState#powerSGD_hook"
+    ]
+  },
+  {
+    "arxiv_id": "1906.01277",
+    "doi": "",
+    "title": "Wasserstein Weisfeiler-Lehman Graph Kernels",
+    "alt_titles": [
+      "Wasserstein Weisfeiler-Lehman Graph Kernels"
+    ],
+    "cited_by": [
+      "[pyg] nn.conv.wl_conv_continuous:WLConvContinuous#"
+    ]
+  },
+  {
+    "arxiv_id": "1906.12192",
+    "doi": "",
+    "title": "GNN-FiLM: Graph Neural Networks with Feature-wise Linear Modulation",
+    "alt_titles": [
+      "GNN-FiLM: Graph Neural Networks with Feature-wise Linear Modulation"
+    ],
+    "cited_by": [
+      "[pyg] nn.conv.film_conv:FiLMConv#"
+    ]
+  },
+  {
+    "arxiv_id": "1907.00481",
+    "doi": "",
+    "title": "Spectral Clustering in Graph Neural Networks for Graph Pooling",
+    "alt_titles": [
+      "Spectral Clustering in Graph Neural Networks for Graph Pooling"
+    ],
+    "cited_by": [
+      "[pyg] nn.dense.mincut_pool"
+    ]
+  },
+  {
+    "arxiv_id": "1907.02204",
+    "doi": "",
+    "title": "Improving Attention Mechanism in Graph Neural Networks via Cardinality Preservation",
+    "alt_titles": [
+      "Improving Attention Mechanism in Graph Neural Networks via Cardinality Preservation"
+    ],
+    "cited_by": [
+      "[pyg] nn.conv.rgat_conv:RGATConv#"
+    ]
+  },
+  {
+    "arxiv_id": "1907.04931",
+    "doi": "",
+    "title": "GraphSAINT: Graph Sampling Based Inductive Learning Method",
+    "alt_titles": [
+      "GraphSAINT: Graph Sampling Based Inductive Learning Method"
+    ],
+    "cited_by": [
+      "[pyg] datasets.amazon_products:AmazonProducts#",
+      "[pyg] datasets.flickr:Flickr#",
+      "[pyg] datasets.reddit2:Reddit2#",
+      "[pyg] datasets.yelp:Yelp#",
+      "[pyg] loader.graph_saint:GraphSAINTSampler#"
+    ]
+  },
+  {
+    "arxiv_id": "1907.05600",
+    "doi": "",
+    "title": "Generative Modeling by Estimating Gradients of the Data Distribution",
+    "alt_titles": [
+      "Generative Modeling by Estimating Gradients of the Data Distribution"
+    ],
+    "cited_by": [
+      "[pyg] utils.noise_scheduler"
+    ]
+  },
+  {
+    "arxiv_id": "1907.06845",
+    "doi": "",
+    "title": "",
+    "alt_titles": [],
+    "cited_by": [
+      "[torch] distributions.continuous_bernoulli:ContinuousBernoulli#"
+    ]
+  },
+  {
+    "arxiv_id": "1908.02591",
+    "doi": "",
+    "title": "Anti-Money Laundering in Bitcoin: Experimenting with Graph Convolutional Networks for Financial Forensics",
+    "alt_titles": [
+      "Anti-Money Laundering in Bitcoin: Experimenting with Graph Convolutional Networks for Financial Forensics"
+    ],
+    "cited_by": [
+      "[pyg] datasets.elliptic:EllipticBitcoinDataset#",
+      "[pyg] datasets.elliptic_temporal:EllipticBitcoinTemporalDataset#"
+    ]
+  },
+  {
+    "arxiv_id": "1908.03265",
+    "doi": "",
+    "title": "",
+    "alt_titles": [],
+    "cited_by": [
+      "[torch] optim.radam:RAdam#step"
+    ]
+  },
+  {
+    "arxiv_id": "1908.08681",
+    "doi": "",
+    "title": "",
+    "alt_titles": [],
+    "cited_by": [
+      "[torch] nn.functional",
+      "[torch] nn.modules.activation:Mish#extra_repr"
+    ]
+  },
+  {
+    "arxiv_id": "1909.09501",
+    "doi": "",
+    "title": "",
+    "alt_titles": [],
+    "cited_by": [
+      "[torch] nn.utils.parametrizations:_Orthogonal#orthogonal"
+    ]
+  },
+  {
+    "arxiv_id": "1909.12223",
+    "doi": "",
+    "title": "PairNorm: Tackling Oversmoothing in GNNs",
+    "alt_titles": [
+      "PairNorm: Tackling Oversmoothing in GNNs"
+    ],
+    "cited_by": [
+      "[pyg] nn.norm.pair_norm:PairNorm#"
+    ]
+  },
+  {
+    "arxiv_id": "1909.13021",
+    "doi": "",
+    "title": "Multi-scale Attributed Node Embedding",
+    "alt_titles": [
+      "Multi-scale Attributed Node Embedding"
+    ],
+    "cited_by": [
+      "[pyg] datasets.facebook:FacebookPagePage#",
+      "[pyg] datasets.github:GitHub#",
+      "[pyg] datasets.twitch:Twitch#",
+      "[pyg] datasets.wikipedia_network:WikipediaNetwork#"
+    ]
+  },
+  {
+    "arxiv_id": "1910.02054",
+    "doi": "",
+    "title": "",
+    "alt_titles": [],
+    "cited_by": [
+      "[torch] distributed.optim.zero_redundancy_optimizer:ZeroRedundancyOptimizer#clear_per_iter_info"
+    ]
+  },
+  {
+    "arxiv_id": "1910.12091",
+    "doi": "",
+    "title": "Understanding Isomorphism Bias in Graph Data Sets",
+    "alt_titles": [
+      "Understanding Isomorphism Bias in Graph Data Sets"
+    ],
+    "cited_by": [
+      "[pyg] datasets.tu_dataset:TUDataset#"
+    ]
+  },
+  {
+    "arxiv_id": "1911.05485",
+    "doi": "",
+    "title": "Diffusion Improves Graph Learning",
+    "alt_titles": [
+      "Diffusion Improves Graph Learning"
+    ],
+    "cited_by": [
+      "[pyg] transforms.gdc:GDC#"
+    ]
+  },
+  {
+    "arxiv_id": "1911.06136",
+    "doi": "",
+    "title": "KEPLER: A Unified Model for Knowledge Embedding and Pre-trained Language Representation",
+    "alt_titles": [
+      "KEPLER: A Unified Model for Knowledge Embedding and Pre-trained Language Representation"
+    ],
+    "cited_by": [
+      "[pyg] datasets.wikidata:Wikidata5M#"
+    ]
+  },
+  {
+    "arxiv_id": "1911.07675",
+    "doi": "",
+    "title": "GraLSP: Graph Neural Networks with Local Structural Patterns",
+    "alt_titles": [
+      "GraLSP: Graph Neural Networks with Local Structural Patterns"
+    ],
+    "cited_by": [
+      "[pyg] datasets.airports:Airports#"
+    ]
+  },
+  {
+    "arxiv_id": "1911.07979",
+    "doi": "",
+    "title": "ASAP: Adaptive Structure Aware Pooling for Learning Hierarchical Graph Representations",
+    "alt_titles": [
+      "ASAP: Adaptive Structure Aware Pooling for Learning Hierarchical Graph Representations"
+    ],
+    "cited_by": [
+      "[pyg] nn.conv.le_conv:LEConv#",
+      "[pyg] nn.pool.asap:ASAPooling#"
+    ]
+  },
+  {
+    "arxiv_id": "2001.02312",
+    "doi": "",
+    "title": "",
+    "alt_titles": [],
+    "cited_by": [
+      "[torch] optim.swa_utils:AveragedModel#swa_update"
+    ]
+  },
+  {
+    "arxiv_id": "2002.01680",
+    "doi": "",
+    "title": "MAGNN: Metapath Aggregated Graph Neural Network for Heterogeneous Graph Embedding",
+    "alt_titles": [
+      "MAGNN: Metapath Aggregated Graph Neural Network for Heterogeneous Graph Embedding"
+    ],
+    "cited_by": [
+      "[pyg] datasets.dblp:DBLP#",
+      "[pyg] datasets.imdb:IMDB#",
+      "[pyg] datasets.last_fm:LastFM#"
+    ]
+  },
+  {
+    "arxiv_id": "2002.02126",
+    "doi": "",
+    "title": "LightGCN: Simplifying and Powering Graph Convolution Network for Recommendation",
+    "alt_titles": [
+      "LightGCN: Simplifying and Powering Graph Convolution Network for Recommendation"
+    ],
+    "cited_by": [
+      "[pyg] datasets.amazon_book:AmazonBook#",
+      "[pyg] nn.conv.lg_conv:LGConv#",
+      "[pyg] nn.models.lightgcn:BPRLoss#__repr__",
+      "[pyg] nn.models.lightgcn:LightGCN#"
+    ]
+  },
+  {
+    "arxiv_id": "2002.05287",
+    "doi": "",
+    "title": "Geom-GCN: Geometric Graph Convolutional Networks",
+    "alt_titles": [
+      "Geom-GCN: Geometric Graph Convolutional Networks"
+    ],
+    "cited_by": [
+      "[pyg] datasets.wikipedia_network:WikipediaNetwork#",
+      "[pyg] utils._homophily"
+    ]
+  },
+  {
+    "arxiv_id": "2002.09518",
+    "doi": "",
+    "title": "Memory-Based Graph Networks",
+    "alt_titles": [
+      "Memory-Based Graph Networks"
+    ],
+    "cited_by": [
+      "[pyg] nn.pool.mem_pool:MemPooling#"
+    ]
+  },
+  {
+    "arxiv_id": "2003.00982",
+    "doi": "",
+    "title": "Benchmarking Graph Neural Networks",
+    "alt_titles": [
+      "Benchmarking Graph Neural Networks"
+    ],
+    "cited_by": [
+      "[pyg] datasets.aqsol:AQSOL#",
+      "[pyg] datasets.gnn_benchmark_dataset:GNNBenchmarkDataset#",
+      "[pyg] datasets.zinc:ZINC#",
+      "[pyg] nn.norm.graph_size_norm:GraphSizeNorm#",
+      "[pyg] transforms.add_positional_encoding:AddLaplacianEigenvectorPE#add_node_attr"
+    ]
+  },
+  {
+    "arxiv_id": "2003.01251",
+    "doi": "",
+    "title": "Point-GNN: Graph Neural Network for 3D Object Detection in a Point Cloud",
+    "alt_titles": [
+      "Point-GNN: Graph Neural Network for 3D Object Detection in a Point Cloud"
+    ],
+    "cited_by": [
+      "[pyg] nn.conv.point_gnn_conv:PointGNNConv#"
+    ]
+  },
+  {
+    "arxiv_id": "2003.01332",
+    "doi": "",
+    "title": "Heterogeneous Graph Transformer",
+    "alt_titles": [
+      "Heterogeneous Graph Transformer"
+    ],
+    "cited_by": [
+      "[pyg] loader.hgt_loader:HGTLoader#",
+      "[pyg] nn.conv.hgt_conv:HGTConv#"
+    ]
+  },
+  {
+    "arxiv_id": "2003.03123",
+    "doi": "",
+    "title": "Directional Message Passing for Molecular Graphs",
+    "alt_titles": [
+      "Directional Message Passing for Molecular Graphs"
+    ],
+    "cited_by": [
+      "[pyg] nn.models.dimenet:DimeNet#triplets"
+    ]
+  },
+  {
+    "arxiv_id": "2003.13663",
+    "doi": "",
+    "title": "Revisiting 'Over-smoothing' in Deep GCNs",
+    "alt_titles": [
+      "Revisiting 'Over-smoothing' in Deep GCNs"
+    ],
+    "cited_by": [
+      "[pyg] nn.norm.mean_subtraction_norm:MeanSubtractionNorm#"
+    ]
+  },
+  {
+    "arxiv_id": "2004.05718",
+    "doi": "",
+    "title": "Adaptive Filters and Aggregator Fusion for Efficient Graph Convolutions",
+    "alt_titles": [
+      "Adaptive Filters and Aggregator Fusion for Efficient Graph Convolutions",
+      "Principal Neighbourhood Aggregation for Graph Nets"
+    ],
+    "cited_by": [
+      "[pyg] nn.aggr.multi:MultiAggregation#",
+      "[pyg] nn.aggr.scaler:DegreeScalerAggregation#",
+      "[pyg] nn.conv.pna_conv:PNAConv#",
+      "[pyg] nn.models.basic_gnn:PNA#init_conv"
+    ]
+  },
+  {
+    "arxiv_id": "2004.11198",
+    "doi": "",
+    "title": "SIGN: Scalable Inception Graph Neural Networks",
+    "alt_titles": [
+      "SIGN: Scalable Inception Graph Neural Networks"
+    ],
+    "cited_by": [
+      "[pyg] transforms.sign:SIGN#"
+    ]
+  },
+  {
+    "arxiv_id": "2004.13336",
+    "doi": "",
+    "title": "",
+    "alt_titles": [],
+    "cited_by": [
+      "[torch] distributed.fsdp.fully_sharded_data_parallel:FullyShardedDataParallel#"
+    ]
+  },
+  {
+    "arxiv_id": "2005.00687",
+    "doi": "",
+    "title": "Open Graph Benchmark: Datasets for Machine Learning on Graphs",
+    "alt_titles": [
+      "Open Graph Benchmark: Datasets for Machine Learning on Graphs"
+    ],
+    "cited_by": [
+      "[pyg] datasets.ogb_mag:OGB_MAG#"
+    ]
+  },
+  {
+    "arxiv_id": "2005.07959",
+    "doi": "",
+    "title": "Characteristic Functions on Graphs: Birds of a Feather, from Statistical Descriptors to Parametric Models",
+    "alt_titles": [
+      "Characteristic Functions on Graphs: Birds of a Feather, from Statistical Descriptors to Parametric Models"
+    ],
+    "cited_by": [
+      "[pyg] datasets.deezer_europe:DeezerEurope#",
+      "[pyg] datasets.lastfm_asia:LastFMAsia#"
+    ]
+  },
+  {
+    "arxiv_id": "2006.06972",
+    "doi": "",
+    "title": "Towards Deeper Graph Neural Networks with Differentiable Group Normalization",
+    "alt_titles": [
+      "Towards Deeper Graph Neural Networks with Differentiable Group Normalization"
+    ],
+    "cited_by": [
+      "[pyg] nn.norm.diff_group_norm:DiffGroupNorm#"
+    ]
+  },
+  {
+    "arxiv_id": "2006.07739",
+    "doi": "",
+    "title": "DeeperGCNs: All You Need to Train Deeper GCNs",
+    "alt_titles": [
+      "DeeperGCN: All You Need to Train Deeper GCNs",
+      "DeeperGCNs: All You Need to Train Deeper GCNs"
+    ],
+    "cited_by": [
+      "[pyg] nn.aggr.basic:PowerMeanAggregation#__repr__",
+      "[pyg] nn.aggr.basic:SoftmaxAggregation#forward",
+      "[pyg] nn.conv.gen_conv:GENConv#__init__",
+      "[pyg] nn.models.deepgcn:DeepGCNLayer#",
+      "[pyg] nn.norm.msg_norm:MessageNorm#"
+    ]
+  },
+  {
+    "arxiv_id": "2006.10637",
+    "doi": "",
+    "title": "Temporal Graph Networks for Deep Learning on Dynamic Graphs",
+    "alt_titles": [
+      "Temporal Graph Networks for Deep Learning on Dynamic Graphs"
+    ],
+    "cited_by": [
+      "[pyg] nn.models.tgn:TGNMemory#"
+    ]
+  },
+  {
+    "arxiv_id": "2006.11239",
+    "doi": "",
+    "title": "Denoising Diffusion Probabilistic Models",
+    "alt_titles": [
+      "Denoising Diffusion Probabilistic Models"
+    ],
+    "cited_by": [
+      "[pyg] utils.noise_scheduler"
+    ]
+  },
+  {
+    "arxiv_id": "2006.11468",
+    "doi": "",
+    "title": "Beyond Homophily in Graph Neural Networks: Current Limitations and Effective Designs",
+    "alt_titles": [
+      "Beyond Homophily in Graph Neural Networks: Current Limitations and Effective Designs"
+    ],
+    "cited_by": [
+      "[pyg] utils._homophily"
+    ]
+  },
+  {
+    "arxiv_id": "2006.16811",
+    "doi": "",
+    "title": "Path Integral Based Convolution and Pooling for Graph Neural Networks",
+    "alt_titles": [
+      "Path Integral Based Convolution and Pooling for Graph Neural Networks"
+    ],
+    "cited_by": [
+      "[pyg] nn.conv.pan_conv:PANConv#",
+      "[pyg] nn.pool.pan_pool:PANPooling#"
+    ]
+  },
+  {
+    "arxiv_id": "2006.16904",
+    "doi": "",
+    "title": "Graph Clustering with Graph Neural Networks",
+    "alt_titles": [
+      "Graph Clustering with Graph Neural Networks"
+    ],
+    "cited_by": [
+      "[pyg] nn.dense.dmon_pool:DMoNPooling#"
+    ]
+  },
+  {
+    "arxiv_id": "2007.02133",
+    "doi": "",
+    "title": "Simple and Deep Graph Convolutional Networks",
+    "alt_titles": [
+      "Simple and Deep Graph Convolutional Networks"
+    ],
+    "cited_by": [
+      "[pyg] nn.conv.gcn2_conv:GCN2Conv#"
+    ]
+  },
+  {
+    "arxiv_id": "2007.02901",
+    "doi": "",
+    "title": "Wiki-CS: A Wikipedia-Based Benchmark for Graph Neural Networks",
+    "alt_titles": [
+      "Wiki-CS: A Wikipedia-Based Benchmark for Graph Neural Networks"
+    ],
+    "cited_by": [
+      "[pyg] datasets.wikics:WikiCS#"
+    ]
+  },
+  {
+    "arxiv_id": "2007.03545",
+    "doi": "",
+    "title": "Network Embedding with Completely-imbalanced Labels",
+    "alt_titles": [
+      "Network Embedding with Completely-imbalanced Labels"
+    ],
+    "cited_by": [
+      "[pyg] nn.models.rect:RECT_L#"
+    ]
+  },
+  {
+    "arxiv_id": "2007.09593",
+    "doi": "",
+    "title": "",
+    "alt_titles": [],
+    "cited_by": [
+      "[pyg] datasets.md17:MD17#"
+    ]
+  },
+  {
+    "arxiv_id": "2009.00826",
+    "doi": "",
+    "title": "Scaling Attributed Network Embedding to Massive Graphs",
+    "alt_titles": [
+      "Scaling Attributed Network Embedding to Massive Graphs"
+    ],
+    "cited_by": [
+      "[pyg] datasets.attributed_graph_dataset:AttributedGraphDataset#"
+    ]
+  },
+  {
+    "arxiv_id": "2009.03294",
+    "doi": "",
+    "title": "GraphNorm: A Principled Approach to Accelerating Graph Neural Network Training",
+    "alt_titles": [
+      "GraphNorm: A Principled Approach to Accelerating Graph Neural Network Training"
+    ],
+    "cited_by": [
+      "[pyg] nn.norm.graph_norm:GraphNorm#"
+    ]
+  },
+  {
+    "arxiv_id": "2009.03509",
+    "doi": "",
+    "title": "Masked Label Prediction: Unified Message Passing Model for Semi-Supervised Classification",
+    "alt_titles": [
+      "Masked Label Prediction: Unified Message Passing Model for Semi-Supervised Classification"
+    ],
+    "cited_by": [
+      "[pyg] nn.conv.transformer_conv:TransformerConv#",
+      "[pyg] nn.models.mask_label:MaskLabel#"
+    ]
+  },
+  {
+    "arxiv_id": "2009.14794",
+    "doi": "",
+    "title": "Rethinking Attention with Performers",
+    "alt_titles": [
+      "Rethinking Attention with Performers"
+    ],
+    "cited_by": [
+      "[pyg] nn.attention.performer",
+      "[pyg] nn.attention.performer:PerformerAttention#forward",
+      "[pyg] nn.attention.performer:PerformerProjection#generalized_kernel"
+    ]
+  },
+  {
+    "arxiv_id": "2010.00577",
+    "doi": "",
+    "title": "Interpreting Graph Neural Networks for NLP With Differentiable Edge Masking",
+    "alt_titles": [
+      "Interpreting Graph Neural Networks for NLP With Differentiable Edge Masking"
+    ],
+    "cited_by": [
+      "[pyg] explain.algorithm.graphmask_explainer:GraphMaskExplainer#explain_message"
+    ]
+  },
+  {
+    "arxiv_id": "2010.12878",
+    "doi": "",
+    "title": "Pathfinder Discovery Networks for Neural Message Passing",
+    "alt_titles": [
+      "Pathfinder Discovery Networks for Neural Message Passing"
+    ],
+    "cited_by": [
+      "[pyg] nn.conv.pdn_conv:PDNConv#"
+    ]
+  },
+  {
+    "arxiv_id": "2010.13993",
+    "doi": "",
+    "title": "Combining Label Propagation And Simple Models Out-performs Graph Neural Networks",
+    "alt_titles": [
+      "Combining Label Propagation And Simple Models Out-performs Graph Neural Networks"
+    ],
+    "cited_by": [
+      "[pyg] nn.models.correct_and_smooth:CorrectAndSmooth#",
+      "[pyg] nn.models.label_prop:LabelPropagation#"
+    ]
+  },
+  {
+    "arxiv_id": "2011.04573",
+    "doi": "",
+    "title": "Parameterized Explainer for Graph Neural Network",
+    "alt_titles": [
+      "Parameterized Explainer for Graph Neural Network"
+    ],
+    "cited_by": [
+      "[pyg] datasets.ba2motif_dataset:BA2MotifDataset#",
+      "[pyg] explain.algorithm.pg_explainer:PGExplainer#"
+    ]
+  },
+  {
+    "arxiv_id": "2011.08843",
+    "doi": "",
+    "title": "Design Space for Graph Neural Networks",
+    "alt_titles": [
+      "Design Space for Graph Neural Networks"
+    ],
+    "cited_by": [
+      "[pyg] nn.conv.general_conv:GeneralConv#"
+    ]
+  },
+  {
+    "arxiv_id": "2011.14115",
+    "doi": "",
+    "title": "Fast and Uncertainty-Aware Directional Message Passing for Non-Equilibrium Molecules",
+    "alt_titles": [
+      "Fast and Uncertainty-Aware Directional Message Passing for Non-Equilibrium Molecules"
+    ],
+    "cited_by": [
+      "[pyg] nn.models.dimenet:DimeNetPlusPlus#forward"
+    ]
+  },
+  {
+    "arxiv_id": "2012.00131",
+    "doi": "",
+    "title": "HydroNet: Benchmark Tasks for Preserving Intermolecular Interactions and Structural Motifs in Predictive and Generative Models for Molecular Data",
+    "alt_titles": [
+      "HydroNet: Benchmark Tasks for Preserving Intermolecular Interactions and Structural Motifs in Predictive and Generative Models for Molecular Data"
+    ],
+    "cited_by": [
+      "[pyg] datasets.hydro_net:HydroNet#"
+    ]
+  },
+  {
+    "arxiv_id": "2012.09164",
+    "doi": "",
+    "title": "Point Transformer",
+    "alt_titles": [
+      "Point Transformer"
+    ],
+    "cited_by": [
+      "[pyg] nn.conv.point_transformer_conv:PointTransformerConv#"
+    ]
+  },
+  {
+    "arxiv_id": "2101.00797",
+    "doi": "",
+    "title": "Beyond Low-Frequency Information in Graph Convolutional Networks",
+    "alt_titles": [
+      "Beyond Low-Frequency Information in Graph Convolutional Networks"
+    ],
+    "cited_by": [
+      "[pyg] nn.conv.fa_conv:FAConv#"
+    ]
+  },
+  {
+    "arxiv_id": "2102.11533",
+    "doi": "",
+    "title": "Accurate Learning of Graph Representations with Graph Multiset Pooling",
+    "alt_titles": [
+      "Accurate Learning of Graph Representations with Graph Multiset Pooling"
+    ],
+    "cited_by": [
+      "[pyg] nn.aggr.gmt:GraphMultisetTransformer#"
+    ]
+  },
+  {
+    "arxiv_id": "2103.09430",
+    "doi": "",
+    "title": "OGB-LSC: A Large-Scale Challenge for Machine Learning on Graphs",
+    "alt_titles": [
+      "OGB-LSC: A Large-Scale Challenge for Machine Learning on Graphs"
+    ],
+    "cited_by": [
+      "[pyg] datasets.pcqm4m:PCQM4Mv2#"
+    ]
+  },
+  {
+    "arxiv_id": "2104.01481",
+    "doi": "",
+    "title": "Adaptive Filters and Aggregator Fusion for Efficient Graph Convolutions",
+    "alt_titles": [
+      "Adaptive Filters and Aggregator Fusion for Efficient Graph Convolutions"
+    ],
+    "cited_by": [
+      "[pyg] nn.aggr.multi:MultiAggregation#",
+      "[pyg] nn.conv.eg_conv:EGConv#"
+    ]
+  },
+  {
+    "arxiv_id": "2104.03058",
+    "doi": "",
+    "title": "Optimizing Memory Efficiency of Graph Neural Networks on Edge Computing Platforms",
+    "alt_titles": [
+      "Optimizing Memory Efficiency of Graph Neural Networks on Edge Computing Platforms"
+    ],
+    "cited_by": [
+      "[pyg] nn.conv.message_passing:MessagePassing#"
+    ]
+  },
+  {
+    "arxiv_id": "2104.12259",
+    "doi": "",
+    "title": "User Preference-aware Fake News Detection",
+    "alt_titles": [
+      "User Preference-aware Fake News Detection"
+    ],
+    "cited_by": [
+      "[pyg] datasets.upfd:UPFD#"
+    ]
+  },
+  {
+    "arxiv_id": "2105.04854",
+    "doi": "",
+    "title": "Improving Molecular Graph Neural Network Explainability with Orthonormalization and Induced Sparsity",
+    "alt_titles": [
+      "Improving Molecular Graph Neural Network Explainability with Orthonormalization and Induced Sparsity"
+    ],
+    "cited_by": [
+      "[pyg] nn.functional.bro",
+      "[pyg] nn.functional.gini"
+    ]
+  },
+  {
+    "arxiv_id": "2105.14491",
+    "doi": "",
+    "title": "How Attentive are Graph Attention Networks?",
+    "alt_titles": [
+      "How Attentive are Graph Attention Networks?"
+    ],
+    "cited_by": [
+      "[pyg] nn.conv.gatv2_conv:GATv2Conv#",
+      "[pyg] nn.models.basic_gnn:GAT#init_conv"
+    ]
+  },
+  {
+    "arxiv_id": "2106.07161",
+    "doi": "",
+    "title": "Heterogeneous Edge-Enhanced Graph Attention Network For Multi-Agent Trajectory Prediction",
+    "alt_titles": [
+      "Heterogeneous Edge-Enhanced Graph Attention Network For Multi-Agent Trajectory Prediction"
+    ],
+    "cited_by": [
+      "[pyg] nn.conv.heat_conv:HEATConv#"
+    ]
+  },
+  {
+    "arxiv_id": "2106.07476",
+    "doi": "",
+    "title": "Graph Neural Networks with 1000 Layers",
+    "alt_titles": [
+      "Graph Neural Networks with 1000 Layers"
+    ],
+    "cited_by": [
+      "[pyg] nn.models.rev_gnn:GroupAddRev#_fn_apply"
+    ]
+  },
+  {
+    "arxiv_id": "2106.09671",
+    "doi": "",
+    "title": "Pseudo-Euclidean Attract-Repel Embeddings for Undirected Graphs",
+    "alt_titles": [
+      "Pseudo-Euclidean Attract-Repel Embeddings for Undirected Graphs"
+    ],
+    "cited_by": [
+      "[pyg] nn.models.attract_repel:ARLinkPredictor#"
+    ]
+  },
+  {
+    "arxiv_id": "2110.03753",
+    "doi": "",
+    "title": "From Stars to Subgraphs: Uplifting Any GNN with Local Structure Awareness",
+    "alt_titles": [
+      "From Stars to Subgraphs: Uplifting Any GNN with Local Structure Awareness"
+    ],
+    "cited_by": [
+      "[pyg] transforms.rooted_subgraph:RootedEgoNets#forward",
+      "[pyg] transforms.rooted_subgraph:RootedRWSubgraph#__repr__"
+    ]
+  },
+  {
+    "arxiv_id": "2110.07875",
+    "doi": "",
+    "title": "Graph Neural Networks with Learnable Structural and Positional Representations",
+    "alt_titles": [
+      "Graph Neural Networks with Learnable Structural and Positional Representations"
+    ],
+    "cited_by": [
+      "[pyg] transforms.add_positional_encoding:AddRandomWalkPE#forward"
+    ]
+  },
+  {
+    "arxiv_id": "2110.14446",
+    "doi": "",
+    "title": "Large Scale Learning on Non-Homophilous Graphs: New Benchmarks and Strong Simple Methods",
+    "alt_titles": [
+      "Large Scale Learning on Non-Homophilous Graphs: New Benchmarks and Strong Simple Methods",
+      "Large-Scale Learning on Non-Homophilous Graphs: New Benchmarks and Strong Simple Methods"
+    ],
+    "cited_by": [
+      "[pyg] datasets.linkx_dataset:LINKXDataset#",
+      "[pyg] nn.models.linkx:LINKX#message_and_aggregate",
+      "[pyg] utils._homophily"
+    ]
+  },
+  {
+    "arxiv_id": "2111.12128",
+    "doi": "",
+    "title": "On the Unreasonable Effectiveness of Feature propagation in Learning on Graphs with Missing Node Features",
+    "alt_titles": [
+      "On the Unreasonable Effectiveness of Feature propagation in Learning on Graphs with Missing Node Features"
+    ],
+    "cited_by": [
+      "[pyg] transforms.feature_propagation:FeaturePropagation#"
+    ]
+  },
+  {
+    "arxiv_id": "2201.07858",
+    "doi": "",
+    "title": "Decoupling the Depth and Scope of Graph Neural Networks",
+    "alt_titles": [
+      "Decoupling the Depth and Scope of Graph Neural Networks"
+    ],
+    "cited_by": [
+      "[pyg] loader.shadow:ShaDowKHopSampler#"
+    ]
+  },
+  {
+    "arxiv_id": "2202.12795",
+    "doi": "",
+    "title": "Equilibrium Aggregation: Encoding Sets via Optimization",
+    "alt_titles": [
+      "Equilibrium Aggregation: Encoding Sets via Optimization"
+    ],
+    "cited_by": [
+      "[pyg] nn.aggr.equilibrium:EquilibriumAggregation#forward"
+    ]
+  },
+  {
+    "arxiv_id": "2205.05198",
+    "doi": "",
+    "title": "",
+    "alt_titles": [],
+    "cited_by": [
+      "[torch] distributed.tensor.parallel.style:SequenceParallel#__repr__"
+    ]
+  },
+  {
+    "arxiv_id": "2205.12454",
+    "doi": "",
+    "title": "Recipe for a General, Powerful, Scalable Graph Transformer",
+    "alt_titles": [
+      "Recipe for a General, Powerful, Scalable Graph Transformer"
+    ],
+    "cited_by": [
+      "[pyg] nn.conv.gps_conv:GPSConv#"
+    ]
+  },
+  {
+    "arxiv_id": "2205.14135",
+    "doi": "",
+    "title": "",
+    "alt_titles": [],
+    "cited_by": [
+      "[torch] nn.modules.activation:MultiheadAttention#_is_make_fx_tracing",
+      "[torch] nn.modules.transformer:TransformerEncoderLayer#forward"
+    ]
+  },
+  {
+    "arxiv_id": "2206.08164",
+    "doi": "",
+    "title": "Long Range Graph Benchmark (LRGB)",
+    "alt_titles": [
+      "Long Range Graph Benchmark (LRGB)"
+    ],
+    "cited_by": [
+      "[pyg] datasets.lrgb:LRGBDataset#"
+    ]
+  },
+  {
+    "arxiv_id": "2206.09677",
+    "doi": "",
+    "title": "GraphFramEx: Towards Systematic Evaluation of Explainability Methods for Graph Neural Networks",
+    "alt_titles": [
+      "GraphFramEx: Towards Systematic Evaluation of Explainability Methods for Graph Neural Networks"
+    ],
+    "cited_by": [
+      "[pyg] explain.metric.fidelity"
+    ]
+  },
+  {
+    "arxiv_id": "2207.03579",
+    "doi": "",
+    "title": "DGraph: A Large-Scale Financial Dataset for Graph Anomaly Detection",
+    "alt_titles": [
+      "DGraph: A Large-Scale Financial Dataset for Graph Anomaly Detection"
+    ],
+    "cited_by": [
+      "[pyg] datasets.dgraph:DGraphFin#"
+    ]
+  },
+  {
+    "arxiv_id": "2208.09339",
+    "doi": "",
+    "title": "Evaluating Explainability for Graph Neural Networks",
+    "alt_titles": [
+      "Evaluating Explainability for Graph Neural Networks"
+    ],
+    "cited_by": [
+      "[pyg] explain.metric.faithfulness"
+    ]
+  },
+  {
+    "arxiv_id": "2210.07147",
+    "doi": "",
+    "title": "Global Explainability of GNNs via Logic Combination of Learned Concepts",
+    "alt_titles": [
+      "Global Explainability of GNNs via Logic Combination of Learned Concepts"
+    ],
+    "cited_by": [
+      "[pyg] datasets.ba_multi_shapes:BAMultiShapesDataset#"
+    ]
+  },
+  {
+    "arxiv_id": "2210.14709",
+    "doi": "",
+    "title": "Harnessing Explanations: LLM-to-LM Interpreter for Enhanced Text-Attributed Graph Representation Learning",
+    "alt_titles": [
+      "Harnessing Explanations: LLM-to-LM Interpreter for Enhanced Text-Attributed Graph Representation Learning",
+      "Learning on Large-scale Text-attributed Graphs via Variational Inference"
+    ],
+    "cited_by": [
+      "[pyg] datasets.tag_dataset:TAGDataset#_safe_auto_tokenizer",
+      "[pyg] llm.models.glem:GLEM#deal_nan"
+    ]
+  },
+  {
+    "arxiv_id": "2210.16518",
+    "doi": "",
+    "title": "Enhancing Geometric Representations for Molecules with Equivariant Vector-Scalar Interactive Message Passing",
+    "alt_titles": [
+      "Enhancing Geometric Representations for Molecules with Equivariant Vector-Scalar Interactive Message Passing"
+    ],
+    "cited_by": [
+      "[pyg] nn.models.visnet:EdgeEmbedding#message",
+      "[pyg] nn.models.visnet:GatedEquivariantBlock#forward",
+      "[pyg] nn.models.visnet:NeighborEmbedding#forward",
+      "[pyg] nn.models.visnet:ViSNet#forward",
+      "[pyg] nn.models.visnet:ViSNetBlock#edge_update",
+      "[pyg] nn.models.visnet:ViS_MP#forward",
+      "[pyg] nn.models.visnet:ViS_MP_Vertex#aggregate"
+    ]
+  },
+  {
+    "arxiv_id": "2211.04952",
+    "doi": "",
+    "title": "Graph Neural Networks with Adaptive Readouts",
+    "alt_titles": [
+      "Graph Neural Networks with Adaptive Readouts"
+    ],
+    "cited_by": [
+      "[pyg] nn.aggr.deep_sets:DeepSetsAggregation#",
+      "[pyg] nn.aggr.gru:GRUAggregation#",
+      "[pyg] nn.aggr.mlp:MLPAggregation#",
+      "[pyg] nn.aggr.set_transformer:SetTransformerAggregation#"
+    ]
+  },
+  {
+    "arxiv_id": "2211.05953",
+    "doi": "",
+    "title": "",
+    "alt_titles": [],
+    "cited_by": [
+      "[torch] distributed.pipelining.schedules:ScheduleLoopedBFS#_perform_action"
+    ]
+  },
+  {
+    "arxiv_id": "2212.07564",
+    "doi": "",
+    "title": "AirfRANS: High Fidelity Computational Fluid Dynamics Dataset for Approximating Reynolds-Averaged Navier-Stokes Solutions",
+    "alt_titles": [
+      "AirfRANS: High Fidelity Computational Fluid Dynamics Dataset for Approximating Reynolds-Averaged Navier-Stokes Solutions"
+    ],
+    "cited_by": [
+      "[pyg] datasets.airfrans:AirfRANS#"
+    ]
+  },
+  {
+    "arxiv_id": "2212.08541",
+    "doi": "",
+    "title": "Learnable Commutative Monoids for Graph Neural Networks",
+    "alt_titles": [
+      "Learnable Commutative Monoids for Graph Neural Networks"
+    ],
+    "cited_by": [
+      "[pyg] nn.aggr.lcm:LCMAggregation#"
+    ]
+  },
+  {
+    "arxiv_id": "2212.09034",
+    "doi": "",
+    "title": "Graph Neural Networks are Inherently Good Generalizers: Insights by Bridging GNNs and MLPs",
+    "alt_titles": [
+      "Graph Neural Networks are Inherently Good Generalizers: Insights by Bridging GNNs and MLPs"
+    ],
+    "cited_by": [
+      "[pyg] nn.models.pmlp:PMLP#"
+    ]
+  },
+  {
+    "arxiv_id": "2212.09083",
+    "doi": "",
+    "title": "Influence-Based Mini-Batching for Graph Neural Networks",
+    "alt_titles": [
+      "Influence-Based Mini-Batching for Graph Neural Networks"
+    ],
+    "cited_by": [
+      "[pyg] loader.ibmb_loader:IBMBBatchLoader#__repr__",
+      "[pyg] loader.ibmb_loader:IBMBNodeLoader#create_loader"
+    ]
+  },
+  {
+    "arxiv_id": "2302.11636",
+    "doi": "",
+    "title": "Do We Really Need Complicated Model Architectures for Temporal Networks?",
+    "alt_titles": [
+      "Do We Really Need Complicated Model Architectures for Temporal Networks?"
+    ],
+    "cited_by": [
+      "[pyg] datasets.gdelt_lite:GDELTLite#"
+    ]
+  },
+  {
+    "arxiv_id": "2302.11640",
+    "doi": "",
+    "title": "A Critical Look at the Evaluation of GNNs under Heterophily: Are We Really Making Progress?",
+    "alt_titles": [
+      "A Critical Look at the Evaluation of GNNs under Heterophily: Are We Really Making Progress?"
+    ],
+    "cited_by": [
+      "[pyg] datasets.heterophilous_graph_dataset:HeterophilousGraphDataset#"
+    ]
+  },
+  {
+    "arxiv_id": "2302.13875",
+    "doi": "",
+    "title": "Evaluating Robustness and Uncertainty of Graph Models Under Structural Distributional Shifts",
+    "alt_titles": [
+      "Evaluating Robustness and Uncertainty of Graph Models Under Structural Distributional Shifts"
+    ],
+    "cited_by": [
+      "[pyg] transforms.node_property_split:NodePropertySplit#"
+    ]
+  },
+  {
+    "arxiv_id": "2305.10498",
+    "doi": "",
+    "title": "Edge Directionality Improves Learning on Heterophilic Graphs",
+    "alt_titles": [
+      "Edge Directionality Improves Learning on Heterophilic Graphs"
+    ],
+    "cited_by": [
+      "[pyg] nn.conv.dir_gnn_conv:DirGNNConv#"
+    ]
+  },
+  {
+    "arxiv_id": "2305.11624",
+    "doi": "",
+    "title": "",
+    "alt_titles": [],
+    "cited_by": [
+      "[torch] _inductor.fx_passes.efficient_conv_bn_eval"
+    ]
+  },
+  {
+    "arxiv_id": "2305.19523",
+    "doi": "",
+    "title": "",
+    "alt_titles": [],
+    "cited_by": [
+      "[pyg] datasets.tag_dataset:TAGDataset#_safe_auto_tokenizer"
+    ]
+  },
+  {
+    "arxiv_id": "2306.06202",
+    "doi": "",
+    "title": "NeuroGraph: Benchmarks for Graph Machine Learning in Brain Connectomics",
+    "alt_titles": [
+      "NeuroGraph: Benchmarks for Graph Machine Learning in Brain Connectomics"
+    ],
+    "cited_by": [
+      "[pyg] datasets.neurograph:NeuroGraphDataset#"
+    ]
+  },
+  {
+    "arxiv_id": "2306.10759",
+    "doi": "",
+    "title": "SGFormer: Simplifying and Empowering Transformers for Large-Graph Representations",
+    "alt_titles": [
+      "SGFormer: Simplifying and Empowering Transformers for Large-Graph Representations"
+    ],
+    "cited_by": [
+      "[pyg] nn.attention.sgformer:SGFormerAttention#",
+      "[pyg] nn.models.sgformer:SGFormer#forward"
+    ]
+  },
+  {
+    "arxiv_id": "2307.07107",
+    "doi": "",
+    "title": "Graph Positional and Structural Encoder",
+    "alt_titles": [
+      "Graph Positional and Structural Encoder"
+    ],
+    "cited_by": [
+      "[pyg] nn.models.gpse:GPSE#forward",
+      "[pyg] nn.models.gpse:GPSENodeEncoder#forward",
+      "[pyg] transforms.add_gpse:AddGPSE#"
+    ]
+  },
+  {
+    "arxiv_id": "2307.08691",
+    "doi": "",
+    "title": "",
+    "alt_titles": [],
+    "cited_by": [
+      "[torch] nn.functional:MyModel#forward"
+    ]
+  },
+  {
+    "arxiv_id": "2308.06862",
+    "doi": "",
+    "title": "Effect of Choosing Loss Function when Using T-Batching for Representation Learning on Dynamic Networks",
+    "alt_titles": [
+      "Effect of Choosing Loss Function when Using T-Batching for Representation Learning on Dynamic Networks"
+    ],
+    "cited_by": [
+      "[pyg] datasets.myket:MyketDataset#"
+    ]
+  },
+  {
+    "arxiv_id": "2308.16139",
+    "doi": "",
+    "title": "MedShapeNet -- A Large-Scale Dataset of 3D Medical Shapes for Computer Vision",
+    "alt_titles": [
+      "MedShapeNet -- A Large-Scale Dataset of 3D Medical Shapes for Computer Vision"
+    ],
+    "cited_by": [
+      "[pyg] datasets.medshapenet:MedShapeNet#"
+    ]
+  },
+  {
+    "arxiv_id": "2310.11009",
+    "doi": "",
+    "title": "LPFormer: An Adaptive Graph Transformer for Link Prediction",
+    "alt_titles": [
+      "LPFormer: An Adaptive Graph Transformer for Link Prediction"
+    ],
+    "cited_by": [
+      "[pyg] nn.models.lpformer:LPFormer#"
+    ]
+  },
+  {
+    "arxiv_id": "2402.07630",
+    "doi": "",
+    "title": "G-Retriever: Retrieval-Augmented Generation for Textual Graph Understanding and Question Answering",
+    "alt_titles": [
+      "G-Retriever: Retrieval-Augmented Generation for Textual Graph Understanding and Question Answering"
+    ],
+    "cited_by": [
+      "[pyg] datasets.web_qsp_dataset",
+      "[pyg] llm.models.g_retriever:GRetriever#"
+    ]
+  },
+  {
+    "arxiv_id": "2402.09353",
+    "doi": "",
+    "title": "",
+    "alt_titles": [],
+    "cited_by": [
+      "[torch] distributed.fsdp._fully_shard._fsdp_param_group:FSDPParamGroup#lazy_init"
+    ]
+  },
+  {
+    "arxiv_id": "2403.01232",
+    "doi": "",
+    "title": "Polynormer: polynomial-expressive graph transformer in linear time",
+    "alt_titles": [
+      "Polynormer: Polynomial-Expressive Graph Transformer in Linear Time",
+      "Polynormer: polynomial-expressive graph transformer in linear time"
+    ],
+    "cited_by": [
+      "[pyg] nn.attention.polynormer:PolynormerAttention#",
+      "[pyg] nn.models.polynormer:Polynormer#"
+    ]
+  },
+  {
+    "arxiv_id": "2403.04747",
+    "doi": "",
+    "title": "GNN-VPA: A Variance-Preserving Aggregation Strategy for Graph Neural Networks",
+    "alt_titles": [
+      "GNN-VPA: A Variance-Preserving Aggregation Strategy for Graph Neural Networks"
+    ],
+    "cited_by": [
+      "[pyg] nn.aggr.variance_preserving:VariancePreservingAggregation#"
+    ]
+  },
+  {
+    "arxiv_id": "2406.07234",
+    "doi": "",
+    "title": "Large-scale Datasets for AC Optimal Power Flow with Topological Perturbations",
+    "alt_titles": [
+      "Large-scale Datasets for AC Optimal Power Flow with Topological Perturbations"
+    ],
+    "cited_by": [
+      "[pyg] datasets.opf:OPFDataset#"
+    ]
+  },
+  {
+    "arxiv_id": "2409.11856",
+    "doi": "",
+    "title": "Edge-Based Graph Component Pooling",
+    "alt_titles": [
+      "Edge-Based Graph Component Pooling"
+    ],
+    "cited_by": [
+      "[pyg] nn.pool.cluster_pool:ClusterPooling#"
+    ]
+  },
+  {
+    "arxiv_id": "2409.14500",
+    "doi": "",
+    "title": "GraphLand: Evaluating Graph Machine Learning Models on Diverse Industrial Data",
+    "alt_titles": [
+      "GraphLand: Evaluating Graph Machine Learning Models on Diverse Industrial Data"
+    ],
+    "cited_by": [
+      "[pyg] datasets.graphland:GraphLandDataset#_load_yaml"
+    ]
+  },
+  {
+    "arxiv_id": "2412.05496",
+    "doi": "",
+    "title": "",
+    "alt_titles": [],
+    "cited_by": [
+      "[torch] nn.attention.flex_attention"
+    ]
+  },
+  {
+    "arxiv_id": "2503.09008",
+    "doi": "",
+    "title": "Towards Quantifying Long-Range Interactions in Graph Machine Learning: a Large Graph Dataset and a Measurement",
+    "alt_titles": [
+      "Towards Quantifying Long-Range Interactions in Graph Machine Learning: a Large Graph Dataset and a Measurement"
+    ],
+    "cited_by": [
+      "[pyg] datasets.city:CityNetwork#",
+      "[pyg] utils.influence"
+    ]
+  },
+  {
+    "arxiv_id": "",
+    "doi": "10.1109/TASSP.1981.1163506",
+    "title": "",
+    "alt_titles": [],
+    "cited_by": [
+      "[torch] signal.windows.windows"
+    ]
+  },
+  {
+    "arxiv_id": "",
+    "doi": "10.1137/0330046",
+    "title": "",
+    "alt_titles": [],
+    "cited_by": [
+      "[torch] optim.asgd"
+    ]
+  }
+]

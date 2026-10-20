@@ -82,6 +82,11 @@ python train_pyg.py --dataset cora     # GCNConv，默认 2 层
 python train_pyg.py --dataset cora --num_layers 8   # 加深，观察过平滑
 python test_pyg.py                     # 37 项断言
 
+# ---- 第三条路径：PyG 内置数据集（自动下载并落盘到 data/Planetoid/）----
+python train_planetoid.py --dataset cora
+python train_planetoid.py --report     # 查看本地缓存
+python test_planetoid.py               # 32 项断言
+
 # ---- 数据与权重 ----
 # 把数据集导出为 CSV（写入 data/csv/）
 python export_csv.py
@@ -140,13 +145,16 @@ gcn-pytorch/
 ├── test.py               正确性测试（54 项断言，独立参考值交叉核对）
 ├── train_pyg.py          PyG 版训练入口（GCNConv，支持任意层数）
 ├── test_pyg.py           PyG 版测试（37 项断言，含与手写层的等价性）
+├── train_planetoid.py    PyG 内置数据集版训练入口（Planetoid，自动落盘）
+├── test_planetoid.py     PyG 内置数据集版测试（32 项断言）
 ├── export_csv.py         数据集 pickle → CSV 导出
 ├── export_model.py       权重导出（GGUF / PyTorch / 元信息）
 ├── infer.py              推理（支持 .pt 与 .gguf）
 ├── requirements.txt
 ├── model/                导出产物：.gguf + .pt + .meta.json
 ├── data/csv/             CSV 形式的数据集（由 export_csv.py 生成）
-├── README.data.md        数据集详解（指标 / 格式 / 读取 / 四个坑 / 实测精度）
+├── data/Planetoid/       PyG 内置数据集的本地缓存（raw + processed）
+├── README.data.md        数据集详解（指标 / 格式 / 读取 / 七个坑 / 实测精度）
 ├── notebooks/
 │   ├── train.ipynb       手写实现的可交互版（含曲线、分类别准确率、CSV 对比）
 │   └── train_pyg.ipynb   PyG 版（含层数实验、层等价性、自环差异）
@@ -157,9 +165,11 @@ gcn-pytorch/
 │   ├── utils.py          数据加载（pickle / CSV）+ 预处理 + Chebyshev
 │   ├── __init__.py       稀疏张量不变量告警的上下文管理器
 │   └── data/             citeseer / cora / pubmed 三个数据集
-└── pyg_gcn/
-    ├── __init__.py       to_pyg_data（Data 转换）+ PyG 告警抑制
-    └── models.py         PyGGCN（GCNConv 堆叠）
+├── pyg_gcn/
+│   ├── __init__.py       to_pyg_data（Data 转换）+ PyG 告警抑制
+│   └── models.py         PyGGCN（GCNConv 堆叠）
+└── pyg_dataset/
+    └── __init__.py       Planetoid 加载 + 本地缓存 + 镜像回退
 ```
 
 ### 各文件的阅读顺序
@@ -410,19 +420,91 @@ python export_model.py --dataset cora
 
 ## 数据集
 
-**完整说明见 [[README.data]]**（三个数据集的全部指标、两种格式对比、四个坑、九个组合的实测精度）。
+项目有**三条并行的数据路径**，互不影响：
 
-自动从 `gcn/data/` 读取（已随代码附带，无需额外下载）：
+| 路径 | 入口 | 数据位置 | 谁负责解析 |
+|---|---|---|---|
+| A. 本地 pickle | `train.py` / `train_pyg.py` | `gcn/data/` | 本仓库 `load_data` |
+| B. 本地 CSV | 同上 `--source csv` | `data/csv/` | 本仓库 `load_data_csv` |
+| **C. PyG 内置** | **`train_planetoid.py`** | **`data/Planetoid/`** | **PyG `Planetoid`** |
 
-| 文件 | 含义 |
-|---|---|
-| `ind.{ds}.x` / `.y` | 训练节点特征 / one-hot 标签 |
-| `ind.{ds}.tx` / `.ty` | 测试节点特征 / 标签 |
-| `ind.{ds}.allx` / `.ally` | 全部（有标签+无标签）训练节点 |
-| `ind.{ds}.graph` | `{index: [邻居...]}` 邻接字典 |
-| `ind.{ds}.test.index` | 测试节点索引（inductive 设置） |
+A、B 两条见 [[README.data]]（含 8 个 `ind.*` 文件的字段含义、Citeseer 15 个孤立节点的处理等）；C 见下一节。
 
-**Citeseer 特殊处理**：该数据集有 15 个孤立节点（`node_id` 2407、2489、2553、2682、2781、2953、3042、3063、3212、3214、3250、3292、3305、3306、3309），`load_data` 中用零向量补齐到正确位置——这段逻辑已原样保留，漏掉会导致精度异常。细节见 [[README.data]] 的「坑 1」。
+> **三条路径的取舍**：想**研究数据管线**用 A（字段最透明）；想在 Excel/pandas 里看数据用 B；想**少写代码、让 PyG 全包**用 C。
+
+## PyG 内置数据集（Planetoid）
+
+第三条路径把数据完全交给 PyG：下载、解压、`test_idx_reorder` 重排、Citeseer 孤立节点补齐都由 `torch_geometric.datasets.Planetoid` 完成，本仓库不再自己解析 `ind.*`。
+
+```bash
+python train_planetoid.py                     # Cora，首次会下载并落盘
+python train_planetoid.py --dataset citeseer
+python train_planetoid.py --report            # 只看本地缓存情况
+python test_planetoid.py                      # 32 项断言
+```
+
+### 数据落盘位置
+
+```text
+data/Planetoid/
+├── Cora/
+│   ├── raw/        ind.cora.{x,y,tx,ty,allx,ally,graph} + test.index   （8 个）
+│   └── processed/  data.pt                                               （PyG 处理结果）
+├── Citeseer/       raw 8 个 + processed/data.pt
+└── Pubmed/         raw 8 个 + processed/data.pt
+```
+
+实测占用：Cora 15.5 MB、Citeseer 48.2 MB、Pubmed 47.5 MB，合计约 **111 MB**（大头是 `processed/data.pt` 里的稠密特征）。**与 `gcn/data/`、`data/csv/` 完全隔离**，不会覆盖任何原文件。
+
+缓存可以随时删掉重建，不影响任何原数据：
+
+```bash
+rm -rf data/Planetoid        # 下次运行会重新下载/处理
+```
+
+> 若要把仓库提交到 git，建议把 `data/Planetoid/` 加进 `.gitignore`——它只是可再生的缓存。
+
+再次运行时命中缓存，**不联网、不重跑 process**（`test_planetoid.py` 的 A3 断言检查 `data.pt` 的 mtime 未变）。
+
+### 离线环境怎么办
+
+PyG 默认从 `github.com/kimiyoung/planetoid/raw/master/data` 下载，该地址会跳转到 `raw.githubusercontent.com`。本机沙箱里这个域名不可达，因此 `pyg_dataset` 加了一条**镜像回退**：
+
+| 顺序 | 方式 | 说明 |
+|---|---|---|
+| 1 | 已缓存 | `raw/` 下 8 个文件齐全 → 直接读，不联网 |
+| 2 | 官方地址 | 联网正常时由 `Planetoid.download()` 完成 |
+| 3 | **镜像回退** | 从 `codeload.github.com` 取仓库 tar.gz（约 6 MB），一次抽出**三个数据集**的文件 |
+
+镜像走 `github.com` 的打包服务，不碰 `raw.githubusercontent.com`。实测单次约 160 秒，故设计成一次铺开三个数据集，避免重复下载。
+
+### 与本地路径的差异（重要）
+
+PyG 的 `Planetoid` 在处理时**会丢掉原始自环**：
+
+| 数据集 | 本地 `adj_raw` 非零元 | PyG `edge_index` | 差 | 原始自环数 |
+|---|---:|---:|---:|---:|
+| Cora | 10,556 | 10,556 | 0 | 0 |
+| Citeseer | 9,228 | 9,104 | **124** | 124 |
+| Pubmed | 88,651 | 88,648 | **3** | 3 |
+
+边数差**恰好等于**原始自环数——`test_planetoid.py` 的 C1 断言就检查这一点，多一条少一条都会失败。
+
+这个差异**不影响精度**：PyG 丢掉自环后，`GCNConv` 的 `add_self_loops` 会以权重 1 补回；而本地路径保留自环、`GCNConv` 也是覆盖为 1。两者归一化结果相同，所以实测精度完全一致：
+
+| 数据集 | `train_pyg.py`（本地） | `train_planetoid.py`（内置） | 差 |
+|---|---:|---:|---:|
+| Cora | 79.50% | **79.50%** | 0.00 |
+| Citeseer | 66.80% | **66.80%** | 0.00 |
+| Pubmed | 76.70% | **76.70%** | 0.00 |
+
+> 注意这里的「一致」只对 `GCNConv` 成立。若换成手写 `GraphConvolution`（`A + I` 会把已有自环变成 2），两条路径就会分叉——那正是 `train.py` 76.70% 与 `train_pyg.py` 79.50% 的差距来源。
+
+### 特征归一化
+
+`load()` 默认套 `NormalizeFeatures()`，与手写版的 `preprocess_features` 对齐。`--no_normalize` 可关闭。
+
+实测 Cora 上两者只差 0.1 个百分点（79.50% vs 79.40%）——0/1 词袋特征的行归一化只改尺度不改方向。**真正影响精度的是邻接矩阵的归一化约定，不是特征归一化。**
 
 ## CSV 数据源
 

@@ -1,0 +1,20 @@
+{
+  "dataset": "cora",
+  "num_nodes": 250,
+  "num_features": 1433,
+  "num_classes": 7,
+  "num_edges": 116,
+  "num_nonzero_features": 4628,
+  "features_format": "dense",
+  "files": {
+    "nodes": "nodes.csv",
+    "features": "features_dense.csv",
+    "edges": "edges.csv"
+  },
+  "splits": {
+    "train": 21,
+    "val": 77,
+    "test": 152
+  },
+  "split_ratio_source": "cora_planetoid_140_500_1000"
+}
