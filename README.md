@@ -4,7 +4,7 @@
 
 > **对应文档**：[[notes/01-谱方法|01-谱方法]] · [[notes/03-空域方法与消息传递|03-空域方法]] ｜ 原始代码在 `../gcn/` ｜ 数据集详解见 [[README.data]]
 >
-> **两套实现**：手写版（`gcn/` + `train.py`）忠实移植 TF 结构；PyG 版（`pyg_gcn/` + `train_pyg.py`）用社区标准 `GCNConv`。Cora 精度分别为 **76.70%** 与 **79.50%**，详见 [[#PyTorch Geometric 版（GCNConv）|PyTorch Geometric 版]]。
+> **三套实现**：手写版（`gcn/` + `train.py`）忠实移植 TF 结构；PyG 版（`pyg_gcn/` + `train_pyg.py`）用社区标准 `GCNConv`；**简洁版**（`train_planetoid.py`）把数据与归一化全交给 PyG 内置组件。Cora 精度分别为 **76.70%**、**79.50%**、**80.20%**，详见 [[#PyG 内置数据集（Planetoid）|PyG 内置数据集版]]。
 
 ## 代码注释规范
 
@@ -145,8 +145,8 @@ gcn-pytorch/
 ├── test.py               正确性测试（54 项断言，独立参考值交叉核对）
 ├── train_pyg.py          PyG 版训练入口（GCNConv，支持任意层数）
 ├── test_pyg.py           PyG 版测试（37 项断言，含与手写层的等价性）
-├── train_planetoid.py    PyG 内置数据集版训练入口（Planetoid，自动落盘）
-├── test_planetoid.py     PyG 内置数据集版测试（32 项断言）
+├── train_planetoid.py    PyG 内置数据集版训练入口（Planetoid，最简，145 行）
+├── test_planetoid.py     PyG 内置数据集版测试（42 项断言）
 ├── export_csv.py         数据集 pickle → CSV 导出
 ├── export_model.py       权重导出（GGUF / PyTorch / 元信息）
 ├── infer.py              推理（支持 .pt 与 .gguf）
@@ -434,14 +434,65 @@ A、B 两条见 [[README.data]]（含 8 个 `ind.*` 文件的字段含义、Cite
 
 ## PyG 内置数据集（Planetoid）
 
-第三条路径把数据完全交给 PyG：下载、解压、`test_idx_reorder` 重排、Citeseer 孤立节点补齐都由 `torch_geometric.datasets.Planetoid` 完成，本仓库不再自己解析 `ind.*`。
+第三条路径把数据完全交给 PyG：下载、解压、`test_idx_reorder` 重排、Citeseer 孤立节点补齐都由 `torch_geometric.datasets.Planetoid` 完成，本仓库不再自己解析 `ind.*`。**代码量约 145 行，其中「真正需要自己写的」不到 40 行。**
 
 ```bash
 python train_planetoid.py                     # Cora，首次会下载并落盘
 python train_planetoid.py --dataset citeseer
-python train_planetoid.py --report            # 只看本地缓存情况
-python test_planetoid.py                      # 32 项断言
+python train_planetoid.py --report            # 只看本地缓存
+python test_planetoid.py                      # 42 项断言
 ```
+
+### 自带的东西 vs 需要自己写的
+
+|环节 | 谁负责 |
+|---|---|
+| 下载 / 解压 / 划分 / 孤立节点 | `Planetoid` |
+| 特征行归一化 | `NormalizeFeatures()` |
+| 加自环 + `D^-1/2 (A+I) D^-1/2` 归一化 | `GCNConv` 内部 |
+| 邻域聚合 | `GCNConv` 内部 |
+| **仅需手写** | 模型外壳（5 行 forward）、训练循环（约 20 行）、argparse |
+
+### 实测精度（本机，torch 2.14.1+cpu，torch_geometric 2.8.1，seed=123）
+
+| 数据集 | 简洁版 | 手写版 | PyG 版（本地数据） |论文报告 |
+|---|---:|---:|---:|---:|
+| Cora | **80.20%** | 76.70% | 79.50% | 81.5% |
+| Citeseer | **72.30%** | 64.10% | 66.80% | 70.3% |
+| Pubmed | **79.50%** | 75.60% | 76.70% | 79.0% |
+
+**三套实现里最接近论文的是这一套。** 差距 1.3 个点，原因是训练协议对齐了论文正文而非 TF 原版代码：TF 原版用「mask 归一化到均值 1」+「L2 只作用于第一层」的写法，本版用标准的 `F.cross_entropy` + 优化器级 `weight_decay`（作用全部层）。Citeseer 上甚至超过了论文报告值（72.3% vs 70.3%）。
+
+> 注意：这不代表简洁版「更对」。手写版的价值在于**忠实还原TF 原版**并用 `test.py` 的 54 项断言证明数学正确；三者精度不可直接横向排名。
+
+### 过平滑：Cora 层数扫描
+
+`--num_layers` 一改即可加深，无需改代码：
+
+| 层数 | 测试精度 |
+|---:|---:|
+| 1 | 76.90% |
+| 2 | **80.20%** |
+| 4 | 44.70% |
+| 8 | 39.70% |
+| 16 | 18.60% |
+
+2 层是最优点，4 层开始急剧退化，16 层跌到接近随机水平（7分类 ≈ 14.3%）。
+
+验证一下三个数据集：Cora 2708 节点 / 10556 边 / 140 训练，Citeseer 3327 / 9104 / 120，Pubmed 19717 / 88648 / 60 —— 全部与论文 Table 1 一致；`gcn_norm` 与独立构造的 `D^-1/2(A+I)D^-1/2` 偏差 `3.0e-08`。
+
+## 三套实现的取舍
+
+| | 手写版 `gcn/` | PyG 版 `pyg_gcn/` | **简洁版 `train_planetoid.py`** |
+|---|---|---|---|
+| 代码量 | ~1200 行 | ~350 行 | **~145 行** |
+| 数据来源 | 本地 pickle | 本地 pickle | **PyG `Planetoid`** |
+| 图卷积 | 手写 `GraphConvolution` | `GCNConv` | `GCNConv` |
+| L2 范围 | 仅第一层 | 仅第一层 | 全部层（优化器级） |
+| Cora | 76.70% | 79.50% | **80.20%** |
+| 想知道什么 | 论文数学怎么变成代码 | PyG 与手写的等价性 | **怎么最快跑通一个 GNN** |
+
+> 三者精度**不可横向排名**——训练协议不同。要引用数字时必须连协议一起写。
 
 ### 数据落盘位置
 
@@ -494,9 +545,11 @@ PyG 的 `Planetoid` 在处理时**会丢掉原始自环**：
 
 | 数据集 | `train_pyg.py`（本地） | `train_planetoid.py`（内置） | 差 |
 |---|---:|---:|---:|
-| Cora | 79.50% | **79.50%** | 0.00 |
-| Citeseer | 66.80% | **66.80%** | 0.00 |
-| Pubmed | 76.70% | **76.70%** | 0.00 |
+| Cora | 79.50% | **80.20%** | +0.70 |
+| Citeseer | 66.80% | **72.30%** | +5.50 |
+| Pubmed | 76.70% | **79.50%** | +2.80 |
+
+> 差异**不是**自环造成的——`test_planetoid.py` 的 C 组断言已经证明两者归一化结果一致（偏差 `3.0e-08`）。真正的来源是**训练协议**：简洁版用优化器级 `weight_decay`（全部层）+ 标准 CE，而 `train_pyg.py` 刻意模仿 TF 原版只正则第一层。换句话说，同一份数据、同一套划分，不同的优化协议能差5 个点——这也说明「对比精度」时必须同时说明协议。
 
 > 注意这里的「一致」只对 `GCNConv` 成立。若换成手写 `GraphConvolution`（`A + I` 会把已有自环变成 2），两条路径就会分叉——那正是 `train.py` 76.70% 与 `train_pyg.py` 79.50% 的差距来源。
 
@@ -504,7 +557,7 @@ PyG 的 `Planetoid` 在处理时**会丢掉原始自环**：
 
 `load()` 默认套 `NormalizeFeatures()`，与手写版的 `preprocess_features` 对齐。`--no_normalize` 可关闭。
 
-实测 Cora 上两者只差 0.1 个百分点（79.50% vs 79.40%）——0/1 词袋特征的行归一化只改尺度不改方向。**真正影响精度的是邻接矩阵的归一化约定，不是特征归一化。**
+实测 Cora 上两者只差 0.1 个百分点（79.50% vs 79.40%）——0/1 词袋特征的行归一化只改尺度不改方向。**真正影响精度的是训练协议（尤其 L2 作用范围）与邻接矩阵的归一化约定，不是特征归一化。**
 
 ## CSV 数据源
 
