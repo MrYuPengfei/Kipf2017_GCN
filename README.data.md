@@ -1,6 +1,15 @@
 ---
-tags: [GCN/数据集, GNN/数据]
-aliases: [GCN数据集说明, 引文网络数据, Cora数据, 数据集文档]
+title: "GCN 数据集说明（README.data）"
+topic: "GNN / scripts"
+source_note: "GNN/scripts/gcn-pytorch/README.data.md"
+created: "2026-10-21"
+tags:
+  - gcn-pytorch
+aliases:
+  - GCN数据集说明
+  - 引文网络数据
+  - Cora数据
+  - 数据集文档
 ---
 Cora，CiteSeer，PubMed应该是GNN学习过程中没有人能逃得过的三大关口，在数据集上的意义可能相当于GCN，GraphSAGE，GAT之于空域GNN的意义.
 https://blog.csdn.net/PolarisRisingWar/article/details/118714542
@@ -16,7 +25,7 @@ https://blog.csdn.net/PolarisRisingWar/article/details/118714542
 
 ## 一、这三个数据集是什么
 
-三个数据集都是**引文网络（citation network）**，来自 [[notes/02-数学基础|图学习综述]] 领域最经典的 Planetoid 基准，由 Yang, Cohen & Finn 于 2016 年发布。
+三个数据集都是**引文网络（citation network）**，来自 [[02-数学基础|图学习综述]] 领域最经典的 Planetoid 基准，由 Yang, Cohen & Finn 于 2016 年发布。
 
 - **节点** = 论文
 - **边** = 论文之间的引用关系（无向图，`A[i,j]=1` 表示 i 引用了 j）
@@ -60,7 +69,7 @@ https://blog.csdn.net/PolarisRisingWar/article/details/118714542
 
 Pubmed 的压缩比只有 4.9×，因为它的特征密度是另两者的 8~12 倍。这也解释了为什么 Pubmed 上稀疏算子带来的加速不如 Cora 明显——**稀疏的收益与密度强相关**。
 
-而稀疏 dropout 之所以必须存在，是因为**稠密 dropout 会把零位置变成非零**，一旦破坏稀疏结构，上表的压缩比立刻归零（参见 [[notes/03-空域方法与消息传递|空域方法]]）。
+而稀疏 dropout 之所以必须存在，是因为**稠密 dropout 会把零位置变成非零**，一旦破坏稀疏结构，上表的压缩比立刻归零（参见 [[03-空域方法与消息传递|空域方法]]）。
 
 **第二，Pubmed 是「大而稠密」，Cora/Citeseer 是「小而稀疏」。** Pubmed 特征密度 10%，比另两个高一个数量级；节点数多 7 倍。这解释了为什么在 Cora 上训练快（200 epoch 约十几秒）而 Pubmed 明显更慢，也解释了为什么 GCNII、GCNII* 这类为「加深网络」设计的模型通常在 Pubmed 上才有说服力。
 
@@ -82,7 +91,7 @@ Pubmed 的压缩比只有 4.9×，因为它的特征密度是另两者的 8~12 �
 |---|---:|---:|---:|
 | 论文数 | 4,103 | 7,739 | 7,875 |
 
-**类别严重不均衡**，Pubmed 尤其明显（4103 : 7739 : 7875 ≈ 1 : 1.9 : 1.9）。因此**必须使用 masked accuracy 而非整体准确率**——后者在不平衡数据集上会给出误导性的高分。这也是 [[notes/00-GNN总览|总览]] 中强调「mask 语义不能顺手改」的原因之一。
+**类别严重不均衡**，Pubmed 尤其明显（4103 : 7739 : 7875 ≈ 1 : 1.9 : 1.9）。因此**必须使用 masked accuracy 而非整体准确率**——后者在不平衡数据集上会给出误导性的高分。这也是 [[00-GNN总览|总览]] 中强调「mask 语义不能顺手改」的原因之一。
 
 ---
 
@@ -219,7 +228,7 @@ adj, features, y_train, y_val, y_test, train_mask, val_mask, test_mask, adj_raw 
 | 7 | `test_mask` | bool (N,) | 测试集掩码 |
 | 8 | `adj_raw` | **scipy** 稀疏矩阵 (N, N) | 原始邻接矩阵，**保留在 scipy 域** |
 
-> **为什么 `adj_raw` 不转 torch？** 因为 [[notes/01-谱方法|ChebNet]] 的 `chebyshev_polynomials()` 需要调用 `eigsh` 做 Lanczos 谱分解，这只能在 scipy 域完成。前 8 项供 GPU 计算，第 9 项供 CPU 谱运算——这是一个刻意的双后端设计。
+> **为什么 `adj_raw` 不转 torch？** 因为 [[01-谱方法|ChebNet]] 的 `chebyshev_polynomials()` 需要调用 `eigsh` 做 Lanczos 谱分解，这只能在 scipy 域完成。前 8 项供 GPU 计算，第 9 项供 CPU 谱运算——这是一个刻意的双后端设计。
 
 ### 4.3 两条路径数值完全一致
 
@@ -310,7 +319,7 @@ pkl.load(f, encoding='latin1')   # Python 3
 - 直接算 `cross_entropy(outputs, y_train)` 是**错的**——会把未参与训练的节点也算进去
 - 必须用 masked 版本（`gcn/metrics.py` 的 `masked_softmax_cross_entropy`）
 
-这是 [[notes/06-深度困境-过平滑与过挤压|语义一致性]] 层面的要求，也是 TF 原版用 `tf.sequence_mask` 的原因。
+这是 [[06-深度困境-过平滑与过挤压|语义一致性]] 层面的要求，也是 TF 原版用 `tf.sequence_mask` 的原因。
 
 ### 坑 5：数值类型是 float32 / int32，不是 numpy 默认的 float64
 
@@ -383,7 +392,7 @@ Cora 的 25.70% 已经接近 7 分类的随机水平（14.3%）。**这是本项
 
 ## 七、本机实测精度
 
-超参数与 [[notes/05-综述与学习路径|原版]] 完全一致：`hidden1=16`、`dropout=0.5`、`lr=0.01`、`weight_decay=5e-4`、`early_stopping=10`、`seed=123`。
+超参数与 [[05-综述与学习路径|原版]] 完全一致：`hidden1=16`、`dropout=0.5`、`lr=0.01`、`weight_decay=5e-4`、`early_stopping=10`、`seed=123`。
 
 下表**九个数全部来自本机实际运行**（`python train.py --dataset X --model Y`），不是引用值：
 
@@ -422,7 +431,7 @@ Cora 的 25.70% 已经接近 7 分类的随机水平（14.3%）。**这是本项
 ### 7.2 GCN 主线的观察
 
 - **Cora 与 Citeseer 上 `gcn` ≥ `gcn_cheby`**：K=3 的 Chebyshev 基并没有带来增益，反而在 Cora 上低了 1.7 个百分点。这与论文结论一致——GCN 本身就是 ChebNet 的一阶近似，在浅层小图上更多阶数只会增加过拟合风险。
-- **Pubmed 上 `gcn` 明显优于 `gcn_cheby`**（75.60% vs 72.90%）：Pubmed 特征稠密（10%）、平均度最高（4.50），一阶传播已能充分混合邻居信息，三阶展开反而把过平滑问题提前引入（参见 [[notes/06-深度困境-过平滑与过挤压|过平滑]]）。
+- **Pubmed 上 `gcn` 明显优于 `gcn_cheby`**（75.60% vs 72.90%）：Pubmed 特征稠密（10%）、平均度最高（4.50），一阶传播已能充分混合邻居信息，三阶展开反而把过平滑问题提前引入（参见 [[06-深度困境-过平滑与过挤压|过平滑]]）。
 - **`gcn_cheby` 的训练时间显著更长**（Cora 每 epoch 0.128s vs `gcn` 0.022s），因为要维护 K+1 个稀疏 support 矩阵并做 K+1 次稀疏乘法。
 
 ---

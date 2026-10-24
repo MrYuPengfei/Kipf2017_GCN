@@ -1,9 +1,11 @@
 """``train_planetoid.py`` 的最小验证集。
 
-只测三件最容易出错、且 PyG 悄悄替你决定的事：
-    1. 数据划分与规模是否和论文 Table 1 一致
-    2. Planetoid 在处理时对原始自环做了什么
-    3. GCNConv 的归一化是不是论文里的 D^-1/2 (A+I) D^-1/2
+测五组：
+    A. 数据划分与规模是否和论文 Table 1 一致
+    B. Planetoid 在处理时对原始自环做了什么
+    C. GCNConv 的归一化是不是论文里的 D^-1/2 (A+I) D^-1/2
+    D. 模型能跑，且输出形状正确
+    E. **GGUF 存/取往返是否逐位一致**（含「仅凭文件重建模型」）
 
 用法：
     python test_planetoid.py            # 全部数据集
@@ -13,9 +15,10 @@
 import sys
 
 import torch
-from torch_geometric.datasets import Planetoid
-from torch_geometric.nn.conv.gcn_conv import gcn_norm
-from torch_geometric.transforms import NormalizeFeatures
+
+# PyG 的导入统一走 pyg_warn（压掉 Python 3.14 下的导入期告警）
+from pyg_warn import (NormalizeFeatures, Planetoid, add_self_loops,
+                      gcn_norm, silence)
 
 # 论文 Table 1 的规模：(节点数, 特征维度, 类别数, 原始边数)
 TABLE1 = {
@@ -79,8 +82,6 @@ def test_normalization(name):
     """
     import numpy as np
     import scipy.sparse as sp
-    from torch_geometric.nn.conv.gcn_conv import gcn_norm
-    from torch_geometric.utils import add_self_loops
 
     print(f'\nC. 归一化 · {name}')
     data = Planetoid(ROOT, name)[0]
@@ -135,12 +136,104 @@ def test_model_forward(name):
     check(torch.isfinite(out).all(), '输出无 NaN/Inf')
 
 
+def test_gguf_roundtrip(name):
+    """E. GGUF 存/取的往返一致性。
+
+    这组断言是本文件新增的核心：验证
+      1. 写出的 GGUF 能被读回，且张量数值与 PyTorch 完全一致
+      2. 仅凭 GGUF 文件就能重建模型结构（层数/维度写在 KV 区）
+      3. 重建后的模型输出与原模型逐位一致
+      4. GGUF **不包含** 图结构与特征（这是它表达不了 GCN 的根本原因）
+    """
+    import os
+    import tempfile
+
+    from train_planetoid import GCN
+    import gguf_io
+
+    print(f'\nE. GGUF 往返 · {name}')
+    ds = Planetoid(ROOT, name, transform=NormalizeFeatures())
+    data = ds[0]
+
+    torch.manual_seed(0)
+    model = GCN(data.num_features, 16, ds.num_classes, 2, 0.5)
+    model.eval()
+
+    with torch.no_grad():
+        ref_logits = model(data.x, data.edge_index)
+
+    tmpdir = tempfile.mkdtemp(prefix='gguf_test_')
+    gguf_path = os.path.join(tmpdir, 'test.gguf')
+    model.save(gguf_path, meta={'dataset': name, 'test_acc': 0.5})
+
+    check(os.path.exists(gguf_path), 'GGUF 文件已写出')
+    check(os.path.exists(os.path.join(tmpdir, 'test.pt')), '.pt 文件已写出')
+    check(os.path.exists(os.path.join(tmpdir, 'test.meta.json')),
+          '.meta.json 已写出')
+
+    # ---- 1) 读回的张量与原权重逐位一致 ----
+    state, meta = gguf_io.load_gguf(gguf_path)
+    check(set(state) == set(model.state_dict()),
+          f'张量集合一致（{len(state)} 个）')
+
+    max_diff = 0.0
+    for k, v in model.state_dict().items():
+        if not v.is_floating_point():
+            continue
+        d = (state[k] - v).abs().max().item()
+        max_diff = max(max_diff, d)
+    check(max_diff == 0.0, f'所有张量与 PyTorch 逐位一致（最大偏差 {max_diff:.2e}）')
+
+    # ---- 2) 仅凭文件重建模型 ----
+    check(meta['num_layers'] == 2, f"KV 区 num_layers == {meta['num_layers']}")
+    check(meta['num_features'] == data.num_features,
+          f"KV 区 num_features == {meta['num_features']}")
+    check(meta['num_classes'] == ds.num_classes,
+          f"KV 区 num_classes == {meta['num_classes']}")
+    check(meta['dataset'] == name, f"KV 区 dataset == {meta['dataset']}")
+
+    rebuilt, _ = GCN.from_file(gguf_path)
+    rebuilt.eval()
+    with torch.no_grad():
+        new_logits = rebuilt(data.x, data.edge_index)
+    check(torch.equal(ref_logits, new_logits),
+          '重建模型的输出与原模型逐位一致')
+
+    # ---- 3) 形状正确（GGUF 头里的 shape 是逆序的，最容易出错的地方）----
+    w = state['convs.0.lin.weight']
+    check(tuple(w.shape) == (16, data.num_features),
+          f'convs.0.lin.weight 形状 {tuple(w.shape)} == '
+          f'(16, {data.num_features})')
+    check(tuple(state['convs.1.lin.weight'].shape) == (ds.num_classes, 16),
+          f'convs.1.lin.weight 形状 '
+          f'{tuple(state["convs.1.lin.weight"].shape)} == ({ds.num_classes}, 16)')
+
+    # ---- 4) GGUF 里**没有**图结构与特征 ----
+    check(not any('edge' in k or k == 'x' for k in state),
+          'GGUF 不含edge_index / x（图结构必须推理时另行提供）')
+
+    # ---- 5) .pt 与 .gguf 载入同一模型，结果一致 ----
+    m2 = GCN(data.num_features, 16, ds.num_classes, 2, 0.0)
+    m2.load(os.path.join(tmpdir, 'test.pt'))
+    m2.eval()
+    with torch.no_grad():
+        l2 = m2(data.x, data.edge_index)
+    check(torch.equal(ref_logits, l2), '.pt 载入的模型输出与原模型一致')
+
+    # 清理临时目录
+    import shutil
+    shutil.rmtree(tmpdir, ignore_errors=True)
+
+
 if __name__ == '__main__':
     names = sys.argv[1:] or list(TABLE1)
-    for nm in names:
-        test_scale(nm)
-        test_self_loop(nm)
-        test_normalization(nm)
-        test_model_forward(nm)
+    # PyG 在 Python 3.14 下的告警发生在 GCNConv 实例化时，必须包住整个测试
+    with silence():
+        for nm in names:
+            test_scale(nm)
+            test_self_loop(nm)
+            test_normalization(nm)
+            test_model_forward(nm)
+            test_gguf_roundtrip(nm)
     print(f'\n{ok} passed, {fail} failed')
     sys.exit(1 if fail else 0)

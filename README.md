@@ -1,8 +1,17 @@
+---
+title: "GCN 的 PyTorch 复现"
+topic: "GNN / scripts"
+source_note: "GNN/scripts/gcn-pytorch/README.md"
+created: "2026-10-21"
+tags:
+  - gcn-pytorch
+---
+
 # GCN 的 PyTorch 复现
 
 把 Kipf & Welling 官方 **TensorFlow 1.x** 实现（[tkipf/gcn](https://github.com/tkipf/gcn)）移植为 **PyTorch**，逐行对照、保留全部实现细节与超参数。另附一套 **PyTorch Geometric（`GCNConv`）** 实现用于对照验证。
 
-> **对应文档**：[[notes/01-谱方法|01-谱方法]] · [[notes/03-空域方法与消息传递|03-空域方法]] ｜ 原始代码在 `../gcn/` ｜ 数据集详解见 [[README.data]]
+> **对应文档**：[[01-谱方法|01-谱方法]] · [[03-空域方法与消息传递|03-空域方法]] ｜ 原始代码在 `../gcn/` ｜ 数据集详解见 [[README.data]]
 >
 > **三套实现**：手写版（`gcn/` + `train.py`）忠实移植 TF 结构；PyG 版（`pyg_gcn/` + `train_pyg.py`）用社区标准 `GCNConv`；**简洁版**（`train_planetoid.py`）把数据与归一化全交给 PyG 内置组件。Cora 精度分别为 **76.70%**、**79.50%**、**80.20%**，详见 [[#PyG 内置数据集（Planetoid）|PyG 内置数据集版]]。
 
@@ -85,7 +94,7 @@ python test_pyg.py                     # 37 项断言
 # ---- 第三条路径：PyG 内置数据集（自动下载并落盘到 data/Planetoid/）----
 python train_planetoid.py --dataset cora
 python train_planetoid.py --report     # 查看本地缓存
-python test_planetoid.py               # 32 项断言
+python test_planetoid.py               # 84 项断言
 
 # ---- 数据与权重 ----
 # 把数据集导出为 CSV（写入 data/csv/）
@@ -145,8 +154,10 @@ gcn-pytorch/
 ├── test.py               正确性测试（54 项断言，独立参考值交叉核对）
 ├── train_pyg.py          PyG 版训练入口（GCNConv，支持任意层数）
 ├── test_pyg.py           PyG 版测试（37 项断言，含与手写层的等价性）
-├── train_planetoid.py    PyG 内置数据集版训练入口（Planetoid，最简，145 行）
-├── test_planetoid.py     PyG 内置数据集版测试（42 项断言）
+├── train_planetoid.py    PyG 内置数据集版训练入口（Planetoid，最简）
+├── test_planetoid.py     PyG 内置数据集版测试（84 项断言）
+├── gguf_io.py            PyG 版 GCN 的 GGUF 读写（简洁版专用）
+├── pyg_warn.py           PyG 在 Python 3.14 下的告警抑制
 ├── export_csv.py         数据集 pickle → CSV 导出
 ├── export_model.py       权重导出（GGUF / PyTorch / 元信息）
 ├── infer.py              推理（支持 .pt 与 .gguf）
@@ -351,7 +362,7 @@ PyG 版更接近论文报告值（Cora 81.5%），差距主要在 Adam 实现细
 | 2 | **79.50%** |
 | 8 | **6.40%** |
 
-8 层跌到 6.4%（7 分类的随机水平约 14.3%），比随机猜还差——这是 [[notes/06-深度困境-过平滑与过挤压|过平滑]] 最直观的实证：所有节点表示收敛到同一点，分类器彻底失效。
+8 层跌到 6.4%（7 分类的随机水平约 14.3%），比随机猜还差——这是 [[06-深度困境-过平滑与过挤压|过平滑]] 最直观的实证：所有节点表示收敛到同一点，分类器彻底失效。
 
 ## Notebook（可交互版）
 
@@ -395,6 +406,80 @@ python export_model.py --dataset cora
 - **实际推理请用 `.pt`**：可直接 `load_state_dict` 还原模型
 
 导出脚本自动校验 GGUF ↔ PyTorch 数值一致性（三数据集实测偏差均为 `0.00e+00`），且两种格式推理结果完全相同。
+
+## 简洁版的 GGUF 存取（`train_planetoid.py`）
+
+简洁版自带一套 GGUF 读写，不需要额外的导出脚本——训练时 `--save`，推理时 `--load`：
+
+```bash
+# 训练 + 保存
+python train_planetoid.py --dataset cora --save
+# → model/gcn_pyg_cora.gguf       GGUF 容器（91.2 KB）
+#   model/gcn_pyg_cora.pt         PyTorch checkpoint
+#   model/gcn_pyg_cora.meta.json  超参与精度元信息
+
+# 只加载不训练
+python train_planetoid.py --dataset cora --load model/gcn_pyg_cora.gguf
+```
+
+实现放在独立模块 `gguf_io.py`，两个脚本共用。`GCN` 类上的三个方法：
+
+| 方法 | 作用 |
+|---|---|
+| `model.save(path, meta)` | 存 `.gguf` + `.pt` + `.meta.json` |
+| `model.load(path)` | 从 `.gguf` 或 `.pt` 载入（按扩展名自动分派） |
+| `GCN.from_file(path)` | **仅凭权重文件**重建模型，无需外部传维度 |
+
+### 为什么能「仅凭文件重建」
+
+GGUF 做了两件事让这件事成立：
+
+1. **张量自带形状**——头部声明了每个张量的维度
+2. **KV 区存了架构信息**——`gnn.num_layers` / `gnn.num_features` / `gnn.hidden_dim` / `gnn.num_classes`
+
+所以 `GCN.from_file('model/gcn_pyg_cora.gguf)` 能直接建出「2 层, 1433→16→7」的模型。相比旧 `infer.py` 硬编码层数与维度的做法，换个架构的文件也不需要改代码。
+
+### 一个必须知道的坑：GGUF 的 shape 是逆序的
+
+GGML 约定 `ne[0]` 是最快维，所以写入 numpy `(16, 1433)` 的权重时，GGUF 头部声明的是 `[1433, 16]`。
+
+**读回时不能 `reshape(t.shape)`**——那会把形状弄反，导致 `size mismatch` 报错。正确做法是直接用 `t.data`（它的 memmap 形状**已经是**正确的 numpy 形状，元素顺序也一致）。本项目的 `gguf_io.py` 踩过这个坑，现已用断言锁死。
+
+### 张量命名：与 `state_dict` 完全一致
+
+```
+convs.0.lin.weight   [16, 1433]
+convs.0.bias         [16]
+convs.1.lin.weight   [7, 16]
+convs.1.bias         [7]
+```
+
+直接用 PyTorch 的键名，好处是 `load_state_dict` 不需要任何映射表，也不会因为「转置了没有」而搞错方向。注意 PyG 的 `GCNConv` 权重形状是 `(out, in)`，与手写版的 `(in, out)` **相反**——这是两套实现不能共用同一份 save/load 的原因。
+
+### GGUF 里没有图结构
+
+| 内容 | 是否存入 GGUF |
+|---|---|
+| 各层权重张量 | ✅ 张量区 |
+| 层数、维度、测试精度 | ✅ KV 区 |
+| **`edge_index` 与特征 `x`** | ❌ **不存** |
+
+最后一条是关键：GGUF 是 llama.cpp 的模型格式，**没有「图」的概念**。推理时必须重新提供 `edge_index` 和 `x`。这一点写进了 KV 区的 `gnn.note`，任何解析器都能读到。`test_planetoid.py` 的 E 组有专门断言检查 GGUF 里确实不含这两样。
+
+### 实测一致性
+
+| 数据集 | 训练时报的 test_acc | 加载 GGUF 后 | 差 |
+|---|---:|---:|---:|
+| Cora | 80.20% | **80.20%** | 0.00 |
+| Citeseer | 72.30% | **72.30%** | 0.00 |
+| Pubmed | 79.50% | **79.50%** | 0.00 |
+
+GGUF ↔ PyTorch 的 logits 偏差 `0.00e+00`（逐位一致）。
+
+> **一个训练脚本的改动**：保存时会把权重**回滚到验证损失最优的那一轮**。
+> 原因是训练结束时模型停在最后一轮，而 `best_test` 记的是验证最优轮的精度——
+> 两者本就不是同一个模型。若直接存最后一轮，会出现「训练报 72.3%、重新加载却是 71.5%」的困惑。
+> 回滚后 `--load` 才能精确复现训练时报出的精度。
 
 ## 支持的模型
 
@@ -440,7 +525,7 @@ A、B 两条见 [[README.data]]（含 8 个 `ind.*` 文件的字段含义、Cite
 python train_planetoid.py                     # Cora，首次会下载并落盘
 python train_planetoid.py --dataset citeseer
 python train_planetoid.py --report            # 只看本地缓存
-python test_planetoid.py                      # 42 项断言
+python test_planetoid.py                      # 84 项断言
 ```
 
 ### 自带的东西 vs 需要自己写的
